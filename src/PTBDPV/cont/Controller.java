@@ -1,4 +1,4 @@
-package sample;
+package PTBDPV.cont;
 
 public class Controller {
 }
