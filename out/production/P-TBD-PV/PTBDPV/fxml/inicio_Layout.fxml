@@ -1,0 +1,221 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.MenuItem?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.Separator?>
+<BorderPane fx:controller="PTBDPV.cont.Controller"
+            xmlns:fx="http://javafx.com/fxml" >
+    <top>
+        <AnchorPane style="-fx-background-color: #D6EAF8;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+            <VBox AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+                <HBox spacing="10">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ImageView fitHeight="60" fitWidth="55">
+                            <Image url="@../res/pvL.png">
+                            </Image>
+                        </ImageView>
+                        <Label text="Punto de Venta"  style="-fx-font-size: 15pt; -fx-text-fill:#FF7922; -fx-font-weight:bold;"/>
+                    </HBox>
+                        <Separator visible="false" orientation="HORIZONTAL" maxWidth="950" prefWidth="950"></Separator>
+                    <VBox  spacing="5">
+                        <Label text="Le atiende: " style="-fx-font-size: 15pt; -fx-text-fill:#FF7922; -fx-font-weight:bold;"></Label>
+                        <JFXButton alignment="TOP_RIGHT" prefHeight="5" fx:id="btnTE" contentDisplay="LEFT" prefWidth="150" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" text=" Usuario actual" >
+                            <graphic>
+                                <FontAwesomeIconView fill="green" glyphName="EXCHANGE" glyphSize="15" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Cambiar de usuario"></Tooltip>
+                            </tooltip>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+
+                    </VBox>
+                </HBox>
+                <HBox spacing="650">
+                    <VBox  spacing="8">
+                        <Separator orientation="HORIZONTAL"></Separator>
+
+                        <MenuBar style="-fx-background-color: TRANSPARENT; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 0; -fx-border-radius: 0; -fx-padding: 0;">
+                            <menus>
+                                <Menu fx:id="mnVenta" style="-fx-background-color:#CBCFDA; -fx-text-fill: #CBCFDA;  -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 5;" text="F1 Ventas">
+                                    <graphic>
+                                        <FontAwesomeIconView glyphName="SHOPPING_CART" glyphSize="20" fill="#59B41D" ></FontAwesomeIconView>
+                                    </graphic>
+                                </Menu>
+                                <Menu fx:id="mnCliente" style="-fx-background-color:#CBCFDA; -fx-text-fill: #CBCFDA; -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 5;" text="F2 Clientes">
+                                    <items>
+                                        <MenuItem fx:id="EDC" text="Estado de cuenta">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="darkgreen" glyphName="MONEY" glyphSize="20" />
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem fx:id="NUC" text="Nuevo Cliente">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="cornflowerblue" glyphName="USER_PLUS" glyphSize="20" />
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem fx:id="ACC" text="Actualizar Cliente">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="royalblue" glyphName="EDIT" glyphSize="20" />
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem fx:id="ELC" text="Eliminar Cliente">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="red" glyphName="TRASH" glyphSize="20" />
+                                            </graphic>
+                                        </MenuItem>
+                                    </items>
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#30BFDC" glyphName="USERS" glyphSize="20" />
+                                    </graphic>
+                                </Menu>
+                                <Menu fx:id="mnProducto" style="-fx-background-color:#CBCFDA; -fx-text-fill: #CBCFDA; -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 5;" text="F3 Productos" visible="true">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="black" glyphName="LIST" glyphSize="20" />
+                                    </graphic>
+                                    <!-- <items>
+                                         <MenuItem fx:id="CTF" text="Cambiar tarfias" visible="true">
+                                             <graphic>
+                                                 <MaterialDesignIconView fill="green" glyphName="CASH_USD" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                         <MenuItem fx:id="AUS" text="Agregar Usuarios" visible="true">
+                                             <graphic>
+                                                 <FontAwesomeIconView fill="green" glyphName="USER_PLUS" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                         <MenuItem fx:id="ATA" text="Agregar tarjetas">
+                                             <graphic>
+                                                 <FontAwesomeIconView fill="dimgrey" glyphName="PLUS_CIRCLE" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                     </items>-->
+                                </Menu>
+                                <Menu fx:id="mnInventario" style="-fx-background-color:#CBCFDA; -fx-text-fill: #CBCFDA; -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 5;" text="F4 Inventario" visible="true">
+                                    <graphic>
+                                        <MaterialDesignIconView fill="forestgreen" glyphName="PLAYLIST_PLAY" glyphSize="20" />
+                                    </graphic>
+                                    <!-- <items>
+                                         <MenuItem fx:id="CTF" text="Cambiar tarfias" visible="true">
+                                             <graphic>
+                                                 <MaterialDesignIconView fill="green" glyphName="CASH_USD" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                         <MenuItem fx:id="AUS" text="Agregar Usuarios" visible="true">
+                                             <graphic>
+                                                 <FontAwesomeIconView fill="green" glyphName="USER_PLUS" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                         <MenuItem fx:id="ATA" text="Agregar tarjetas">
+                                             <graphic>
+                                                 <FontAwesomeIconView fill="dimgrey" glyphName="PLUS_CIRCLE" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                     </items>-->
+                                </Menu>
+                                <Menu fx:id="mnConfiguracion" style="-fx-background-color:#CBCFDA; -fx-text-fill: #CBCFDA; -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 5;" text="Configuración" visible="true">
+                                    <graphic>
+                                        <MaterialDesignIconView fill="grey" glyphName="SETTINGS" glyphSize="20" />
+                                    </graphic>
+                                    <!-- <items>
+                                         <MenuItem fx:id="CTF" text="Cambiar tarfias" visible="true">
+                                             <graphic>
+                                                 <MaterialDesignIconView fill="green" glyphName="CASH_USD" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                         <MenuItem fx:id="AUS" text="Agregar Usuarios" visible="true">
+                                             <graphic>
+                                                 <FontAwesomeIconView fill="green" glyphName="USER_PLUS" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                         <MenuItem fx:id="ATA" text="Agregar tarjetas">
+                                             <graphic>
+                                                 <FontAwesomeIconView fill="dimgrey" glyphName="PLUS_CIRCLE" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                     </items>-->
+                                </Menu>
+                                <Menu fx:id="mnCorte" style="-fx-background-color:#CBCFDA; -fx-text-fill: #CBCFDA; -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 5;" text="Corte" visible="true">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="slategrey" glyphName="CALCULATOR" glyphSize="18" />
+                                    </graphic>
+                                    <!-- <items>
+                                         <MenuItem fx:id="CTF" text="Cambiar tarfias" visible="true">
+                                             <graphic>
+                                                 <MaterialDesignIconView fill="green" glyphName="CASH_USD" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                         <MenuItem fx:id="AUS" text="Agregar Usuarios" visible="true">
+                                             <graphic>
+                                                 <FontAwesomeIconView fill="green" glyphName="USER_PLUS" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                         <MenuItem fx:id="ATA" text="Agregar tarjetas">
+                                             <graphic>
+                                                 <FontAwesomeIconView fill="dimgrey" glyphName="PLUS_CIRCLE" glyphSize="20" />
+                                             </graphic>
+                                         </MenuItem>
+                                     </items>-->
+                                </Menu>
+
+                            </menus>
+                        </MenuBar>
+                        <Separator orientation="HORIZONTAL" ></Separator>
+                    </VBox>
+                    <HBox spacing="10" alignment="BOTTOM_CENTER">
+                        <JFXButton alignment="TOP_RIGHT" fx:id="btnPB" contentDisplay="LEFT" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" >
+                            <graphic>
+                                <FontAwesomeIconView fill="red" glyphName="WARNING" glyphSize="15" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="? Productos debajo del minimo"></Tooltip>
+                            </tooltip>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_RIGHT" fx:id="btnSalir" contentDisplay="LEFT" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;"  text="Salir">
+
+                            <graphic>
+                                <FontAwesomeIconView fill="red" glyphName="CLOSE" glyphSize="15" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Cerrar la aplicación"></Tooltip>
+                            </tooltip>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+
+                    </HBox>
+
+                </HBox>
+            </VBox>
+        </AnchorPane>
+
+
+    </top>
+    <center>
+
+    </center>
+    <bottom>
+
+    </bottom>
+</BorderPane>

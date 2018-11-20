@@ -9,21 +9,15 @@ import java.util.logging.Logger;
  *
  * @author Luis Enrique Ramírez Palacios
  */
-public class SQLC {
-    private static Connection conn = null;
-    private static String hostname   = "localhost";
-    private static String dbname = "bdestacionamiento1";
-    private static String dbuser = "estacionamiento1";
-    private static String dbpass = "estaProgra";
-
+public class SQL {
      private static java.sql.Connection con = null;
-   // jdbc:sqlserver://;database
      private static String url = "jdbc:sqlserver://";
      private static String serverName = "localhost";
      private static String portNumber = "1433";
-     private static String databaseName = "alumnosREPASO";
-     private static String userName = "benigno";
-     private static String password = "ben1"; // Indica al controlador que debe utilizar un cursor de servidor,
+     private static String databaseName = "bdPV";
+     private static String userName = "adms";
+     private static String password = "ADMIN";
+     // Indica al controlador que debe utilizar un cursor de servidor,
      // lo que permite más de una instrucción activa // en una conexión. private final String selectMethod = "cursor";
 
      // Constructor public Connect(){}
@@ -43,8 +37,6 @@ public class SQLC {
          }
          return con;
      }
-
-     /* Mostrar las propiedades del controlador y los detalles de la base de datos */
 
      public void displayDbProperties() {
          java.sql.DatabaseMetaData dm = null;
@@ -73,51 +65,12 @@ public class SQLC {
          }
          dm = null;
      }
-        /*public static void Conectar(){
-        try {
-            String connectionUrl = "jdbc:microsoft:sqlserver://localhost:1433";userName;password;"jdbc:sqlserver://;database=DB_Name;integratedSecurity=true;";
-            conect = DriverManager.getConnection(connectionUrl);
-            System.out.println("Conectado.");
-        }
-        catch (SQLException ex)
-        {
-            System.out.println("Error.");
-        }
-        con = DriverManager.getConnection();
-    }*/
-
-    /*public static void Connect() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-                conn = DriverManager.getConnection("jdbc:mysql://"+ hostname +":3306/" + dbname, dbuser, dbpass);
-                System.out.println("Se ha iniciado la conexión con el servidor de forma exitosa");
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SQLException ex) {
-                Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
-            }        
-    }*/
-
-     /* public static Connection getConnection()
-      {
-          if(conn == null) Connect();
-          return conn;
-      }*/
-   /*private void closeConnection(){
-       try{
-           if(con!=null)
-               con.close();
-           con=null;
-       }catch(Exception e){
-           e.printStackTrace();
-       }
-   }*/
      public void closeConnection() {
          try {
-             conn.close();
+             con.close();
              System.out.println("Se ha finalizado la conexión con el servidor");
          } catch (SQLException ex) {
-             Logger.getLogger(SQLC.class.getName()).log(Level.SEVERE, null, ex);
+             Logger.getLogger(SQL.class.getName()).log(Level.SEVERE, null, ex);
          }
      }
 
