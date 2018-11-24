@@ -25,7 +25,10 @@ public class SQL {
     public static String getConnectionUrl() {
          return url + serverName + ":" + portNumber + ";databaseName=" + databaseName + ";";
      }
-
+     public static void authentication( String userN,String pass){
+        userName=userN;
+        password=pass;
+     }
      public static Connection getConnection() {
          try {
              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

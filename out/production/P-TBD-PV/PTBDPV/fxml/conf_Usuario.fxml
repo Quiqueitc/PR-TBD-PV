@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.effect.DropShadow?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<AnchorPane id="AnchorPane" prefHeight="500" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" style="-fx-border-color: #FF7922" fx:controller="PTBDPV.cont.cont_conf_Usuario">
+    <children>
+        <StackPane layoutX="100.0" layoutY="100.0" prefHeight="400.0" prefWidth="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Pane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #00bcd4;" />
+                        <Pane prefHeight="351.0" prefWidth="800.0" style="-fx-background-color: #D6EAF8;" />
+                    </children>
+                </VBox>
+                <AnchorPane fx:id="anchor1" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: transparent;">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <children>
+                        <VBox fx:id="vbCU" layoutX="100.0" layoutY="24.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="34.0" prefWidth="425.0" text="Configuración principal" textAlignment="CENTER"  style="-fx-font-size: 15pt; -fx-text-fill:#FF7922; -fx-font-weight:bold;">
+                                    <font>
+                                        <Font name="Roboto Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="32.0" prefWidth="425.0" text="Configura el administrador" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="Roboto Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <AnchorPane fx:id="APU"  visible="true" layoutX="106.0" layoutY="113.0" prefHeight="242.0" prefWidth="409.0" style="-fx-background-color: WHITE; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;">
+                            <children>
+                                <ImageView fx:id="imgU" fitHeight="30.0" fitWidth="150.0" layoutX="190.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../res/adduser.png" />
+                                    </image>
+                                </ImageView>
+                                <JFXTextField fx:id="txtNickName" labelFloat="true" layoutX="75.0" alignment="CENTER" layoutY="50.0" maxWidth="316.0" minWidth="233.0" prefHeight="31.0" prefWidth="250.0" promptText="Usuario">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXTextField fx:id="txtNombre" labelFloat="true" layoutX="75.0" alignment="CENTER" layoutY="100.0" maxWidth="316.0" minWidth="233.0" prefHeight="31.0" prefWidth="250.0" promptText="Nombre">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXTextField fx:id="txtDomicilio" labelFloat="true" layoutX="75.0" alignment="CENTER" layoutY="150.0" maxWidth="316.0" minWidth="140.0" prefHeight="31.0" prefWidth="50.0" promptText="Domicilio">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXTextField fx:id="txtTelefono" labelFloat="true" layoutX="230.0" alignment="CENTER" layoutY="150.0" maxWidth="316.0" minWidth="90.0" prefHeight="31.0" prefWidth="100.0" promptText="Telefono">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXDatePicker fx:id="dpfe"  layoutX="75.0"  layoutY="200.0" maxWidth="320.0" minWidth="233.0" prefHeight="31.0" prefWidth="31.0" promptText="Fecha contrato"></JFXDatePicker>
+                                <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="75.0" alignment="CENTER" layoutY="250.0" maxWidth="316.0" minWidth="235.0" prefHeight="31.0" prefWidth="250.0" promptText="Contraseña">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXPasswordField>
+                                <JFXButton fx:id="btnInicio" layoutX="90.0" layoutY="300.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: TRANSPARENT; -fx-border-radius: 90; -fx-text-fill: #00bcd4; -fx-border-color: #00bcd4" text="¡Listo!">
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btnCerrar" layoutX="210.0" layoutY="300.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: #FF0101; -fx-border-radius: 90" text="Cerrar" textFill="red">
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <children>
+                        <VBox fx:id="vbCS" layoutX="100.0" layoutY="24.0" visible="false">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="34.0" prefWidth="425.0" text="Configuración principal" textAlignment="CENTER"  style="-fx-font-size: 15pt; -fx-text-fill:#FF7922; -fx-font-weight:bold;">
+                                    <font>
+                                        <Font name="Roboto Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="32.0" prefWidth="425.0" text="Configura información de la sucursal" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="Roboto Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <AnchorPane fx:id="APS" visible="false" layoutX="106.0" layoutY="113.0" prefHeight="242.0" prefWidth="409.0" style="-fx-background-color: WHITE; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;">
+                            <children>
+                                <ImageView fx:id="imgS" fitHeight="30.0" fitWidth="150.0" layoutX="190.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../res/sucur.png" />
+                                    </image>
+                                </ImageView>
+                                <JFXTextField fx:id="txtrfc" labelFloat="true" layoutX="75.0" alignment="CENTER" layoutY="50.0" maxWidth="316.0" minWidth="233.0" prefHeight="31.0" prefWidth="250.0" promptText="RFC">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXTextField fx:id="txtNombreS" labelFloat="true" layoutX="75.0" alignment="CENTER" layoutY="100.0" maxWidth="316.0" minWidth="233.0" prefHeight="31.0" prefWidth="250.0" promptText="Nombre sucursal">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXTextField fx:id="txtDomicilioS" labelFloat="true" layoutX="75.0" alignment="CENTER" layoutY="150.0" maxWidth="316.0" minWidth="140.0" prefHeight="31.0" prefWidth="50.0" promptText="Domicilio sucursal">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXTextField fx:id="txtTelefonoS" labelFloat="true" layoutX="230.0" alignment="CENTER" layoutY="150.0" maxWidth="316.0" minWidth="90.0" prefHeight="31.0" prefWidth="100.0" promptText="Telefono sucursal">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXTextField fx:id="txtCiudad" labelFloat="true" layoutX="75.0" alignment="CENTER" layoutY="200.0" maxWidth="316.0" minWidth="233.0" prefHeight="31.0" prefWidth="250.0" promptText="Ciudad sucursal">
+                                    <font>
+                                        <Font name="Roboto Medium" size="14.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXComboBox fx:id="cbEncargado" labelFloat="true" layoutX="75.0"  layoutY="250.0" maxWidth="316.0" minWidth="235.0" prefHeight="31.0" prefWidth="250.0" promptText="Contraseña">
+                                </JFXComboBox>
+                                <JFXButton fx:id="btnInicioS" layoutX="90.0" layoutY="300.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: TRANSPARENT; -fx-border-radius: 90; -fx-text-fill: #00bcd4; -fx-border-color: #00bcd4" text="¡Comenzar!" textFill="WHITE">
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btnRegresar" layoutX="210.0" layoutY="300.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: #FF0101; -fx-border-radius: 90" text="Regresar" textFill="red">
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                            </children>
+                        </AnchorPane>
+                    </children>
+
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
+<!--CREATE TABLE sucursal (rfc varchar(15) not null,
+						nombre varchar(30),
+						domicilio varchar(100),
+						telefono varchar(15),
+						ciudad varchar(70),
+						idUsu varchar(15) not null,
+						constraint sucursalPK primary key (rfc),
+						constraint sucursalFK1 foreign key (idUsu) references empleados(idUsu));-->
+<!--CREATE TABLE empleados(idUsu varchar(15) not null,
+						nombre varchar(60),
+						domicilio varchar(100),
+						telefono varchar(15),
+						contrasena varchar(40) not null,
+						fecContrato date,
+						idTip varchar(1) not null,
+						constraint empleadosPK primary key (idUsu),
+						constraint empleadosFK1 foreign key (idTip) references tipoEmpleado (idTip),
+						constraint empleadoC2 check (fecContrato>'01/01/2000'));
+						-->

@@ -20,43 +20,25 @@ public class TransactionDAO {
     {
         this.conn = conn;
     }
-   public Boolean ELIMINARTARJETA(String NT) {
-        if(ELIMINARTARHISTORIAL(NT)){
-            try {
-                String query = "DELETE FROM autoactivo WHERE NumTarjeta='"+NT+"'";
-                PreparedStatement st = conn.prepareStatement(query);
-                st.execute();
-                return true;
-            } catch (SQLException e) {
-                //  System.out.println(e.getMessage());
-                alert=new Alert(Alert.AlertType.ERROR);
-                if(e.getErrorCode()==1451)
-                {
-                    alert.setContentText("Este tarjeta no se puede eliminar porque está siendo usado en otras tablas");
-                    alert.show();
-                }
-            }
 
+    public  int usuarioNull () throws SQLException {
+        try(CallableStatement cstmt = conn.prepareCall("{call dbo.usuNull(?)}");) {
+           // cstmt.setInt(1, 5);
+            cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
+            cstmt.execute();
+            return cstmt.getInt(1);
+            //System.out.println("MANAGER ID: " + cstmt.getInt(2));
         }
-       return false;
-   }
-   public Boolean ELIMINARTARHISTORIAL(String NT) {
-       try {
-           String query = "DELETE FROM autocobrado WHERE NumTarjeta='"+NT+"'";
-           PreparedStatement st = conn.prepareStatement(query);
-           st.execute();
-           return true;
-       } catch (SQLException e) {
-         //  System.out.println(e.getMessage());
-           alert=new Alert(Alert.AlertType.ERROR);
-           if(e.getErrorCode()==1451)
-           {
-               alert.setContentText("Este tarjeta no se puede eliminar porque está siendo usado en otras tablas");
-               alert.show();
-           }
-       }
-       return false;
-   }
+    }
+    public  int sucursalNull () throws SQLException {
+        try(CallableStatement cstmt = conn.prepareCall("{call dbo.sucuNull(?)}");) {
+           // cstmt.setInt(1, 5);
+            cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
+            cstmt.execute();
+            return cstmt.getInt(1);
+            //System.out.println("MANAGER ID: " + cstmt.getInt(2));
+        }
+    }
    public Boolean ELIMINARPENSIONADO(int NP) {
 
        try {

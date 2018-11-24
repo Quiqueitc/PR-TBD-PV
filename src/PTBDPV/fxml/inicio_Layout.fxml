@@ -24,7 +24,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.control.TableView?>
-<BorderPane fx:controller="PTBDPV.cont.Controller"
+<BorderPane fx:controller="PTBDPV.cont.cont_login"
             xmlns:fx="http://javafx.com/fxml" >
     <top>
         <AnchorPane style="-fx-background-color: #D6EAF8;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
