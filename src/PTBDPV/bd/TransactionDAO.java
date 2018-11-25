@@ -1,5 +1,7 @@
 package PTBDPV.bd;;
 
+import PTBDPV.datos.datEmpleados;
+import PTBDPV.datos.datSucursal;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
@@ -30,7 +32,7 @@ public class TransactionDAO {
             //System.out.println("MANAGER ID: " + cstmt.getInt(2));
         }
     }
-    public  int sucursalNull () throws SQLException {
+    public   int sucursalNull () throws SQLException {
         try(CallableStatement cstmt = conn.prepareCall("{call dbo.sucuNull(?)}");) {
            // cstmt.setInt(1, 5);
             cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
@@ -39,7 +41,152 @@ public class TransactionDAO {
             //System.out.println("MANAGER ID: " + cstmt.getInt(2));
         }
     }
-   public Boolean ELIMINARPENSIONADO(int NP) {
+    public   Boolean aduser (datEmpleados datEmpleados) throws SQLException {
+        try {
+            conn.setAutoCommit(false);
+          //  exec sp_addlogin @id,@con,'bdPV',null,null,null
+            CallableStatement cstmt = conn.prepareCall("{ call sys.sp_addlogin (?,?,?,?,?,?) }");
+            cstmt.setString(1, datEmpleados.getIdUsu());
+            cstmt.setString(2, datEmpleados.getContrasena());
+            cstmt.setString(3, "bdPV");
+            cstmt.setString(4, null);
+            cstmt.setString(5, null);
+            cstmt.setString(6, null);
+            //cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
+            cstmt.execute();
+            //conn.commit();
+            return true;
+            //System.out.println("MANAGER ID: " + cstmt.getInt(2));
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Se deshicieron cambios");
+            //conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            // cerrar la conexion
+            //conn.close();
+            System.out.println("Se cerró conexión");
+        }
+        return false;
+    }
+
+    public Boolean insUsuari (datEmpleados datEmpleados) throws SQLException {
+        try {
+            conn.setAutoCommit(false);
+            CallableStatement cstmt = conn.prepareCall("{ call dbo.insUsuario (?,?,?,?,?,?,?) }");
+            cstmt.setString(1, datEmpleados.getIdUsu());
+            // System.out.println("1");
+            cstmt.setString(2, datEmpleados.getNombre());
+            cstmt.setString(3, datEmpleados.getDomicilio());
+            cstmt.setString(4, datEmpleados.getTelefono());
+            cstmt.setString(5, datEmpleados.getContrasena());
+            cstmt.setDate(6, datEmpleados.getFecContrato());
+            cstmt.setString(7, datEmpleados.getIdTip());
+            //cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
+            // System.out.println("2"+datEmpleados.getIdUsu() + " "+ datEmpleados.getContrasena());
+            cstmt.execute();
+            conn.commit();
+            return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            // cerrar la conexion
+           // conn.close();
+        }
+        return false;
+    }
+    //@id varchar(15), @no varchar(60), @dom varchar(100), @ varchar (15), @ varchar(40), @ date, @ varchar(1)
+    public   Boolean insUsuario (datEmpleados datEmpleados) throws SQLException {
+        try(CallableStatement cstmt = conn.prepareCall("{call dbo.insUsuario(?,?,?,?,?,?,?)}")) {
+            cstmt.setString("id", datEmpleados.getIdUsu());
+            System.out.println("1");
+            cstmt.setString("no", datEmpleados.getNombre());
+            cstmt.setString("dom", datEmpleados.getDomicilio());
+            cstmt.setString("tel", datEmpleados.getTelefono());
+            cstmt.setString("con", datEmpleados.getContrasena());
+            cstmt.setDate("fec", datEmpleados.getFecContrato());
+            cstmt.setString("idT", datEmpleados.getIdTip());
+            //cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
+            System.out.println("2"+datEmpleados.getIdUsu() + " "+ datEmpleados.getContrasena());
+            cstmt.execute();
+            return true;
+            //System.out.println("MANAGER ID: " + cstmt.getInt(2));
+        }
+    }
+    public ObservableList<String> LlenarClientes() {
+        ObservableList<String> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT nomCompleto FROM clientes;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            String p = null;
+            while(rs.next()) {
+                p=       rs.getString("nomCompleto");
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de clientes...");
+        }
+        return transactions;
+    }
+    public ObservableList<String> LlenarEncargados(char ti) {
+        ObservableList<String> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT nombre FROM empleados where idTip='"+ti+"';";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            String p = null;
+            while(rs.next()) {
+                p=                        rs.getString("nombre");
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de empleados...");
+        }
+        return transactions;
+    }
+
+    public datEmpleados datEmpleado(String IU) {
+        // ObservableList<DatosAutoActivo> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT * FROM empleados WHERE idUsu='"+IU+"';";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datEmpleados p = null;
+            while(rs.next()) {
+                p = new datEmpleados(rs.getString("idUsu"),
+                        rs.getString("nombre"),
+                        rs.getString("domicilio"),
+                        rs.getString("telefono"),
+                        rs.getString("contrasena"),
+                        rs.getString("idTip"),
+                        rs.getDate("fecContrato"));
+                //  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+            return p;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de empleados...");
+        }
+        return null;
+    }
+
+    public Boolean ELIMINARPENSIONADO(int NP) {
 
        try {
            String query = "DELETE FROM pensionados WHERE NumPensionado='"+NP+"';";
@@ -57,6 +204,38 @@ public class TransactionDAO {
        }
        return false;
    }
+    public Boolean insSucursal(datSucursal datSucursal) {
+        try {
+            String query = "INSERT INTO sucursal VALUES (?,?,?,?,?,(SELECT idUsu FROM empleados WHERE nombre=?));";
+            PreparedStatement st =  conn.prepareStatement(query);
+            st.setString(1,datSucursal.getRfc());
+            System.out.println("Aqui 2");
+            st.setString(2,datSucursal.getNombre());
+            st.setString(3,datSucursal.getDomicilio());
+            st.setString(4,datSucursal.getTelefono());
+            st.setString(5,datSucursal.getCiudad());
+            st.setString(6,datSucursal.getIdUsu());
+            System.out.println("Aqui 3");
+            st.execute();
+            return true;
+        } catch (SQLException e) {
+            Alert alert;
+            if(e.getErrorCode()==1062)
+            {
+                alert=new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("La llave principal ya existe");
+                alert.show();
+            }
+            if(e.getErrorCode()==1406){
+                alert=new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Algun(os) campos exceden el tamaño permitido de caracteres");
+                alert.show();
+            }
+            System.out.println("error  "+ e);
+        }
+        return false;
+    }
+
     public Boolean ELIMINARUSUARIO(String NN) {
 
         try {

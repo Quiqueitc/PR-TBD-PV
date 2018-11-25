@@ -1,5 +1,7 @@
 package PTBDPV.bd;
 
+import javafx.scene.control.Alert;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -10,7 +12,7 @@ import java.util.logging.Logger;
  * @author Luis Enrique Ramírez Palacios
  */
 public class SQL {
-     private static java.sql.Connection con = null;
+     public  static java.sql.Connection con = null;
      private static String url = "jdbc:sqlserver://";
      private static String serverName = "localhost";
      private static String portNumber = "1433";
@@ -25,7 +27,7 @@ public class SQL {
     public static String getConnectionUrl() {
          return url + serverName + ":" + portNumber + ";databaseName=" + databaseName + ";";
      }
-     public static void authentication( String userN,String pass){
+     public SQL( String userN,String pass){
         userName=userN;
         password=pass;
      }
@@ -35,7 +37,10 @@ public class SQL {
              con = java.sql.DriverManager.getConnection(getConnectionUrl(), userName, password);
              if (con != null) System.out.println("Conexión correcta.");
          } catch (Exception e) {
-             e.printStackTrace();
+             Alert alert=new Alert(Alert.AlertType.ERROR);
+             alert.setContentText("Usuario o contraseña incorrectos");
+             alert.show();
+             //e.printStackTrace();
              System.out.println("Error de seguimiento en getConnection() : " + e.getMessage());
          }
          return con;

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<BorderPane fx:id="BPP" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            >
+    <top>
+        <AnchorPane style="-fx-background-color: #74EF25;">
+            <HBox alignment="CENTER" AnchorPane.topAnchor="12" AnchorPane.leftAnchor="12" AnchorPane.rightAnchor="12" AnchorPane.bottomAnchor="12">
+                <Label prefHeight="50"  text="Acerca de la app" >
+                    <font>
+                        <Font size="25"></Font>
+                    </font>
+                </Label>
+            </HBox>
+        </AnchorPane>
+    </top>
+    <right>
+        <AnchorPane style="-fx-background-color: #74EF25;">
+            <HBox alignment="CENTER" AnchorPane.topAnchor="2" AnchorPane.leftAnchor="2" AnchorPane.rightAnchor="2" AnchorPane.bottomAnchor="2">
+            </HBox>
+        </AnchorPane>
+    </right>
+    <left>
+        <AnchorPane style="-fx-background-color: #74EF25;">
+            <HBox alignment="CENTER" AnchorPane.topAnchor="2" AnchorPane.leftAnchor="2" AnchorPane.rightAnchor="2" AnchorPane.bottomAnchor="2">
+            </HBox>
+        </AnchorPane>
+    </left>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" fx:id="VBC">
+
+            <Label text="Elaborado por:">
+                <font>
+                    <Font size="18"></Font>
+                </font>
+            </Label>
+            <Label text="Luis Enrique Ramírez Palacios">
+                <font>
+                    <Font size="18"></Font>
+                </font>
+            </Label>
+            <Label text="Dudas o problemas: ">
+                <font>
+                    <Font size="18"></Font>
+                </font>
+            </Label>
+            <JFXTextField fx:id="txt1" text="luiserp86@gmail.com" editable="false" alignment="CENTER">
+                <font>
+                    <Font size="18"></Font>
+                </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txt2" text="4611380853" editable="false" alignment="CENTER">
+                <font>
+                    <Font size="18"></Font>
+                </font>
+            </JFXTextField>
+
+        </VBox>
+    </center>
+    <bottom>
+        <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #74EF25">
+            <JFXButton fx:id="btnOK" textFill="aliceblue" alignment="CENTER" text="Cerrar" contentDisplay="TOP" textAlignment="CENTER" style="-fx-background-color: #F50057">
+                <tooltip><Tooltip text="Cerrar ventana" /></tooltip>
+                <graphic>
+                    <FontAwesomeIconView glyphName="CLOSE" glyphSize="25" fill="white" />
+                </graphic>
+                <font>
+                    <Font name="Bold" size="15.0" />
+                </font>
+            </JFXButton>
+        </HBox>
+    </bottom>
+
+</BorderPane>

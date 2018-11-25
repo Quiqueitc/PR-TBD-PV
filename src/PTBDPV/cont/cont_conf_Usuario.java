@@ -2,6 +2,8 @@ package PTBDPV.cont;
 
 import PTBDPV.bd.SQL;
 import PTBDPV.bd.TransactionDAO;
+import PTBDPV.datos.datEmpleados;
+import PTBDPV.datos.datSucursal;
 import com.jfoenix.controls.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -13,13 +15,15 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.ResourceBundle;
 
 public class cont_conf_Usuario implements Initializable{
     @FXML
-    JFXTextField txtNickName,txtNombre,txtDomicilio,txtTelefono,txtrfc,txtNombreS,txtDomicilioS,txtTelefonoS,txtCiudad;
+    JFXTextField txtNickName,txtNombre,txtDomicilio,txtTelefono,txtrfc,txtNombreS,txtDomicilioS,
+            txtTelefonoS,txtCiudad;
     @FXML
     JFXComboBox<String> cbEncargado;
     @FXML
@@ -32,7 +36,7 @@ public class cont_conf_Usuario implements Initializable{
     VBox vbCU,vbCS;
     @FXML
     AnchorPane APU,APS;
-    String NN,NO,DO,TE,PA;
+    String NN,NO,DO,TE,PA, RFC,NOS,DOS,TES,CS,EN;
     char TU='A';
     java.sql.Date fecContra;
     TransactionDAO transactionDAO=new TransactionDAO(SQL.getConnection());
@@ -42,6 +46,7 @@ public class cont_conf_Usuario implements Initializable{
         btnInicioS.setOnAction(handler);
         btnRegresar.setOnAction(handler);
         btnCerrar.setOnAction(handler);
+        cbEncargado.setItems(transactionDAO.LlenarEncargados('A'));
     }
     EventHandler<ActionEvent> handler= new EventHandler<ActionEvent>() {
         @Override
@@ -49,13 +54,27 @@ public class cont_conf_Usuario implements Initializable{
             Alert alert;
             if(event.getSource()==btnInicio)
             {
-                llenarDatos();
+                datEmpleados datEmpleados=llenarDatos();
+                System.out.println(" use  "+NN+ "      con "+ PA);
                if(NN.trim().length()>0 && PA.trim().length()>0)
                {
-                        vbCU.setVisible(false);
-                        vbCS.setVisible(true);
-                        APU.setVisible(false);
-                        APS.setVisible(true);
+                   try {
+                       if(transactionDAO.insUsuari(datEmpleados))
+                       {
+                           cbEncargado.setItems(transactionDAO.LlenarEncargados('A'));
+                           vbCU.setVisible(false);
+                           vbCS.setVisible(true);
+                           APU.setVisible(false);
+                           APS.setVisible(true);
+                       }
+                       else {
+                           alert=new Alert(Alert.AlertType.ERROR);
+                           alert.setContentText("Error al insertar");
+                           alert.show();
+                       }
+                   } catch (Exception e) {
+                       e.printStackTrace();
+                   }
                }
                else
                    {
@@ -66,7 +85,27 @@ public class cont_conf_Usuario implements Initializable{
             }
             if(event.getSource()==btnInicioS)
             {
-
+                datSucursal datSucursal=llenarDatosS();
+                if(RFC.trim().length()>0 && EN.trim().length()>0)
+                {
+                    if(transactionDAO.insSucursal(datSucursal)){
+                        alert=new Alert(Alert.AlertType.INFORMATION);
+                        alert.setContentText("Se registraron con éxito las configuraciones principales");
+                        alert.show();
+                        SQL sql=new SQL(NN,PA);
+                        transactionDAO=new TransactionDAO(SQL.getConnection());
+                    }
+                    else {
+                        alert=new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("Error al insertar datos");
+                    }
+                }
+                else
+                {
+                    alert=new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("RFC y encargado están vacíos");
+                    alert.show();
+                }
             }
             if(event.getSource()==btnRegresar)
             {
@@ -81,8 +120,9 @@ public class cont_conf_Usuario implements Initializable{
             }
         }
     };
-    private void llenarDatos()
+    private datEmpleados llenarDatos()
     {
+        datEmpleados datEmpleados=null;
         try {
             NN=txtNickName.getText().toString();
             NO=txtNombre.getText().toString();
@@ -90,11 +130,31 @@ public class cont_conf_Usuario implements Initializable{
             TE=txtTelefono.getText().toString();
             PA=txtPassword.getText().toString();
             fecContra= java.sql.Date.valueOf(dpfe.getValue());
+            datEmpleados=new datEmpleados(NN,NO,DO,TE,PA,"A",fecContra);
         }
         catch (NullPointerException e)
         {
             System.out.println(e);
         }
+        return datEmpleados;
+    }
+    private datSucursal llenarDatosS()
+    {
+        datSucursal datSucursal=null;
+        try {
+            RFC=txtrfc.getText().toString();
+            NOS=txtNombreS.getText().toString();
+            DOS=txtDomicilioS.getText().toString();
+            TES=txtTelefonoS.getText().toString();
+            CS=txtCiudad.getText().toString();
+            EN=cbEncargado.getValue();
+            datSucursal=new datSucursal(RFC,NOS,DOS,TES,CS,EN);
+        }
+        catch (NullPointerException e)
+        {
+            System.out.println(e);
+        }
+        return datSucursal;
     }
     private void closeStage( )
     {
