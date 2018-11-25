@@ -5,14 +5,19 @@ import com.sun.org.glassfish.gmbal.IncludeSubclass;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import PTBDPV.datos.datEmpleados;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -21,12 +26,9 @@ public class cont_inicioL implements Initializable {
     @FXML
     BorderPane BP1;
     @FXML
-    JFXButton btnTE,btnPB,btnSalir,btnVenta,btnProducto,btnInventario,btnConfiguracion,btnCorte;;
+    JFXButton btnTE,btnPB,btnSalir,btnVenta,btnProducto,btnInventario,btnConfiguracion,btnCorte,btnCliente;;
     @FXML
     Label lblfecha;
-
-    @FXML
-    MenuItem EDC,NUC,ACC,ELC;
     @FXML
     VBox VBV,VBP,VBL,VBI,VBC,VBR;
     static datEmpleados datEmpleados; //DATOS DEL USUARIO EN CURSO
@@ -41,10 +43,7 @@ public class cont_inicioL implements Initializable {
         btnInventario.setOnAction(handler);
         btnConfiguracion.setOnAction(handler);
         btnCorte.setOnAction(handler);
-        EDC.setOnAction(handler);
-        NUC.setOnAction(handler);
-        ACC.setOnAction(handler);
-        ELC.setOnAction(handler);
+        btnCliente.setOnAction(handler);
         btnTE.setText(datEmpleados.getNombre());
         BP1.setOnKeyPressed(
                 event -> {
@@ -97,22 +96,8 @@ public class cont_inicioL implements Initializable {
             if (event.getSource()==btnCorte){
                 MCorte();
             }
-            if(event.getSource()==EDC){
-                VBI.setVisible(false);
-                VBC.setVisible(false);
-                VBR.setVisible(false);
-                VBP.setVisible(false);
-                VBV.setVisible(false);
-                VBL.setVisible(true);
-            }
-            if(event.getSource()==NUC){
-
-            }
-            if(event.getSource()==ACC){
-
-            }
-            if(event.getSource()==ELC){
-
+            if(event.getSource()==btnCliente){
+                MCliente();
             }
         }
     };
@@ -137,18 +122,44 @@ public class cont_inicioL implements Initializable {
         VBV.setVisible(true);
     }
     public  void MCliente(){
-
+        VBI.setVisible(false);
+        VBC.setVisible(false);
+        VBR.setVisible(false);
+        VBP.setVisible(false);
+        VBV.setVisible(false);
+        VBL.setVisible(true);
     }
     public  void MProducto(){
-
+        VBI.setVisible(false);
+        VBC.setVisible(false);
+        VBR.setVisible(false);
+        VBV.setVisible(false);
+        VBL.setVisible(false);
+        VBP.setVisible(true);
     }
     public  void MInventario(){
-
+        VBC.setVisible(false);
+        VBR.setVisible(false);
+        VBV.setVisible(false);
+        VBL.setVisible(false);
+        VBP.setVisible(false);
+        VBI.setVisible(true);
     }
     public  void MConfiguracion(){
-
+        VBR.setVisible(false);
+        VBV.setVisible(false);
+        VBL.setVisible(false);
+        VBP.setVisible(false);
+        VBI.setVisible(false);
+        VBC.setVisible(true);
     }
     public  void MCorte(){
+        VBV.setVisible(false);
+        VBL.setVisible(false);
+        VBP.setVisible(false);
+        VBI.setVisible(false);
+        VBC.setVisible(false);
+        VBR.setVisible(true);
 
     }
 }

@@ -65,37 +65,11 @@
                                     <FontAwesomeIconView glyphName="SHOPPING_CART" glyphSize="20" fill="#59B41D" ></FontAwesomeIconView>
                                 </graphic>
                             </JFXButton>
-                            <MenuBar style="-fx-background-color: TRANSPARENT; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 0; -fx-border-radius: 0; -fx-padding: 0;">
-                                <menus>
-                                    <Menu fx:id="mnCliente" style="-fx-background-color:#F7F9F9; -fx-text-fill: #CBCFDA; -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 5;" text="F2 Clientes">
-                                        <items>
-                                            <MenuItem fx:id="EDC" text="Estado de cuenta">
-                                                <graphic>
-                                                    <FontAwesomeIconView fill="darkgreen" glyphName="MONEY" glyphSize="20" />
-                                                </graphic>
-                                            </MenuItem>
-                                            <MenuItem fx:id="NUC" text="Nuevo Cliente">
-                                                <graphic>
-                                                    <FontAwesomeIconView fill="cornflowerblue" glyphName="USER_PLUS" glyphSize="20" />
-                                                </graphic>
-                                            </MenuItem>
-                                            <MenuItem fx:id="ACC" text="Actualizar Cliente">
-                                                <graphic>
-                                                    <FontAwesomeIconView fill="royalblue" glyphName="EDIT" glyphSize="20" />
-                                                </graphic>
-                                            </MenuItem>
-                                            <MenuItem fx:id="ELC" text="Eliminar Cliente">
-                                                <graphic>
-                                                    <FontAwesomeIconView fill="red" glyphName="TRASH" glyphSize="20" />
-                                                </graphic>
-                                            </MenuItem>
-                                        </items>
-                                        <graphic>
-                                            <FontAwesomeIconView fill="#30BFDC" glyphName="USERS" glyphSize="20" />
-                                        </graphic>
-                                    </Menu>
-                                </menus>
-                            </MenuBar>
+                            <JFXButton fx:id="btnCliente" style="-fx-background-color:#F7F9F9; -fx-text-fill: #2C3E50; -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 5;" text="F2 Clientes">
+                                <graphic>
+                                    <FontAwesomeIconView fill="#30BFDC" glyphName="USERS" glyphSize="20" />
+                                </graphic>
+                            </JFXButton>
                             <JFXButton fx:id="btnProducto" style="-fx-background-color:#F7F9F9; -fx-text-fill: #2C3E50; -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 5;" text="F3 Productos" visible="true">
                                 <graphic>
                                     <FontAwesomeIconView fill="black" glyphName="LIST" glyphSize="20" />

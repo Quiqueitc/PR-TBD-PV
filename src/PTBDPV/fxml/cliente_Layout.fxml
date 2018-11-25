@@ -14,6 +14,7 @@
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
 <?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.shape.Sphere?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml" fx:id="BPV" fx:controller="PTBDPV.cont.cont_clienteL"          >
     <top>
@@ -70,19 +71,68 @@
         </AnchorPane>
     </top>
     <center>
-        <AnchorPane >
+        <AnchorPane style="-fx-background-color: #FFFFFF">
             <children>
-                <VBox fx:id="VBEC" alignment="TOP_CENTER" prefHeight="423.0" prefWidth="341.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+                <StackPane style="-fx-border-color: #FFFFFF;" layoutX="0.0" layoutY="0.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
                     <children>
-                        <Label  alignment="TOP_LEFT" text="Clientes" style="-fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;">
-                        </Label>
-                        <JFXListView fx:id="ltClientes" prefHeight="200.0" prefWidth="200.0" />
+                        <VBox fx:id="VBEC" visible="true" alignment="TOP_CENTER" prefHeight="423.0" prefWidth="341.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+                            <children>
+                                <Label  fx:id="lblTi" alignment="TOP_LEFT" text="Estado de cuenta" style="-fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;">
+                                </Label>
+                                <JFXListView fx:id="ltClientes" prefHeight="200.0" prefWidth="200.0" />
 
-                        <VBox id="HBox" fx:id="HBox4Btns" alignment="CENTER" spacing="10">
-                            <Label text=" Teclee el nombre del cliente" alignment="CENTER" maxWidth="1500" prefWidth="1500" style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;"/>
+                                <VBox id="HBox" fx:id="HBox4Btns" alignment="CENTER" spacing="10">
+                                    <Label text=" Teclee el nombre del cliente" alignment="CENTER" maxWidth="1500" prefWidth="1500" style="-fx-background-color: #A4F796; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;"/>
 
-                            <JFXTextField fx:id="txtAddItem" prefWidth="200.0" style="-fx-border-color: #A4F796"/>
-                                <JFXButton fx:id="btnSeC" text="Aceptar" alignment="CENTER" prefHeight="5" maxWidth="150"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#FFFFFF;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <JFXTextField fx:id="txtBUC" prefWidth="200.0" style="-fx-border-color: #FFFFFF; -fx-background-color:#FFFFFF"/>
+                                    <JFXButton fx:id="btnSeC" text="Aceptar" alignment="CENTER" prefHeight="5" maxWidth="150" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#FFFFFF;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                        <graphic>
+                                            <FontAwesomeIconView fill="green" glyphName="CHECK" glyphSize="15" />
+                                        </graphic>
+                                        <font>
+                                            <Font name="Roboto Bold" size="14.0" />
+                                        </font>
+                                    </JFXButton>
+
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <!--idClie smallint not null,
+						nomCompleto varchar(60),
+						domicilio varchar(100),
+						telefono varchar(15),
+						email varchar(100),
+						limCredito money, /* che-->
+                        <VBox fx:id="VBNC" visible="false" spacing="12" alignment="TOP_CENTER" style="-fx-border-color: #A4F796">
+                            <Label text="Nuevo cliente"  style="-fx-background-color: #FFFFFF; -fx-font-size: 15pt; -fx-text-fill:#A4F796; -fx-font-weight:bold;"/>
+                            <Label text="Ingrese la informacion " alignment="CENTER"  style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;"/>
+                            <JFXTextField fx:id="txtNC" promptText="Nombre Completo" labelFloat="true" alignment="CENTER" layoutX="75.0" layoutY="147.0" maxWidth="500.0" minWidth="233.0" prefHeight="31.0" prefWidth="300.0" style=" -fx-border-color: #A4F796">
+                                <font>
+                                    <Font name="Roboto Medium" size="14.0" />
+                                </font>
+                            </JFXTextField>
+                            <JFXTextField fx:id="txtDC" promptText="Domicilio" labelFloat="true" alignment="CENTER" layoutX="75.0" layoutY="147.0" maxWidth="500.0" minWidth="233.0" prefHeight="31.0" prefWidth="300.0" style=" -fx-border-color: #A4F796">
+                                <font>
+                                    <Font name="Roboto Medium" size="14.0" />
+                                </font>
+                            </JFXTextField>
+                            <JFXTextField fx:id="txtTC" promptText="Telefono" labelFloat="true" alignment="CENTER" layoutX="75.0" layoutY="147.0" maxWidth="500.0" minWidth="233.0" prefHeight="31.0" prefWidth="300.0" style=" -fx-border-color: #A4F796">
+                                <font>
+                                    <Font name="Roboto Medium" size="14.0" />
+                                </font>
+                            </JFXTextField>
+                            <JFXTextField fx:id="txtEC" promptText="Email" labelFloat="true" alignment="CENTER" layoutX="75.0" layoutY="147.0" maxWidth="500.0" minWidth="233.0" prefHeight="31.0" prefWidth="300.0" style=" -fx-border-color: #A4F796">
+                                <font>
+                                    <Font name="Roboto Medium" size="14.0" />
+                                </font>
+                            </JFXTextField>
+                            <JFXTextField fx:id="txtLC" promptText="Limite crédito" labelFloat="true" alignment="CENTER" layoutX="75.0" layoutY="147.0" maxWidth="500.0" minWidth="233.0" prefHeight="31.0" prefWidth="300.0" style=" -fx-border-color: #A4F796">
+                                <font>
+                                    <Font name="Roboto Medium" size="14.0" />
+                                </font>
+                            </JFXTextField>
+                            <HBox spacing="12" alignment="CENTER">
+                                <JFXButton fx:id="btnAC" text="Guadar cliente" alignment="CENTER" prefHeight="5" maxWidth="150" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#FFFFFF;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
                                     <graphic>
                                         <FontAwesomeIconView fill="green" glyphName="CHECK" glyphSize="15" />
                                     </graphic>
@@ -90,10 +140,149 @@
                                         <Font name="Roboto Bold" size="14.0" />
                                     </font>
                                 </JFXButton>
+                                <JFXButton fx:id="btnCC" text="Cancelar" alignment="CENTER" prefHeight="5" maxWidth="150" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#FFFFFF;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <graphic>
+                                        <FontAwesomeIconView fill="red" glyphName="CLOSE" glyphSize="15" />
+                                    </graphic>
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                            </HBox>
+                        </VBox>
+                        <VBox fx:id="VBE" spacing="8" visible="false">
+                            <HBox spacing="8">
+                                <Label text="Estado de cuenta"  maxWidth="1500" style="-fx-background-color: #FFFFFF; -fx-font-size: 12pt; -fx-text-fill:#A4F796; -fx-font-weight:bold;"/>
+                                <Label fx:id="lblNC" text="Nombre " alignment="CENTER"  style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;"/>
+                            </HBox>
+                                <HBox spacing="8">
+                                    <Label text="Saldo actual"  maxWidth="900" style="-fx-background-color: #FFFFFF; -fx-font-size: 12pt; -fx-text-fill:#A4F796; -fx-font-weight:bold;"/>
+                                    <Label fx:id="lblCC" text="saldo " alignment="CENTER"  style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;"/>
+                                    <Separator orientation="HORIZONTAL" maxWidth="500" prefWidth="500" visible="false"></Separator>
+                                    <Label text="Limite de crédito de cuenta"   style="-fx-background-color: #FFFFFF; -fx-font-size: 12pt; -fx-text-fill:#A4F796; -fx-font-weight:bold;"/>
+                                    <Label fx:id="lblC" text="saldo " alignment="CENTER"  style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;"/>
+                                </HBox>
+                            <Separator orientation="HORIZONTAL"></Separator>
+                            <HBox spacing="15">
+                                <HBox spacing="12">
+                                    <!--/*CARGAR LAS FACRURAS COMPRADAS A CREDITO*/
+    SELECT F.noFactura,F.fecha,F.total }
+    FROM factura F INNER JOIN clientes C ON F.idClie=C.idClie
+    WHERE C.idClie=1 and F.idMetPago='C';-->
+                                    <TableView fx:id="tblFactura" VBox.vgrow="ALWAYS">
+                                        <columns>
+                                            <TableColumn fx:id="tblNN" text="No. Factura" prefWidth="100">
+                                                <cellValueFactory>
+                                                    <PropertyValueFactory property="noFactura"></PropertyValueFactory>
+                                                </cellValueFactory>
+                                            </TableColumn>
+                                            <TableColumn fx:id="tblNC" text="Fecha compra" prefWidth="100">
+                                                <cellValueFactory>
+                                                    <PropertyValueFactory property="fecha"></PropertyValueFactory>
+                                                </cellValueFactory>
+                                            </TableColumn>
+                                            <TableColumn fx:id="tblTU" text="Total" prefWidth="100">
+                                                <cellValueFactory>
+                                                    <PropertyValueFactory property="total"></PropertyValueFactory>
+                                                </cellValueFactory>
+                                            </TableColumn>
+                                        </columns>
+                                    </TableView>
+
+                                </HBox>
+                                    <VBox spacing="12">
+                                        <JFXButton fx:id="btnVD" text="Ver detalles" alignment="CENTER" prefHeight="5" maxWidth="120" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#FFFFFF;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                            <graphic>
+                                                <FontAwesomeIconView fill="green" glyphName="EYE" glyphSize="15" />
+                                            </graphic>
+                                            <font>
+                                                <Font name="Roboto Bold" size="14.0" />
+                                            </font>
+                                            <tooltip>
+                                                <Tooltip text="Ver detalles de esta factura"></Tooltip>
+                                            </tooltip>
+
+                                        </JFXButton>
+                                        <JFXButton fx:id="btnVP" text="Ver pagos" alignment="CENTER" prefHeight="5" maxWidth="120" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#FFFFFF;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                            <graphic>
+                                                <FontAwesomeIconView fill="green" glyphName="EYE_SLASH" glyphSize="15" />
+                                            </graphic>
+                                            <font>
+                                                <Font name="Roboto Bold" size="14.0" />
+                                            </font>
+                                            <tooltip>
+                                                <Tooltip text="Ver pagos de esta factura"></Tooltip>
+                                            </tooltip>
+
+                                        </JFXButton>
+                                        <JFXButton fx:id="btnAF" text="Abonar" alignment="CENTER" prefHeight="5" maxWidth="120" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#FFFFFF;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                            <graphic>
+                                                <FontAwesomeIconView fill="green" glyphName="MONEY" glyphSize="15" />
+                                            </graphic>
+                                            <font>
+                                                <Font name="Roboto Bold" size="14.0" />
+                                            </font>
+                                            <tooltip>
+                                                <Tooltip text="Abonar a esta factura"></Tooltip>
+                                            </tooltip>
+                                        </JFXButton>
+
+                                    </VBox>
+                                <!--SELECT descripcion, D.precio,D.cantidad, (D.precio*D.cantidad) AS total
+FROM detalle D INNER JOIN factura F on D.noFactura=F.noFactura INNER JOIN  clientes C ON F.idClie=C.idClie INNER JOIN productos P ON D.codigo=P.codigo
+WHERE C.idClie=? and F.idMetPago='C';-->
+                                <TableView fx:id="tblDetalles" VBox.vgrow="ALWAYS" visible="false">
+                                    <columns>
+                                        <TableColumn fx:id="tblN" text="Descripción" prefWidth="100">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="descripcion"></PropertyValueFactory>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="tblgN" text="Precio" prefWidth="100">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="precio"></PropertyValueFactory>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="tblT" text="Cantidad" prefWidth="100">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="cantidad"></PropertyValueFactory>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="tblTo" text="Total" prefWidth="100">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="total"></PropertyValueFactory>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                </TableView>
+                                <!--SELECT numPago,fecha,abono
+FROM pagos
+WHERE noFactura=? and idClie=?-->
+                                <TableView fx:id="tblPagos" VBox.vgrow="ALWAYS" visible="false">
+                                    <columns>
+                                        <TableColumn fx:id="tbl" text="No. pago" prefWidth="100">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="numPago"></PropertyValueFactory>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="tblgP" text="Fecha" prefWidth="100">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="fecha"></PropertyValueFactory>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="tblTC" text="Abono" prefWidth="100">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="abono"></PropertyValueFactory>
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                </TableView>
+
+                            </HBox>
 
                         </VBox>
                     </children>
-                </VBox>
+                </StackPane>
             </children>
         </AnchorPane>
         <!--codigo varchar(30) not null,

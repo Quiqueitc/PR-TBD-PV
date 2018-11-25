@@ -117,11 +117,11 @@ public class TransactionDAO {
             //System.out.println("MANAGER ID: " + cstmt.getInt(2));
         }
     }
-    public ObservableList<String> LlenarClientes() {
+    public ObservableList<String> LlenarClientes(String B) {
         ObservableList<String> transactions = FXCollections.observableArrayList();
         try {
 
-            String query = "SELECT nomCompleto FROM clientes;";
+            String query = "SELECT nomCompleto FROM clientes WHERE nomCompleto LIKE '"+B+"%'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             String p = null;
