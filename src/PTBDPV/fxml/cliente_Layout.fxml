@@ -31,9 +31,6 @@
                             <graphic>
                                 <MaterialDesignIconView fill="forestgreen" glyphName="CHART_LINE" glyphSize="15" />
                             </graphic>
-                            <tooltip>
-                                <Tooltip text="Insertar varios articulos del mismo tipo"></Tooltip>
-                            </tooltip>
                             <font>
                                 <Font name="Roboto Bold" size="14.0" />
                             </font>
@@ -42,9 +39,6 @@
                             <graphic>
                                 <MaterialDesignIconView fill="forestgreen" glyphName="ACCOUNT_PLUS" glyphSize="15" />
                             </graphic>
-                            <tooltip>
-                                <Tooltip text="Para articulos no registrados"></Tooltip>
-                            </tooltip>
                             <font>
                                 <Font name="Roboto Bold" size="14.0" />
                             </font>
