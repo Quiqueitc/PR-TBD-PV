@@ -31,6 +31,7 @@ public class cont_inicioL implements Initializable {
     Label lblfecha;
     @FXML
     VBox VBV,VBP,VBL,VBI,VBC,VBR;
+
     static datEmpleados datEmpleados; //DATOS DEL USUARIO EN CURSO
 
     @Override

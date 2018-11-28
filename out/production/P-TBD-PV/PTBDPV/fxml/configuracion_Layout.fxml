@@ -6,8 +6,185 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <BorderPane fx:id="BPC" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
+            >
+    <top>
+        <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+            <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10" >
+                <HBox spacing="10">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text=" Configuración" maxWidth="1500" prefWidth="1500" style="-fx-background-color: #F76A79; -fx-font-size: 15pt; -fx-text-fill:#FFFFFF; -fx-font-weight:bold;"/>
+                    </HBox>
+                </HBox>
+                <VBox spacing="15">
+                    <HBox spacing="5">
+                        <JFXButton fx:id="btnCS" text="Configuración sucursal" alignment="CENTER" prefHeight="5" maxWidth="180"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                            <graphic>
+                                <FontAwesomeIconView fill="crimson" glyphName="DRIVERS_LICENSE_ALT" glyphSize="15" />
+                            </graphic>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnAE" text="Usuarios" alignment="CENTER" prefHeight="5" maxWidth="180"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                            <graphic>
+                                <FontAwesomeIconView fill="cornflowerblue" glyphName="CLONE" glyphSize="15" />
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="Para articulos no registrados"></Tooltip>
+                            </tooltip>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnBus" text="F10 Buscar" alignment="CENTER" prefHeight="5" maxWidth="100"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                            <graphic>
+                                <FontAwesomeIconView fill="cornflowerblue" glyphName="SEARCH" glyphSize="15" />
+                            </graphic>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnMay" text="F11 Mayoreo" alignment="CENTER" prefHeight="5" maxWidth="120"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                            <graphic>
+                                <FontAwesomeIconView fill="cornflowerblue" glyphName="STAR" glyphSize="15" />
+                            </graphic>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnEnt" text="F7 Entradas" alignment="CENTER" prefHeight="5" maxWidth="120"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                            <graphic>
+                                <FontAwesomeIconView fill="cornflowerblue" glyphName="MONEY" glyphSize="15" />
+                            </graphic>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSal" text="F8 Salidas" alignment="CENTER" prefHeight="5" maxWidth="100"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                            <graphic>
+                                <MaterialDesignIconView fill="cornflowerblue" glyphName="EXIT_TO_APP" glyphSize="15" />
+                            </graphic>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnBor" text="DEL Borrar" alignment="CENTER" prefHeight="5" maxWidth="100"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                            <graphic>
+                                <FontAwesomeIconView fill="cornflowerblue" glyphName="TRASH" glyphSize="15" />
+                            </graphic>
+                            <font>
+                                <Font name="Roboto Bold" size="14.0" />
+                            </font>
+                            <tooltip>
+                                <Tooltip text="Borrar arcticulo de la compra"></Tooltip>
+                            </tooltip>
+                        </JFXButton>
+
+                    </HBox>
+                </VBox>
+            </VBox>
+        </AnchorPane>
+    </top>
+    <center>
+        <!--codigo varchar(30) not null,
+						descripcion varchar(40),
+						preCosto money,
+						preVenta money,
+						preMayoreo money,
+						noExistencia real,
+						exiMinima real,
+						ganancia real,
+						idUniMed varchar(1) not null,
+						idDepartamento smallint not null,
+						idProv smallint not null,-->
+        <VBox alignment="CENTER" spacing="10">
+            <Label fx:id="lbltic" text="Ticket - 1"  style="-fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;"></Label>
+            <TableView fx:id="tblVen" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="tblNN" text="Código producto" prefWidth="120">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="codigo"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="tblNC" text="Descripción producto" prefWidth="250">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="descripcion"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="tblTU" text="Precio venta" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="preVenta"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="tblTV" text="Cantidad" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="cantidad"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="tblTI" text="Importe" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="total"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="tblTE" text="Existencia" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="noExistencia"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+                <tooltip>
+                    <Tooltip text="Presione dos veces el regis"></Tooltip>
+                </tooltip>
+            </TableView>
+        </VBox>
+
+    </center>
+    <bottom>
+        <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+            <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10">
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <Label fx:id="lblNPV" text="0"  style="-fx-font-size: 11pt; -fx-text-fill:#AED6F1; -fx-font-weight:bold;"></Label>
+                    <Label text="Productos vendidos"  style="-fx-font-size: 11pt; -fx-text-fill:#AED6F1; -fx-font-weight:bold;"></Label>
+                    <JFXButton fx:id="btnCob" text="F12 Cobrar" alignment="CENTER" prefHeight="30" maxWidth="150" maxHeight="30"   contentDisplay="LEFT" prefWidth="220" style="-fx-font-size: 11pt; -fx-text-fill:#27A122; -fx-font-weight:bold; -fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" >
+                        <graphic>
+                            <FontAwesomeIconView fill="green" glyphName="DOLLAR" glyphSize="15" />
+                        </graphic>
+                        <font>
+                            <Font name="Roboto Bold" size="14.0" />
+                        </font>
+                        <tooltip>
+                            <Tooltip text="Cobrar compra"></Tooltip>
+                        </tooltip>
+                    </JFXButton>
+                    <JFXTextField fx:id="txtTotal" text="0.00" prefWidth="200" prefHeight="40" style="-fx-font-size: 20pt; -fx-text-fill:#27A122; -fx-font-weight:bold; -fx-border-color: #ADCAF2; -fx-background-color: #D6EAF8;" alignment="CENTER">
+                        <tooltip>
+                            <Tooltip text="Total a cobrar"></Tooltip>
+                        </tooltip>
+                    </JFXTextField>
+                </HBox>
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <JFXButton fx:id="btnVDD" text="Ventas del día y devoluciones" alignment="CENTER" prefHeight="5" maxWidth="150" maxHeight="60"   contentDisplay="LEFT" prefWidth="250" style="-fx-font-size: 6pt; -fx-text-fill:#000000; -fx-font-weight:bold; -fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" >
+                        <graphic>
+                            <FontAwesomeIconView fill="green" glyphName="BAR_CHART" glyphSize="15" />
+                        </graphic>
+                        <tooltip>
+                            <Tooltip text="Cobrar compra"></Tooltip>
+                        </tooltip>
+                    </JFXButton>
+
+                </HBox>
+            </VBox>
+
+        </AnchorPane>
+
+    </bottom>
 
 </BorderPane>
