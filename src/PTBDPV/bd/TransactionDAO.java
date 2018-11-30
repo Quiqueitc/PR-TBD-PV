@@ -1,7 +1,6 @@
 package PTBDPV.bd;;
 
-import PTBDPV.datos.datEmpleados;
-import PTBDPV.datos.datSucursal;
+import PTBDPV.datos.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
@@ -24,19 +23,27 @@ public class TransactionDAO {
     }
 
     public  int usuarioNull () throws SQLException {
-        try(CallableStatement cstmt = conn.prepareCall("{call dbo.usuNull(?)}");) {
+        try(CallableStatement cstmt = conn.prepareCall("{call usuNull(?)}");) {
            // cstmt.setInt(1, 5);
             cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
             cstmt.execute();
+            System.out.println("En call es "+cstmt.getInt(1) );
             return cstmt.getInt(1);
+
             //System.out.println("MANAGER ID: " + cstmt.getInt(2));
         }
+        catch (Exception e)
+        {
+            System.out.println("Cai");
+        }
+        return 0;
     }
     public   int sucursalNull () throws SQLException {
-        try(CallableStatement cstmt = conn.prepareCall("{call dbo.sucuNull(?)}");) {
+        try(CallableStatement cstmt = conn.prepareCall("{call bdpv.sucuNull(?)}");) {
            // cstmt.setInt(1, 5);
             cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
             cstmt.execute();
+            System.out.println("En call es S"+cstmt.getInt(1) );
             return cstmt.getInt(1);
             //System.out.println("MANAGER ID: " + cstmt.getInt(2));
         }
@@ -91,6 +98,56 @@ public class TransactionDAO {
         } catch (Exception e) {
             // deshacer la ejecucion en caso de error
             conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            // cerrar la conexion
+           // conn.close();
+        }
+        return false;
+    }
+  /*  public   Boolean insFacP (datProductos datProductos) throws SQLException {
+        try(CallableStatement cstmt = conn.prepareCall("{call dbo.ACT_PRO(?,?,?,?)}")) {
+            cstmt.setString(1, datProductos.getCodigo());
+            cstmt.setDouble(2, datProductos.getNoExistencia());
+            cstmt.setInt(3, datProductos.getIdProv());
+            cstmt.setString(4, datProductos.getDescripcion());
+            cstmt.execute();
+            return true;
+        }
+    }*/
+  public  Boolean insFaPr (String NU) throws SQLException {
+      try(CallableStatement cstmt = conn.prepareCall("{call INS_FAC(?)}");) {
+          cstmt.setString(1, NU);
+          //cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
+          cstmt.execute();
+          System.out.println("Estoy en call  ");
+          return true;
+
+          //System.out.println("MANAGER ID: " + cstmt.getInt(2));
+      }
+      catch (Exception e)
+      {
+          System.out.println("Cai");
+      }
+      return false;
+  }
+
+    public Boolean insFaP (datProductos datProductos) throws SQLException {
+        try {
+                conn.setAutoCommit(false);
+                CallableStatement cstmt = conn.prepareCall("{call ACT_PRO(?,?,?,?)}");
+                cstmt.setString(1, datProductos.getCodigo());
+                cstmt.setDouble(2,datProductos.getNoExistencia());
+                cstmt.setDouble(3,datProductos.getIdProv());
+                cstmt.setString(4,datProductos.getDescripcion());
+                cstmt.execute();
+                conn.commit();
+            return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Deshacer");
+//            conn.rollback();
             // informar por consola
             e.printStackTrace();
         } finally {
@@ -185,16 +242,61 @@ public class TransactionDAO {
         }
         return null;
     }
+    public ObservableList<datProductos> LlenarTblVen(int NF) {
+        ObservableList<datProductos> transactions = FXCollections.observableArrayList();
+        try {
 
-    public Boolean ELIMINARPENSIONADO(int NP) {
+            String query = "SELECT P.codigo,P.descripcion,D.precio,D.cantidad, (D.precio*D.cantidad) as Importe, P.noExistencia FROM productos P INNER JOIN detalle D ON P.codigo=D.codigo INNER JOIN factura F ON D.noFactura=F.noFactura WHERE F.noFactura='"+NF+"'";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datProductos p = null;
+            while(rs.next()) {
+                p = new datProductos(rs.getString("P.codigo"),
+                        rs.getString("P.descripcion"),
+                        rs.getDouble("D.precio"),
+                        rs.getDouble("D.cantidad"),
+                        rs.getDouble("Importe"),
+                        rs.getDouble("P.noExistencia"));
+                  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de empleados...");
+        }
+        return transactions;
+    }
+
+    public Boolean creUsuario(String id,String pas) {
 
        try {
-           String query = "DELETE FROM pensionados WHERE NumPensionado='"+NP+"';";
+           String query = "GRANT ALL PRIVILEGES ON bdpv.* TO '"+id+"'@'%' IDENTIFIED BY '"+pas+"' WITH GRANT OPTION;";
            PreparedStatement st = conn.prepareStatement(query);
+         //  crePri(id,pas);
            st.execute();
            return true;
        } catch (SQLException e) {
-         //  System.out.println(e.getMessage());
+           System.out.println("Error al crear usuario"+e.getMessage());
+           alert=new Alert(Alert.AlertType.ERROR);
+           if(e.getErrorCode()==1451)
+           {
+               alert.setContentText("Este pensionado no se puede eliminar porque está siendo usado en otras tablas");
+               alert.show();
+           }
+       }
+       return false;
+   }
+    public Boolean crePri(String id,String pas) {
+
+       try {
+           String query = "GRANT USAGE ON bdpv.* TO '"+id+"'@'%' IDENTIFIED BY '"+pas+"';";
+           PreparedStatement st = conn.prepareStatement(query);
+           creUsuario(id,pas);
+           st.execute();
+           return true;
+       } catch (SQLException e) {
+           System.out.println("Error al dar privi usuario   "+e.getMessage()+ "  "+e.getErrorCode());
            alert=new Alert(Alert.AlertType.ERROR);
            if(e.getErrorCode()==1451)
            {
@@ -232,6 +334,57 @@ public class TransactionDAO {
                 alert.show();
             }
             System.out.println("error  "+ e);
+        }
+        return false;
+    }
+    public int NoFactura() //REgresa el numero de factura
+    {
+        int p=0;
+        ResultSet rs = null;
+        try {
+
+            String query = "SELECT IFNULL((MAX(noFactura)+1),1) AS NF from factura;";
+            Statement st = conn.createStatement();
+             rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getInt("NF");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public Boolean insEmpleado(datEmpleados datEmpleados) {
+        try {
+            String query = "INSERT INTO empleados VALUES(?,?,?,?,?,?,?);";
+            PreparedStatement st =  conn.prepareStatement(query);
+            st.setString(1, datEmpleados.getIdUsu());
+            st.setString(2,datEmpleados.getNombre());
+            st.setString(3,datEmpleados.getDomicilio());
+            st.setString(4,datEmpleados.getTelefono());
+            st.setString(5,datEmpleados.getContrasena());
+            st.setDate(6,datEmpleados.getFecContrato());
+            st.setString(7,datEmpleados.getIdTip());
+            crePri(datEmpleados.getIdUsu(),datEmpleados.getContrasena());
+//            creUsuario(datEmpleados.getIdUsu(),datEmpleados.getContrasena());
+            st.execute();
+            return true;
+        } catch (SQLException e) {
+            alert=new Alert(Alert.AlertType.ERROR);
+            if(e.getErrorCode()==1062)
+            {
+                alert.setContentText("La clave de autor ya existe");
+                alert.show();
+            }
+            if(e.getErrorCode()==1406)
+            {
+                alert.setContentText("La clave no debe ser mayor de 2 caracteres");
+                alert.show();
+            }
+            System.out.println("Error "+e);
         }
         return false;
     }
@@ -375,23 +528,6 @@ public class TransactionDAO {
         return false;
     }
 
-    public double TOTALUSUARIO() {
-        double p=0;
-        try {
-
-            String query = "SELECT SUM(total) AS TOTAL FROM usuario";
-            Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery(query);
-            while (rs.next()) {
-                p=rs.getDouble("TOTAL");
-            }
-            rs.close();
-            st.close();
-        } catch(SQLException ex){
-            ex.printStackTrace();
-        }
-        return p;
-    }
     public int TOTALPER(String ES) {
         int p=0;
         try {
@@ -426,6 +562,7 @@ public class TransactionDAO {
         }
         return p;
     }
+
     public int DIFERENCIAMESES(Date d1,Date d2) {
         int p=0;
         try {

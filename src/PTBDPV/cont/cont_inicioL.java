@@ -1,23 +1,15 @@
 package PTBDPV.cont;
 
 import com.jfoenix.controls.JFXButton;
-import com.sun.org.glassfish.gmbal.IncludeSubclass;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import PTBDPV.datos.datEmpleados;
-import javafx.stage.StageStyle;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -31,9 +23,11 @@ public class cont_inicioL implements Initializable {
     Label lblfecha;
     @FXML
     VBox VBV,VBP,VBL,VBI,VBC,VBR;
+    private static datEmpleados datEmpleados; //DATOS DEL USUARIO EN CURSO
 
-    static datEmpleados datEmpleados; //DATOS DEL USUARIO EN CURSO
 
+    //datTrans datTrans=new datTrans(datEmpleados);
+    //datComp datComp= new datComp(datEmpleados);
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         btnTE.setOnAction(handler);
@@ -51,6 +45,7 @@ public class cont_inicioL implements Initializable {
                     switch (event.getCode()) {
                         case F1:
                             MVenta();
+
                             break;
                         case F2:
                             MCliente();
@@ -69,6 +64,7 @@ public class cont_inicioL implements Initializable {
         );
 
     }
+
     public cont_inicioL(datEmpleados datEmpleados){
         this.datEmpleados=datEmpleados;
     }
@@ -121,6 +117,7 @@ public class cont_inicioL implements Initializable {
         VBR.setVisible(false);
         VBP.setVisible(false);
         VBV.setVisible(true);
+        //cont_ventasL cont_ventasL;
     }
     public  void MCliente(){
         VBI.setVisible(false);

@@ -27,7 +27,7 @@
                     <HBox spacing="5">
                         <JFXButton fx:id="btnCS" text="Configuración sucursal" alignment="CENTER" prefHeight="5" maxWidth="180"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
                             <graphic>
-                                <FontAwesomeIconView fill="crimson" glyphName="DRIVERS_LICENSE_ALT" glyphSize="15" />
+                                <FontAwesomeIconView fill="crimson" glyphName="EDIT" glyphSize="15" />
                             </graphic>
                             <font>
                                 <Font name="Roboto Bold" size="14.0" />

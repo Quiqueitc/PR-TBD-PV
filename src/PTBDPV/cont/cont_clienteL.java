@@ -1,6 +1,6 @@
 package PTBDPV.cont;
 
-import PTBDPV.bd.SQL;
+import PTBDPV.bd.MySQL;
 import PTBDPV.bd.TransactionDAO;
 import PTBDPV.datos.datDetalles;
 import PTBDPV.datos.datFactura;
@@ -8,7 +8,6 @@ import PTBDPV.datos.datPagos;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.skins.JFXListViewSkin;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -45,7 +44,7 @@ public class cont_clienteL implements Initializable {
     TableView <datPagos>tblPagos;
     String B;
     ObservableList<String> listItems = FXCollections.observableArrayList();
-    TransactionDAO transactionDAO=new TransactionDAO(SQL.getConnection());
+    TransactionDAO transactionDAO=new TransactionDAO(MySQL.getConnection());
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         btnEsC.setOnAction(handler);

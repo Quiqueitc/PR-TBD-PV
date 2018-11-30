@@ -141,7 +141,7 @@
                         <VBox fx:id="VBI" visible="false">
                             <fx:include fx:id="inventario" source="inventario_Layout.fxml"></fx:include>
                         </VBox>
-                        <VBox fx:id="VBC" visible="false">
+                       <VBox fx:id="VBC" visible="false">
                             <fx:include fx:id="configuracion" source="configuracion_Layout.fxml"></fx:include>
                         </VBox>
                         <VBox fx:id="VBR" visible="false">

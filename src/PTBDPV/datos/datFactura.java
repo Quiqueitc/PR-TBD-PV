@@ -7,13 +7,15 @@ public class datFactura {
     Date fecha;
     Double total;
     String idUsu,idMetPago;
-    public datFactura(int noFactura, Date fecha, Double total, int idClie,String idUsu, String idMetPago) {
+    String estatus;
+    public datFactura(int noFactura, Date fecha, Double total, int idClie,String idUsu, String idMetPago, String estatus) {
         this.noFactura = noFactura;
         this.idClie = idClie;
         this.fecha = fecha;
         this.total = total;
         this.idUsu = idUsu;
         this.idMetPago = idMetPago;
+        this.estatus=estatus;
     }
 
 
@@ -63,6 +65,14 @@ public class datFactura {
 
     public void setIdMetPago(String idMetPago) {
         this.idMetPago = idMetPago;
+    }
+
+    public String getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(String estatus) {
+        this.estatus = estatus;
     }
 
 

@@ -16,7 +16,7 @@
 <?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml" fx:id="BPV" fx:controller="PTBDPV.cont.cont_ventasL"          >
+            xmlns:fx="http://javafx.com/fxml" fx:id="BPV" fx:controller="PTBDPV.cont.cont_ventasL">
     <top>
         <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
             <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10" >
@@ -189,7 +189,7 @@
                             <Tooltip text="Cobrar compra"></Tooltip>
                         </tooltip>
                     </JFXButton>
-                    <JFXTextField fx:id="txtTotal" text="0.00" prefWidth="200" prefHeight="40" style="-fx-font-size: 20pt; -fx-text-fill:#27A122; -fx-font-weight:bold; -fx-border-color: #ADCAF2; -fx-background-color: #D6EAF8;" alignment="CENTER">
+                    <JFXTextField fx:id="txtTotal" editable="false" text="0.00" prefWidth="200" prefHeight="40" style="-fx-font-size: 20pt; -fx-text-fill:#27A122; -fx-font-weight:bold; -fx-border-color: #ADCAF2; -fx-background-color: #D6EAF8;" alignment="CENTER">
                         <tooltip>
                             <Tooltip text="Total a cobrar"></Tooltip>
                         </tooltip>

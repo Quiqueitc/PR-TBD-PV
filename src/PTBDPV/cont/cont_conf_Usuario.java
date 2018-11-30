@@ -1,6 +1,5 @@
 package PTBDPV.cont;
 
-import PTBDPV.bd.SQL;
 import PTBDPV.bd.TransactionDAO;
 import PTBDPV.datos.datEmpleados;
 import PTBDPV.datos.datSucursal;
@@ -8,16 +7,19 @@ import com.jfoenix.controls.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import PTBDPV.bd.MySQL;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.ResourceBundle;
 
 public class cont_conf_Usuario implements Initializable{
@@ -39,7 +41,7 @@ public class cont_conf_Usuario implements Initializable{
     String NN,NO,DO,TE,PA, RFC,NOS,DOS,TES,CS,EN;
     char TU='A';
     java.sql.Date fecContra;
-    TransactionDAO transactionDAO=new TransactionDAO(SQL.getConnection());
+    TransactionDAO transactionDAO=new TransactionDAO(MySQL.getConnection());
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         btnInicio.setOnAction(handler);
@@ -59,7 +61,7 @@ public class cont_conf_Usuario implements Initializable{
                if(NN.trim().length()>0 && PA.trim().length()>0)
                {
                    try {
-                       if(transactionDAO.insUsuari(datEmpleados))
+                       if(transactionDAO.insEmpleado(datEmpleados))
                        {
                            cbEncargado.setItems(transactionDAO.LlenarEncargados('A'));
                            vbCU.setVisible(false);
@@ -92,8 +94,41 @@ public class cont_conf_Usuario implements Initializable{
                         alert=new Alert(Alert.AlertType.INFORMATION);
                         alert.setContentText("Se registraron con éxito las configuraciones principales");
                         alert.show();
-                        SQL sql=new SQL(NN,PA);
-                        transactionDAO=new TransactionDAO(SQL.getConnection());
+                            MySQL mySQL=new MySQL(NN,PA);
+                        //MySQL =new SQL(NN,PA);
+                        transactionDAO=new TransactionDAO(MySQL.getConnection());
+                     
+                       // Stage primaryStage = new Stage();
+                        Stage stage =new Stage();
+                        FXMLLoader loader;
+                        Parent parent;
+                        //cont_inicioL cont_inicioL=new cont_inicioL(transactionDAO.datEmpleado(userName));
+                        // datComp datComp=new datComp(transactionDAO.datEmpleado(userName));
+                        // cont_inicioL.setDatEmpleados(transactionDAO.datEmpleado(userName));
+                        stage.setResizable(true);
+                        stage.setMaximized(false);
+                        stage.initStyle(StageStyle.TRANSPARENT);
+                        loader=new FXMLLoader(getClass().getResource("../fxml/login_Register_Layout.fxml"));
+                        // loader.setController(cont_inicioL);
+                        try {
+                            parent= loader.load();
+                            Scene scene=new Scene(parent);
+                            stage.setScene(scene);
+                            stage.show();
+                            closeStage();
+                            //System.exit(0);
+                        }
+                        catch (IOException et)
+                        {
+                            System.out.println(et);
+                        }
+                           /* Parent root = FXMLLoader.load(getClass().getResource("fxml/login_Register_Layout.fxml"));
+                            //primaryStage.setTitle("Hello World");
+                            primaryStage.setMaximized(false);
+                            primaryStage.initStyle(TRANSPARENT);
+                            primaryStage.setResizable(false);
+                            primaryStage.setScene(new Scene(root));
+                            primaryStage.show();*/
                     }
                     else {
                         alert=new Alert(Alert.AlertType.ERROR);

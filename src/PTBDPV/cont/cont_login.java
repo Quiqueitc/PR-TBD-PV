@@ -1,7 +1,7 @@
 package PTBDPV.cont;
 
-import PTBDPV.bd.SQL;
 import PTBDPV.bd.TransactionDAO;
+import PTBDPV.datos.datComp;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -21,8 +21,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import PTBDPV.bd.MySQL;
 
 import static javafx.stage.StageStyle.TRANSPARENT;
+
 
 public class cont_login implements Initializable {
     @FXML
@@ -32,7 +34,7 @@ public class cont_login implements Initializable {
     @FXML
     JFXPasswordField JtxPas;
     String userName,passUser;
-    TransactionDAO transactionDAO=new TransactionDAO(SQL.getConnection());
+    TransactionDAO transactionDAO=new TransactionDAO(MySQL.getConnection());
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         btnInicio.setOnAction(handler);
@@ -75,14 +77,16 @@ public class cont_login implements Initializable {
         passUser=JtxPas.getText().toString();
         if(userName.trim().length()>0 && passUser.trim().length()>0)
         {
-            SQL sql=new SQL(userName,passUser);
-            sql.con=null;
-            transactionDAO=new TransactionDAO(SQL.getConnection());
-            if(SQL.getConnection()!=null){
+            MySQL mySQL=new MySQL(userName,passUser);
+            mySQL.conn=null;
+            transactionDAO=new TransactionDAO(MySQL.getConnection());
+            if(MySQL.getConnection()!=null){
                 Stage stage =new Stage();
                 FXMLLoader loader;
                 Parent parent;
                 cont_inicioL cont_inicioL=new cont_inicioL(transactionDAO.datEmpleado(userName));
+                datComp datComp=new datComp(transactionDAO.datEmpleado(userName));
+               // cont_inicioL.setDatEmpleados(transactionDAO.datEmpleado(userName));
                 stage.setResizable(true);
                 stage.setMaximized(true);
                 stage.initStyle(StageStyle.DECORATED);
