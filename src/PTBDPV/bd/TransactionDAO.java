@@ -4,6 +4,7 @@ import PTBDPV.datos.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import jdk.nashorn.internal.runtime.ECMAErrors;
@@ -11,6 +12,7 @@ import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -37,6 +39,14 @@ public class TransactionDAO {
             System.out.println("Cai");
         }
         return 0;
+    }
+    public   int VER_PRO (String codi) throws SQLException {
+        try(CallableStatement cstmt = conn.prepareCall("{CALL VER_PRO (?,?)}");) {
+            cstmt.setString(1, codi);
+            cstmt.registerOutParameter(2, java.sql.Types.INTEGER);
+            cstmt.execute();
+            return cstmt.getInt(2);
+        }
     }
     public   int sucursalNull () throws SQLException {
         try(CallableStatement cstmt = conn.prepareCall("{call bdpv.sucuNull(?)}");) {
@@ -134,16 +144,151 @@ public class TransactionDAO {
   }
 
     public Boolean insFaP (datProductos datProductos) throws SQLException {
+      Alert alert;
         try {
                 conn.setAutoCommit(false);
-                CallableStatement cstmt = conn.prepareCall("{call ACT_PRO(?,?,?,?)}");
+                CallableStatement cstmt = conn.prepareCall("{call ACT_PRO(?,?,?,?,?)}");
                 cstmt.setString(1, datProductos.getCodigo());
                 cstmt.setDouble(2,datProductos.getNoExistencia());
                 cstmt.setDouble(3,datProductos.getIdProv());
                 cstmt.setString(4,datProductos.getDescripcion());
+                cstmt.registerOutParameter(5, Types.VARCHAR);
                 cstmt.execute();
                 conn.commit();
-            return true;
+                if(!cstmt.getNString(5).equalsIgnoreCase("e"))
+                {
+                    alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText(cstmt.getNString(5));
+                    alert.show();
+                    return false;
+                }
+                else
+                    return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Deshacer");
+//            conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            conn.setAutoCommit(true);
+        }
+        return false;
+    }
+    public Boolean updFAC (int NC,int NF) throws SQLException {
+      Alert alert;
+        try {
+                conn.setAutoCommit(false);
+                CallableStatement cstmt = conn.prepareCall("{call VER_CRE(?,?,?)}");
+                cstmt.setInt(1, NC);
+                cstmt.setInt(2,NF);
+                cstmt.registerOutParameter(3, Types.VARCHAR);
+                cstmt.execute();
+                conn.commit();
+                if(!cstmt.getNString(3).equalsIgnoreCase("e"))
+                {
+                    alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText(cstmt.getNString(3));
+                    alert.show();
+                    return false;
+                }
+                else
+                    return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Deshacer");
+//            conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            conn.setAutoCommit(true);
+        }
+        return false;
+    }
+    public Boolean delPRO (String cod, double cant,int NF,int ND) throws SQLException {
+      Alert alert;
+        try {
+                conn.setAutoCommit(false);
+                CallableStatement cstmt = conn.prepareCall("{call DEL_DP(?,?,?,?,?)}");
+                cstmt.setString(1, cod);
+                cstmt.setDouble(2,cant);
+                cstmt.setInt(3,NF);
+                cstmt.setInt(4,ND);
+                cstmt.registerOutParameter(5, Types.VARCHAR);
+                cstmt.execute();
+                conn.commit();
+                if(!cstmt.getNString(5).equalsIgnoreCase("e"))
+                {
+                    alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText(cstmt.getNString(5));
+                    alert.show();
+                    return false;
+                }
+                else
+                    return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Deshacer");
+//            conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            conn.setAutoCommit(true);
+        }
+        return false;
+    }
+    public Boolean actPPRO (String codi,int NF,int ND,String TP) throws SQLException {
+      Alert alert;
+        try {
+                conn.setAutoCommit(false);
+                CallableStatement cstmt = conn.prepareCall("{call ACT_PPRO(?,?,?,?,?)}");
+                cstmt.setString(1, codi);//CODIGO
+                cstmt.setInt(2,NF); //NUMERO FACTURA
+                cstmt.setInt(3,ND); //NUMERO DETALLE
+                cstmt.setString(4,TP); //TIPO DE PRECIO
+                cstmt.registerOutParameter(5, Types.VARCHAR);
+                cstmt.execute();
+                conn.commit();
+                if(!cstmt.getNString(5).equalsIgnoreCase("e"))
+                {
+                    alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText(cstmt.getNString(5));
+                    alert.show();
+                    return false;
+                }
+                else
+                    return true;
+
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Deshacer");
+//            conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            // cerrar la conexion
+           // conn.close();
+        }
+        return false;
+    }
+    public Boolean insARTcomun (double cant,double precio,int NF) throws SQLException {
+      Alert alert;
+        try {
+                conn.setAutoCommit(false);
+                CallableStatement cstmt = conn.prepareCall("{call ACT_PROC(?,?,?,?)}");
+                cstmt.setDouble(1, cant);
+                cstmt.setDouble(2,precio);
+                cstmt.setInt(3,NF);
+                cstmt.registerOutParameter(4, Types.VARCHAR);
+                cstmt.execute();
+                conn.commit();
+                if(!cstmt.getNString(4).equalsIgnoreCase("e"))
+                {
+                    alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText(cstmt.getNString(4));
+                    alert.show();
+                }
+                return true;
         } catch (Exception e) {
             // deshacer la ejecucion en caso de error
             System.out.println("Deshacer");
@@ -246,7 +391,7 @@ public class TransactionDAO {
         ObservableList<datProductos> transactions = FXCollections.observableArrayList();
         try {
 
-            String query = "SELECT P.codigo,P.descripcion,D.precio,D.cantidad, (D.precio*D.cantidad) as Importe, P.noExistencia FROM productos P INNER JOIN detalle D ON P.codigo=D.codigo INNER JOIN factura F ON D.noFactura=F.noFactura WHERE F.noFactura='"+NF+"'";
+            String query = "SELECT P.codigo,P.descripcion,D.precio,D.cantidad, (D.precio*D.cantidad) as Importe, P.noExistencia,D.numDetalle FROM productos P INNER JOIN detalle D ON P.codigo=D.codigo INNER JOIN factura F ON D.noFactura=F.noFactura WHERE F.noFactura='"+NF+"'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             datProductos p = null;
@@ -256,14 +401,90 @@ public class TransactionDAO {
                         rs.getDouble("D.precio"),
                         rs.getDouble("D.cantidad"),
                         rs.getDouble("Importe"),
-                        rs.getDouble("P.noExistencia"));
+                        rs.getDouble("P.noExistencia"),
+                        rs.getInt("D.numDetalle"));
                   transactions.add(p);
             }
             rs.close();
             st.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
-            System.out.println("Error al recuperar información de empleados...");
+            System.out.println("Error al recuperar información de detalles...");
+        }
+        return transactions;
+    }
+    public ObservableList<datFactura> LlenarTblFAC() {
+        ObservableList<datFactura> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT F.NoFactura, F.fecha,F.total,F.idUsu,C.nomCompleto,M.descripcion,CASE estatus\n" +
+                    "\t\t\t\t\t\t\t\tWHEN 'P' THEN 'Pagado'\n" +
+                    "\t\t\t\t\t\t\t\tWHEN 'V' THEN 'Vendido'\n" +
+                    "\t\t\t\t\t\t\t\tWHEN 'F' THEN 'Fiado'\n" +
+                    "                                END AS estatus\n" +
+                    "FROM factura F INNER JOIN clientes C ON F.idClie=C.idClie\n" +
+                    "\t\t\t\tINNER JOIN MetodoPago M ON M.idMetPago=F.idMetPago;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datFactura p = null;
+            while(rs.next()) {
+                p = new datFactura(rs.getInt("NoFactura"),
+                        rs.getDate("fecha"),
+                        rs.getDouble("total"),
+                        rs.getString("idUsu"),
+                        rs.getString("nomCompleto"),
+                        rs.getString("descripcion"),
+                        rs.getString("estatus"));
+                  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de facturas...");
+        }
+        return transactions;
+    }
+    public ObservableList<datClientes> LlenarTblCC() {
+        ObservableList<datClientes> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select idClie, nomCompleto from clientes;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datClientes p = null;
+            while(rs.next()) {
+                p = new datClientes(rs.getInt("idClie"),
+                        rs.getString("nomCompleto"));
+                  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de clientes...");
+        }
+        return transactions;
+    }
+    public ObservableList<datProductos> LlenarTblBus(String BU) {
+        ObservableList<datProductos> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select codigo, descripcion,noExistencia from productos WHERE codigo LIKE '"+BU+"' OR descripcion LIKE '"+BU+"';";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datProductos p = null;
+            while(rs.next()) {
+                p = new datProductos(rs.getString("codigo"),
+                        rs.getString("descripcion"),
+                        rs.getDouble("noExistencia"));
+                  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de productos...");
         }
         return transactions;
     }
@@ -356,6 +577,80 @@ public class TransactionDAO {
         }
         return p;
     }
+    public String[]  DPproducto(String NP) //REgresa la descripcion de producto
+    {
+        String p[]=new String[2];
+        ResultSet rs = null;
+        try {
+            String query = "select descripcion, preVenta from productos WHERE codigo='"+NP+"';";
+            Statement st = conn.createStatement();
+             rs = st.executeQuery(query);
+            while (rs.next()) {
+                p[0]=rs.getString("descripcion");
+                p[1]=rs.getString("preVenta");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+    public String[]  datSucu() //REgresa la descripcion de producto
+    {
+        String p[]=new String[2];
+        ResultSet rs = null;
+        try {
+            String query = "select rfc,nombre from SUCURSAL;";
+            Statement st = conn.createStatement();
+             rs = st.executeQuery(query);
+            while (rs.next()) {
+                p[0]=rs.getString("rfc");
+                p[1]=rs.getString("nombre");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+    public double [] totFactura(int NF) {
+        double p[]=new double[2];
+        try {
+
+            String query = "select SUM(cantidad*precio) as total, CEILING(SUM(cantidad)) as cantidad from detalle WHERE noFactura='"+NF+"';";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p[0]=rs.getDouble("total");
+                p[1]=rs.getDouble("cantidad");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+    public String desPRO(int NF,int ND) {
+        String p=null;
+        try {
+
+            String query = "SELECT descuento FROM detalle WHERE noFactura='"+NF+"' and numDetalle='"+ND+"';";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getString("descuento");
+                System.out.println("Es p"+p);
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
 
     public Boolean insEmpleado(datEmpleados datEmpleados) {
         try {
@@ -385,6 +680,37 @@ public class TransactionDAO {
                 alert.show();
             }
             System.out.println("Error "+e);
+        }
+        return false;
+    }
+    public Boolean insMOV(datMovimientos datMovimientos) throws SQLException {
+        try {
+            conn.setAutoCommit(false);
+            String query = "INSERT INTO movimiento (descripción,cantidad,fecha,idUsu,rfc,idTipo) Values(?,?,now(),?,?,?);;";
+            PreparedStatement st =  conn.prepareStatement(query);
+            st.setString(1, datMovimientos.getDescripción());
+            st.setDouble(2,datMovimientos.getCantidad());
+            st.setString(3,datMovimientos.getIdUsu());
+            st.setString(4,datMovimientos.getRfc());
+            st.setString(5,datMovimientos.getIdTipo());
+            st.execute();
+            return true;
+        } catch (SQLException e) {
+            alert=new Alert(Alert.AlertType.ERROR);
+            if(e.getErrorCode()==1062)
+            {
+                alert.setContentText("La clave ya existe");
+                alert.show();
+            }
+            if(e.getErrorCode()==1406)
+            {
+                alert.setContentText("Se exceden los caracteres permitidos");
+                alert.show();
+            }
+            System.out.println("Error "+e);
+        }
+        finally {
+            conn.setAutoCommit(true);
         }
         return false;
     }
@@ -597,23 +923,6 @@ public class TransactionDAO {
         return Math.abs(p);
     }
 
-    public double TOTAL(String DE,String TG) {
-        double p=0;
-        try {
-
-            String query = "SELECT SUM(Monto) AS TOTAL FROM otrosgastos WHERE DescripcionG like '"+DE+"' AND CveTipGasto='"+TG+"';";
-            Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery(query);
-            while (rs.next()) {
-                p=rs.getDouble("TOTAL");
-            }
-            rs.close();
-            st.close();
-        } catch(SQLException ex){
-            ex.printStackTrace();
-        }
-        return p;
-    }
     public double TOTAL(String TG) {
         double p=0;
         try {
@@ -829,7 +1138,512 @@ public class TransactionDAO {
      | CosCobrado | decimal(10,0) | NO
      */
 
+    /******************************Agregado THALIA******************************/
+    public Boolean insClie (datClientes datClientes) throws SQLException {
+        try {
+            conn.setAutoCommit(false);
+            CallableStatement cstmt = conn.prepareCall("{ call veriCliente (?,?,?,?,?,?) }");
+            cstmt.setInt(1,datClientes.getIdClie());
+            cstmt.setString(2, datClientes.getNomCompleto());
+            cstmt.setString(3, datClientes.getDomicilio());
+            cstmt.setString(4, datClientes.getTelefono());
+            cstmt.setString(5, datClientes.getEmail());
+            cstmt.setDouble(6, datClientes.getLimCredito());
 
+            //cstmt.registerOutParameter(1, java.sql.Types.INTEGER);
+            // System.out.println("2"+datEmpleados.getIdUsu() + " "+ datEmpleados.getContrasena());
+            cstmt.execute();
+            conn.commit();
+            return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println(e);//conn.rollback();
+
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            // cerrar la conexion
+            // conn.close();
+        }
+        return false;
+    }
+
+
+
+
+    public ObservableList<datFactura> infoFactura(int code) {
+        ObservableList<datFactura> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT noFactura,fecha,total FROM factura where idClie="+code+";";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datFactura p = null;
+            while(rs.next()) {
+                p = new datFactura(
+                        rs.getInt("noFactura"),
+                        rs.getDate("fecha"),
+                        rs.getDouble("total"));
+
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n de clientes...");
+        }
+        return transactions;
+    }
+
+    public ObservableList<datClientes> listClient(String B) {
+        ObservableList<datClientes> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT idClie,nomCompleto FROM clientes WHERE nomCompleto LIKE '"+B+"%' OR idClie LIKE '"+B+"';";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datClientes p = null;
+            while(rs.next()) {
+                p = new datClientes(
+                        rs.getInt("idClie"),
+                        rs.getString("nomCompleto"));
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n de clientes...");
+        }
+        return transactions;
+    }
+
+    public Boolean deleteCL(int id) {
+        Alert messaje=new Alert(Alert.AlertType.CONFIRMATION);
+        messaje.setContentText("Desea eliminar este usuario");
+        Optional<ButtonType> Acepta=messaje.showAndWait();
+
+        if(Acepta.get()==ButtonType.OK)
+        {
+            try {
+                String query = "delete from clientes where idClie = ?";
+                PreparedStatement st = conn.prepareStatement(query);
+                st.setInt(1, id);
+                st.execute();
+                return true;
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+                System.out.println(e.getErrorCode());
+                if (e.getErrorCode()==1205)
+                {
+                    showMessage("Este usuario tiene facturas");
+                }
+
+
+            }
+        }
+
+
+        return false;
+    }
+
+    public datClientes obtenerCliente(int idCl)
+    {
+        List<datClientes> movimiento = new ArrayList<datClientes>();
+        datClientes objeto = null;
+        try {
+
+            String nomCompleto,domicilio,telefono,email;
+            double LimCredito;
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM clientes where idClie="+idCl +";");
+            while (rs.next())
+            {
+                objeto=new datClientes();
+                nomCompleto=rs.getString("nomCompleto");
+                domicilio=rs.getString("domicilio");
+                telefono=rs.getString("telefono");
+                email=rs.getString("email");
+                LimCredito= rs.getDouble("limCredito");
+
+
+                objeto.setNomCompleto(nomCompleto);
+                objeto.setDomicilio(domicilio);
+                objeto.setEmail(email);
+                objeto.setTelefono(telefono);
+                objeto.setLimCredito(LimCredito);
+
+                movimiento.add(objeto);
+
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(TransactionDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return objeto;
+    }
+
+
+    public ObservableList<datDetFact> detallFactira(int code) {
+        ObservableList<datDetFact> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT descripcion, D.precio,D.cantidad, (D.precio*D.cantidad) AS total\n" +
+                    "FROM detalle D INNER JOIN factura F on D.noFactura=F.noFactura " +
+                    "INNER JOIN productos P ON D.codigo=P.codigo where F.noFactura="+code+";";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datDetFact p = null;
+            while(rs.next()) {
+                p = new datDetFact(
+                        rs.getString("descripcion"),
+                        rs.getDouble("precio"),
+                        rs.getDouble("cantidad"),
+                        rs.getDouble("total"));
+
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n de clientes...");
+        }
+        return transactions;
+    }
+
+    public ObservableList<datPagos> pagos(int code) {
+        ObservableList<datPagos> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT numPago,fecha,abono\n" +
+                    "FROM pagos WHERE noFactura="+code+";";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datPagos p = null;
+            while(rs.next()) {
+                p = new datPagos(
+                        rs.getInt("numPago"),
+                        rs.getDate("fecha"),
+                        rs.getDouble("abono"));
+
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n de clientes...");
+        }
+        return transactions;
+    }
+    /***********Registrar PAGO*************/
+//INSERT INTO pagos VALUES  (3,2,(select MAX(numPago) + 1 as Num from pagos WHERE noFactura=2),getDate(),200);
+
+    public int noPago(int noFact) {
+        int p=0;
+        try {
+
+            String query = "SELECT IFNULL((MAX(numPago)+1),1) AS noPago from pagos WHERE noFactura="+noFact+";";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getInt("noPago");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public Boolean insAbono(datPagos datPagos) {
+        try {
+            //INSERT INTO factura (fecha,total,idClie,idUsu,idMetPago,estatus) VALUES (curdate(),1600,1,'C1','C','V') 1 row(s) affected       0.031 sec
+            String query = "INSERT INTO pagos (noFactura,idClie,numPago,fecha,abono) VALUES  (?,?,?,curdate(),?);";
+            PreparedStatement st =  conn.prepareStatement(query);
+            st.setInt(1,datPagos.getNoFactura());
+            System.out.println("Aqui 2");
+            st.setInt(2,datPagos.getIdClie());
+            st.setInt(3,datPagos.getNumPago());
+            //st.setDate(4,datPagos.getFecha());
+            st.setDouble(4,datPagos.getAbono());
+            System.out.println("Aqui 3");
+            st.execute();
+            return true;
+        } catch (SQLException e) {
+            Alert alert;
+            if(e.getErrorCode()==1062)
+            {
+                alert=new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("La llave principal ya existe");
+                alert.show();
+            }
+            if(e.getErrorCode()==1406){
+                alert=new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Algun(os) campos exceden el tamaÃ±o permitido de caracteres");
+                alert.show();
+            }
+            System.out.println("error  "+ e);
+        }
+        return false;
+    }
+
+    public double saldo(int idClie) {
+        double p=0;
+        try {
+
+            String query = "SELECT SUM(F.total) AS TOTAL FROM factura F inner join clientes C on C.idClie=F.idClie \n" +
+                    "where idMetPago=(Select idMetPago from metodoPago where descripcion='CrÃ©dito') AND C.idClie="+idClie+";";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("TOTAL");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+    //Total de pagos realizados en el dia
+    public double totPagos() {
+        double p=0;
+        try {
+
+            String query = "SELECT SUM(abono) AS TOTAL from pagos WHERE fecha = curdate();";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("TOTAL");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double totEfectivo() {
+        double p=0;
+        try {
+
+            String query = "SELECT SUM(total) AS TOTAL from factura WHERE fecha = curdate() AND idMetPago=(Select idMetPago from metodoPago Where descripcion='Efectivo');";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("TOTAL");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double totVales() {
+        double p=0;
+        try {
+
+            String query = "SELECT SUM(total) AS TOTAL from factura WHERE fecha = curdate() AND idMetPago=(Select idMetPago from metodoPago Where descripcion='Vales Despensa');";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("TOTAL");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double totTarjetas() {
+        double p=0;
+        try {
+
+            String query = "SELECT SUM(total) AS TOTAL from factura WHERE fecha = curdate() AND idMetPago=(Select idMetPago from metodoPago Where descripcion='Tarjeta Credito/Debito');";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("TOTAL");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double totEntradas() {
+        double p=0;
+        try {
+
+            String query = "SELECT SUM(cantidad) AS TOTAL from movimiento WHERE fecha = curdate() " +
+                    "AND idTipo=(Select idTipMov from tipMov Where descripción='Entrada');;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("TOTAL");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double totPagoProve() {
+        double p=0;
+        try {
+
+            String query = "SELECT SUM(cantidad) AS TOTAL from movimiento WHERE fecha = curdate() " +
+                    "AND idTipo=(Select idTipMov from tipMov Where descripción='Salida');;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("TOTAL");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double ganancia() {
+        double p=0;
+        try {
+
+            String query = "select sum((d.cantidad*(d.precio-p.preCosto))-d.descuento) AS GANANCIA from detalle d " +
+                    "inner join factura f on d.noFactura=f.noFactura \n" +
+                    "inner join productos p on p.codigo=d.codigo where fecha=curdate();";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("GANANCIA");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public ObservableList<datVentaXDepartamento> ventasXDep() {
+        ObservableList<datVentaXDepartamento> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select dt.descripcion AS descripcion,SUM(d.cantidad*d.precio-d.descuento) AS ventas from detalle d inner join factura f on d.noFactura=f.noFactura \n" +
+                    "inner join productos p on p.codigo=d.codigo inner join departamento dt on dt.idDepartamento=p.idDepartamento where fecha=curdate() group by descripcion;;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datVentaXDepartamento p = null;
+            while(rs.next()) {
+                p = new datVentaXDepartamento(
+                        rs.getString("descripcion"),
+                        rs.getDouble("ventas"));
+
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n de clientes...");
+        }
+        return transactions;
+    }
+    public double ECambio() {
+        double p=0;
+        try {
+
+            String query = "select SUM(cantidad) As cambio from movimiento where idTipo='C' AND fecha =curdate();";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("cambio");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double DinInCaj() {
+        double p=0;
+        try {
+
+            String query = "select cantidad As Inicial from movimiento where idTipo='I' AND fecha =curdate();";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("Inicial");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+
+
+    public ObservableList<datUnidadMedida> UnidadesMedida (){
+
+        ObservableList<datUnidadMedida> transactions = FXCollections.observableArrayList();
+        datUnidadMedida p=null;
+        try {
+            String query = "select * from unidadmedida;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                //Mientras haya resultados obtengo el valor.
+                p=new datUnidadMedida(rs.getString("idUniMed").charAt(0),
+                        rs.getString("descripcion"));
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n...");
+        }
+        return transactions;
+    }
+
+    public void UPDATEUM(char id,String desc) {
+        try {
+            String query = "UPDATE unidadmedida set descripcion='"+desc+"' where idUniMed='"+id+"'";
+            PreparedStatement st =  conn.prepareStatement(query);
+            st.execute();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+
+    public void showMessage(String message)
+    {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText(message);
+        alert.show();
+
+    }
 
 
 

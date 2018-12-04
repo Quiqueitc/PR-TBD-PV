@@ -4,13 +4,18 @@ public class datProductos {
     String codigo,descripcion,idUniMed;
     double preCosto,preVenta,preMayoreo,noExistencia,exiMinima,ganancia;
     int idDepartamento,idProv;
-    public datProductos(String codigo, String descripcion, double preVenta, double preMayoreo, double exiMinima,double noExistencia) {
+    int numDetalle;
+
+
+
+    public datProductos(String codigo, String descripcion, double preVenta, double preMayoreo, double exiMinima,double noExistencia,int numDetalle) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.preVenta = preVenta;
         this.preMayoreo = preMayoreo;
         this.noExistencia = noExistencia;
         this.exiMinima = exiMinima;
+        this.numDetalle=numDetalle;
     }
     public datProductos(String codigo, double noExistencia, int idProv,String descripcion ) {
         this.codigo = codigo;
@@ -18,8 +23,25 @@ public class datProductos {
         this.noExistencia = noExistencia;
         this.idProv = idProv;
     }
+    public datProductos(String codigo, String descripcion, double noExistencia ) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.noExistencia = noExistencia;
+    }
+    /*public datProductos(String codigo, int IdProv, int IdDepartamento ,String Descripcion ) {
+        this.codigo = codigo;
+        this.idProv = IdProv;
+        this.idDepartamento = IdDepartamento;
+        this.descripcion=Descripcion;
+    }*/
 
+    public int getNumDetalle() {
+        return numDetalle;
+    }
 
+    public void setNumDetalle(int numDetalle) {
+        this.numDetalle = numDetalle;
+    }
     public String getCodigo() {
         return codigo;
     }

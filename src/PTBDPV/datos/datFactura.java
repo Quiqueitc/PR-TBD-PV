@@ -8,14 +8,42 @@ public class datFactura {
     Double total;
     String idUsu,idMetPago;
     String estatus;
-    public datFactura(int noFactura, Date fecha, Double total, int idClie,String idUsu, String idMetPago, String estatus) {
+    String NomCompleto;
+    public String getNomCompleto() {
+        return NomCompleto;
+    }
+
+    public void setNomCompleto(String nomCompleto) {
+        NomCompleto = nomCompleto;
+    }
+
+
+
+
+
+    public datFactura(int noFactura, Date fecha, Double total, String idUsu,String nomCompleto, String idMetPago, String estatus) {
+        this.noFactura = noFactura;
+        //this.idClie = idClie;
+        this.fecha = fecha;
+        this.total = total;
+        this.idUsu = idUsu;
+        this.NomCompleto=nomCompleto;
+        this.idMetPago = idMetPago;
+        this.estatus=estatus;
+    }
+    public datFactura(int noFactura, Date fecha, Double total, int idClie,String idUsu, String idMetPago) {
         this.noFactura = noFactura;
         this.idClie = idClie;
         this.fecha = fecha;
         this.total = total;
         this.idUsu = idUsu;
         this.idMetPago = idMetPago;
-        this.estatus=estatus;
+    }
+
+    public datFactura(int noFactura, Date fecha, Double total) {
+        this.noFactura = noFactura;
+        this.fecha = fecha;
+        this.total = total;
     }
 
 

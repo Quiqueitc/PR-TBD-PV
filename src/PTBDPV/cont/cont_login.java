@@ -102,7 +102,9 @@ public class cont_login implements Initializable {
                 }
                 catch (IOException et)
                 {
-                    System.out.println(et);
+                    alert=new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("Usuario o contraseña incorrectos");
+                    alert.show();
                 }
             }
             else{

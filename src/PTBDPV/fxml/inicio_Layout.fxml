@@ -31,16 +31,20 @@
     <top>
         <AnchorPane style="-fx-background-color: #D6EAF8;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
             <VBox AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
-                <HBox spacing="10">
+                <HBox spacing="760">
                     <HBox spacing="10" alignment="CENTER_LEFT">
                         <ImageView fitHeight="60" fitWidth="55">
                             <Image url="@../res/pvL.png">
                             </Image>
                         </ImageView>
                         <Label text="Punto de Venta"  style="-fx-font-size: 15pt; -fx-text-fill:#FF7922; -fx-font-weight:bold;"/>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Label fx:id="lblNom" text="Name"  style="-fx-font-size: 12pt; -fx-text-fill:#FF7922; -fx-font-weight:bold;"/>
+                            <Label fx:id="lblrfc" text="rfc"  style="-fx-font-size: 8pt; -fx-text-fill:#FF7922; -fx-font-weight:bold;"/>
+
+                        </VBox>
                     </HBox>
-                        <Separator visible="false" orientation="HORIZONTAL" maxWidth="850" prefWidth="850"></Separator>
-                    <VBox  spacing="5">
+                    <VBox  spacing="5" alignment="CENTER_RIGHT">
                         <Label text="Le atiende: " style="-fx-font-size: 15pt; -fx-text-fill:#FF7922; -fx-font-weight:bold;"></Label>
                         <JFXButton alignment="CENTER" prefHeight="5" maxWidth="250" fx:id="btnTE" contentDisplay="LEFT" prefWidth="250" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" text=" Usuario actual" >
                             <graphic>

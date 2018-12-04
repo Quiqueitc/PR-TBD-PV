@@ -1,5 +1,7 @@
 package PTBDPV.bd;
 
+import javafx.scene.control.Alert;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -24,7 +26,11 @@ public class MySQL {
         dbuser=userN;
         dbpass=pass;
     }
+    public MySQL(){
+
+    }
     public static void Connect() {
+        Alert alert;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             jdbc:mysql://ipaddress:3306/test?noAccessToProcedureBodies=true
@@ -32,8 +38,14 @@ public class MySQL {
                 System.out.println("Se ha iniciado la conexión con el servidor de forma exitosa");
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+                 alert=new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Usuario o contraseña incorrectos");
+                 alert.show();
             } catch (SQLException ex) {
                 Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
+                 alert=new Alert(Alert.AlertType.ERROR);
+                  alert.setContentText("Usuario o contraseña incorrectos");
+                  alert.show();
             }        
     }
     
@@ -43,7 +55,7 @@ public class MySQL {
         return conn;
     }
     
-    public static void Disconnect() {
+    public  void Disconnect() {
         try {
             conn.close();
             System.out.println("Se ha finalizado la conexión con el servidor");

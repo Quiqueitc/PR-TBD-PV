@@ -1,9 +1,15 @@
 package PTBDPV.datos;
 
 import java.sql.Date;
+import java.time.format.DateTimeFormatter;
 
 public class datPagos {
     int noFactura,idClie,numPago;
+    Date fecha;
+    double abono;
+    public datPagos() {
+
+    }
 
     public datPagos(int noFactura, int idClie, int numPago, Date fecha, double abono) {
         this.noFactura = noFactura;
@@ -13,8 +19,14 @@ public class datPagos {
         this.abono = abono;
     }
 
-    Date fecha;
-    double abono;
+    public datPagos(int numPago, Date fecha, double abono) {
+        this.numPago = numPago;
+        this.fecha = fecha;
+        this.abono = abono;
+    }
+
+
+
     public int getNoFactura() {
         return noFactura;
     }
@@ -54,5 +66,9 @@ public class datPagos {
     public void setAbono(double abono) {
         this.abono = abono;
     }
+
+
+
+
 
 }

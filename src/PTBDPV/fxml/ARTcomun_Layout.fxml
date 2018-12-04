@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="160.0" prefWidth="550.0"
+            fx:id="BDAC">
+    <top>
+        <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+            <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10" >
+                <HBox spacing="10">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text=" Venta productos no dados de alta" maxWidth="1500" prefWidth="1500" style="-fx-background-color: #ADCAF2; -fx-font-size: 15pt; -fx-text-fill:#FFFFFF; -fx-font-weight:bold;"/>
+                    </HBox>
+                </HBox>
+            </VBox>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane  style="-fx-background-color: #FFFFFF;">
+            <VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="5" AnchorPane.rightAnchor="5" AnchorPane.leftAnchor="5" AnchorPane.topAnchor="5">
+                <HBox alignment="TOP_CENTER" spacing="5" style="-fx-background-color: #FFFFFF;">
+                    <HBox spacing="10" >
+                        <Label text=" Cantidad:"  prefWidth="80" style="-fx-font-size: 12pt; -fx-text-fill:#ADCAF2; -fx-font-weight:bold;">
+                        </Label>
+                        <JFXTextField fx:id="txtCantidad" text="1.0" prefWidth="100" style="-fx-border-color: #ADCAF2">
+                            <tooltip>
+                                <Tooltip text="Cantidad a comprar"></Tooltip>
+                            </tooltip>
+                        </JFXTextField>
+                    </HBox>
+                    <HBox spacing="10" >
+                        <Label text=" Precio:" prefWidth="60" style="-fx-font-size: 12pt; -fx-text-fill:#ADCAF2; -fx-font-weight:bold;">
+                        </Label>
+                        <JFXTextField fx:id="txtPrecio" prefWidth="100" style="-fx-border-color: #ADCAF2">
+                            <tooltip>
+                                <Tooltip text="Ingrese código del producto"></Tooltip>
+                            </tooltip>
+                        </JFXTextField>
+                    </HBox>
+
+                </HBox>
+
+            </VBox>
+
+        </AnchorPane>
+        <!--String codigo, String descripcion, double preVenta, double preMayoreo, double exiMinima,double noExistencia) {-->
+    </center>
+    <right>
+        <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+            <VBox spacing="12"  AnchorPane.topAnchor="0" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+                <JFXButton alignment="CENTER" prefHeight="5" maxWidth="150" fx:id="btnEnter" contentDisplay="BOTTOM" prefWidth="150" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" text="Agregar producto" >
+                    <graphic>
+                        <FontAwesomeIconView fill="green" glyphName="CHECK" glyphSize="15" />
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Clic para agregar a la venta"></Tooltip>
+                    </tooltip>
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton alignment="CENTER" prefHeight="5" maxWidth="150" fx:id="btnCancelar" contentDisplay="BOTTOM" prefWidth="150" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" text=" Cancelar" >
+                    <graphic>
+                        <FontAwesomeIconView fill="red" glyphName="CLOSE" glyphSize="15" />
+                    </graphic>
+                    <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+            </VBox>
+        </AnchorPane>
+    </right>
+</BorderPane>

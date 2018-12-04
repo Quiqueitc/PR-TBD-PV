@@ -1,5 +1,8 @@
 package PTBDPV.cont;
 
+import PTBDPV.bd.MySQL;
+import PTBDPV.bd.TransactionDAO;
+import PTBDPV.datos.datComp;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -20,11 +23,13 @@ public class cont_inicioL implements Initializable {
     @FXML
     JFXButton btnTE,btnPB,btnSalir,btnVenta,btnProducto,btnInventario,btnConfiguracion,btnCorte,btnCliente;;
     @FXML
-    Label lblfecha;
+    Label lblfecha,lblrfc,lblNom;
     @FXML
     VBox VBV,VBP,VBL,VBI,VBC,VBR;
-    private static datEmpleados datEmpleados; //DATOS DEL USUARIO EN CURSO
 
+    private static datEmpleados datEmpleados; //DATOS DEL USUARIO EN CURSO
+    private static String datSucu[];
+    TransactionDAO transactionDAO=new TransactionDAO(MySQL.getConnection());
 
     //datTrans datTrans=new datTrans(datEmpleados);
     //datComp datComp= new datComp(datEmpleados);
@@ -40,6 +45,9 @@ public class cont_inicioL implements Initializable {
         btnCorte.setOnAction(handler);
         btnCliente.setOnAction(handler);
         btnTE.setText(datEmpleados.getNombre());
+        datSucu=transactionDAO.datSucu();
+        lblNom.setText(datSucu[1]);
+        lblrfc.setText(datSucu[0]);
         BP1.setOnKeyPressed(
                 event -> {
                     switch (event.getCode()) {
@@ -106,6 +114,8 @@ public class cont_inicioL implements Initializable {
         alert.setContentText("¿Desea salir?");
         Optional<ButtonType> option = alert.showAndWait();
         if (option.get() == ButtonType.OK) {
+            MySQL mySQL=new MySQL();
+            mySQL.Disconnect();
             System.exit(0);
         } else if (option.get() == ButtonType.CANCEL) {
         }

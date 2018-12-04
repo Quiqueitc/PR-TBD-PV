@@ -19,123 +19,136 @@
             xmlns:fx="http://javafx.com/fxml" fx:id="BPV" fx:controller="PTBDPV.cont.cont_ventasL">
     <top>
         <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
-            <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10" >
+            <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
                 <HBox spacing="10">
                     <HBox spacing="10" alignment="CENTER_LEFT">
                         <Label text=" Venta de productos" maxWidth="1500" prefWidth="1500" style="-fx-background-color: #ADCAF2; -fx-font-size: 15pt; -fx-text-fill:#FFFFFF; -fx-font-weight:bold;"/>
                     </HBox>
                 </HBox>
-                <VBox spacing="15">
-                    <HBox spacing="15" >
-                        <Label text=" Código de producto:"  style="-fx-font-size: 12pt; -fx-text-fill:#ADCAF2; -fx-font-weight:bold;">
-                        </Label>
-                        <JFXTextField fx:id="txtCodigo" prefWidth="500" style="-fx-border-color: #ADCAF2">
-                            <tooltip>
-                                <Tooltip text="Ingrese código del producto"></Tooltip>
-                            </tooltip>
-                        </JFXTextField>
-                        <JFXButton alignment="TOP_RIGHT" prefHeight="5" maxWidth="200" fx:id="btnEnter" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" text=" Enter - Agregar producto" >
-                            <graphic>
-                                <FontAwesomeIconView fill="green" glyphName="CHECK" glyphSize="15" />
-                            </graphic>
-                            <tooltip>
-                                <Tooltip text="Clic para agregar a la venta"></Tooltip>
-                            </tooltip>
-                            <font>
-                                <Font name="Roboto Bold" size="14.0" />
-                            </font>
-                        </JFXButton>
-                    </HBox>
-                    <HBox spacing="5">
-                        <JFXButton fx:id="btnInsV" text="INS varios" alignment="CENTER" prefHeight="5" maxWidth="130"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
-                            <graphic>
-                                <FontAwesomeIconView fill="cornflowerblue" glyphName="CLIPBOARD" glyphSize="15" />
-                            </graphic>
-                            <tooltip>
-                                <Tooltip text="Insertar varios articulos del mismo tipo"></Tooltip>
-                            </tooltip>
-                            <font>
-                                <Font name="Roboto Bold" size="14.0" />
-                            </font>
-                        </JFXButton>
-                        <JFXButton fx:id="btnArtC" text="CTRL+V Artículo común" alignment="CENTER" prefHeight="5" maxWidth="180"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
-                            <graphic>
-                                <FontAwesomeIconView fill="cornflowerblue" glyphName="CLONE" glyphSize="15" />
-                            </graphic>
-                            <tooltip>
-                                <Tooltip text="Para articulos no registrados"></Tooltip>
-                            </tooltip>
-                            <font>
-                                <Font name="Roboto Bold" size="14.0" />
-                            </font>
-                        </JFXButton>
-                        <JFXButton fx:id="btnBus" text="F10 Buscar" alignment="CENTER" prefHeight="5" maxWidth="100"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
-                            <graphic>
-                                <FontAwesomeIconView fill="cornflowerblue" glyphName="SEARCH" glyphSize="15" />
-                            </graphic>
-                            <font>
-                                <Font name="Roboto Bold" size="14.0" />
-                            </font>
-                        </JFXButton>
-                        <JFXButton fx:id="btnMay" text="F11 Mayoreo" alignment="CENTER" prefHeight="5" maxWidth="120"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
-                            <graphic>
-                                <FontAwesomeIconView fill="cornflowerblue" glyphName="STAR" glyphSize="15" />
-                            </graphic>
-                            <font>
-                                <Font name="Roboto Bold" size="14.0" />
-                            </font>
-                        </JFXButton>
-                        <JFXButton fx:id="btnEnt" text="F7 Entradas" alignment="CENTER" prefHeight="5" maxWidth="120"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
-                            <graphic>
-                                <FontAwesomeIconView fill="cornflowerblue" glyphName="MONEY" glyphSize="15" />
-                            </graphic>
-                            <font>
-                                <Font name="Roboto Bold" size="14.0" />
-                            </font>
-                        </JFXButton>
-                        <JFXButton fx:id="btnSal" text="F8 Salidas" alignment="CENTER" prefHeight="5" maxWidth="100"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
-                            <graphic>
-                                <MaterialDesignIconView fill="cornflowerblue" glyphName="EXIT_TO_APP" glyphSize="15" />
-                            </graphic>
-                            <font>
-                                <Font name="Roboto Bold" size="14.0" />
-                            </font>
-                        </JFXButton>
-                        <JFXButton fx:id="btnBor" text="DEL Borrar" alignment="CENTER" prefHeight="5" maxWidth="100"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
-                            <graphic>
-                                <FontAwesomeIconView fill="cornflowerblue" glyphName="TRASH" glyphSize="15" />
-                            </graphic>
-                            <font>
-                                <Font name="Roboto Bold" size="14.0" />
-                            </font>
-                            <tooltip>
-                                <Tooltip text="Borrar arcticulo de la compra"></Tooltip>
-                            </tooltip>
-                        </JFXButton>
+                <HBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
 
-                    </HBox>
-                </VBox>
+                    <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10" >
+                        <VBox spacing="15">
+                            <HBox spacing="15" >
+                                <Label text=" Código de producto:"  style="-fx-font-size: 12pt; -fx-text-fill:#ADCAF2; -fx-font-weight:bold;">
+                                </Label>
+                                <JFXTextField fx:id="txtCodigo" prefWidth="500" style="-fx-border-color: #ADCAF2">
+                                    <tooltip>
+                                        <Tooltip text="Ingrese código del producto"></Tooltip>
+                                    </tooltip>
+                                </JFXTextField>
+                                <JFXButton alignment="TOP_RIGHT" prefHeight="5" maxWidth="200" fx:id="btnEnter" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" text=" Enter - Agregar producto" >
+                                    <graphic>
+                                        <FontAwesomeIconView fill="green" glyphName="CHECK" glyphSize="15" />
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip text="Clic para agregar a la venta"></Tooltip>
+                                    </tooltip>
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                            </HBox>
+                            <HBox spacing="5">
+                                <JFXButton fx:id="btnInsV" text="INS varios" alignment="CENTER" prefHeight="5" maxWidth="130"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <graphic>
+                                        <FontAwesomeIconView fill="cornflowerblue" glyphName="CLIPBOARD" glyphSize="15" />
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip text="Insertar varios articulos del mismo tipo"></Tooltip>
+                                    </tooltip>
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btnArtC" text="CTRL+V Artículo común" alignment="CENTER" prefHeight="5" maxWidth="180"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <graphic>
+                                        <FontAwesomeIconView fill="cornflowerblue" glyphName="CLONE" glyphSize="15" />
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip text="Para articulos no registrados"></Tooltip>
+                                    </tooltip>
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btnBus" text="F10 Buscar" alignment="CENTER" prefHeight="5" maxWidth="100"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <graphic>
+                                        <FontAwesomeIconView fill="cornflowerblue" glyphName="SEARCH" glyphSize="15" />
+                                    </graphic>
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btnMay" text="F11 Mayoreo" alignment="CENTER" prefHeight="5" maxWidth="120"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <graphic>
+                                        <FontAwesomeIconView fill="cornflowerblue" glyphName="STAR" glyphSize="15" />
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip text="Seleccione un registro para dar precio de Mayoreo"></Tooltip>
+                                    </tooltip>
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btnEnt" text="F7 Entradas" alignment="CENTER" prefHeight="5" maxWidth="120"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <graphic>
+                                        <FontAwesomeIconView fill="cornflowerblue" glyphName="MONEY" glyphSize="15" />
+                                    </graphic>
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btnSal" text="F8 Salidas" alignment="CENTER" prefHeight="5" maxWidth="100"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <graphic>
+                                        <MaterialDesignIconView fill="cornflowerblue" glyphName="EXIT_TO_APP" glyphSize="15" />
+                                    </graphic>
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="btnBor" text="DEL Borrar" alignment="CENTER" prefHeight="5" maxWidth="100"  contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <graphic>
+                                        <FontAwesomeIconView fill="cornflowerblue" glyphName="TRASH" glyphSize="15" />
+                                    </graphic>
+                                    <font>
+                                        <Font name="Roboto Bold" size="14.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Borrar arcticulo de la compra"></Tooltip>
+                                    </tooltip>
+                                </JFXButton>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                    <TableView fx:id="tblBP" visible="false" VBox.vgrow="ALWAYS" prefHeight="80">
+                        <columns>
+                            <TableColumn text="Código" prefWidth="100">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="codigo"></PropertyValueFactory>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn  text="Descripción" prefWidth="180">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="descripcion"></PropertyValueFactory>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn  text="Existencia" prefWidth="80">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="noExistencia"></PropertyValueFactory>
+                                </cellValueFactory>
+                            </TableColumn>
+                        </columns>
+                        <tooltip>
+                            <Tooltip text="Presione dos veces para agregar a la venta"></Tooltip>
+                        </tooltip>
+                    </TableView>
+                </HBox>
             </VBox>
         </AnchorPane>
     </top>
     <center>
-        <!--codigo varchar(30) not null,
-						descripcion varchar(40),
-						preCosto money,
-						preVenta money,
-						preMayoreo money,
-						noExistencia real,
-						exiMinima real,
-						ganancia real,
-						idUniMed varchar(1) not null,
-						idDepartamento smallint not null,
-						idProv smallint not null,
-						s.getString("P.codigo"),
-                        rs.getString("P.descripcion"),
-                        rs.getDouble("D.precio"),
-                        rs.getDouble("D.cantidad"),
-                        rs.getDouble("Importe"),
-                        rs.getDouble("P.noExistencia"));-->
+        <!--String codigo, String descripcion, double preVenta, double preMayoreo, double exiMinima,double noExistencia) {-->
         <VBox alignment="CENTER" spacing="10">
             <Label fx:id="lbltic" text="Ticket - 1"  style="-fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;"></Label>
             <TableView fx:id="tblVen" VBox.vgrow="ALWAYS">
@@ -152,17 +165,17 @@
                     </TableColumn>
                     <TableColumn fx:id="tblTU" text="Precio venta" prefWidth="100">
                         <cellValueFactory>
-                            <PropertyValueFactory property="precio"></PropertyValueFactory>
+                            <PropertyValueFactory property="preVenta"></PropertyValueFactory>
                         </cellValueFactory>
                     </TableColumn>
                     <TableColumn fx:id="tblTV" text="Cantidad" prefWidth="100">
                         <cellValueFactory>
-                            <PropertyValueFactory property="D.cantidad"></PropertyValueFactory>
+                            <PropertyValueFactory property="preMayoreo"></PropertyValueFactory>
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn fx:id="tblTI" text="Importe" prefWidth="100">
+                    <TableColumn fx:id="tblTI" text="Importe" prefWidth="100"  style="-fx-background-color: #D1FBA1">
                         <cellValueFactory>
-                            <PropertyValueFactory property="Importe"></PropertyValueFactory>
+                            <PropertyValueFactory property="exiMinima"></PropertyValueFactory>
                         </cellValueFactory>
                     </TableColumn>
                     <TableColumn fx:id="tblTE" text="Existencia" prefWidth="100">
@@ -171,12 +184,8 @@
                         </cellValueFactory>
                     </TableColumn>
                 </columns>
-                <tooltip>
-                    <Tooltip text="Presione dos veces el regis"></Tooltip>
-                </tooltip>
             </TableView>
         </VBox>
-
     </center>
     <bottom>
         <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">

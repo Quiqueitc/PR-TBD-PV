@@ -72,24 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cont_ventasL.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_ventasL.java">
+      <file leaf-file-name="cont_clienteL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="115" column="10" lean-forward="false" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
-              <folding>
-                <element signature="e#4713#4714#0" expanded="true" />
-                <element signature="e#4735#4736#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQL.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/MySQL.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="185" column="20" lean-forward="false" selection-start-line="185" selection-start-column="20" selection-end-line="185" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,105 +84,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+      <file leaf-file-name="VDD_Layout.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/VDD_Layout.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="74" column="43" lean-forward="false" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cont_login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_login.java">
+      <file leaf-file-name="cont_VDDL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_VDDL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+            <state relative-caret-position="443">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cont_conf_Usuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_conf_Usuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="109" column="62" lean-forward="false" selection-start-line="109" selection-start-column="62" selection-end-line="109" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cont_configuracionL.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_configuracionL.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransactionDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="258" column="56" lean-forward="true" selection-start-line="253" selection-start-column="38" selection-end-line="258" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#551#552#0" expanded="true" />
-                <element signature="e#583#584#0" expanded="true" />
-                <marker date="1543561220340" expanded="true" signature="7213:7220" ph="SELECT* FROM... empleados" />
-                <marker date="1543561220340" expanded="true" signature="7213:7270" ph="SELECT * FRO... clientes" />
-                <marker date="1543561220340" expanded="true" signature="7213:7277" ph="SELECT * FRO... clientes" />
-                <marker date="1543561220340" expanded="true" signature="7979:8028" ph="SELECT nombr... empleados" />
-                <marker date="1543561220340" expanded="true" signature="8744:8780" ph="SELECT * FRO... empleados" />
-                <marker date="1543561220340" expanded="true" signature="8744:8781" ph="SELECT * FRO... empleados" />
-                <marker date="1543561220340" expanded="true" signature="8744:8788" ph="SELECT * FRO... empleados" />
-                <marker date="1543561220340" expanded="true" signature="8744:8789" ph="SELECT NumTa... autoactivo" />
-                <marker date="1543561220340" expanded="true" signature="9829:10062" ph="SELECT P.cod... productos" />
-                <marker date="1543561220340" expanded="true" signature="10953:10988" ph="GRANT ALL PR... " />
-                <marker date="1543561220340" expanded="true" signature="10953:11015" ph="GRANT ALL PR... " />
-                <marker date="1543561220340" expanded="true" signature="10953:11023" ph="GRANT ALL PR... " />
-                <marker date="1543561220340" expanded="true" signature="10953:11041" ph="DELETE FROM pensionados... " />
-                <marker date="1543561220340" expanded="true" signature="11681:11707" ph="GRANT USAGE " />
-                <marker date="1543561220340" expanded="true" signature="11681:11742" ph="GRANT USAGE " />
-                <marker date="1543561220340" expanded="true" signature="11719:11742" ph="GRANT ALL PR... " />
-                <marker date="1543561220340" expanded="true" signature="12423:12507" ph="INSERT INTO sucursal... " />
-                <marker date="1543561220340" expanded="true" signature="12423:12508" ph="INSERT INTO movimientos... " />
-                <marker date="1543561220340" expanded="true" signature="12463:12505" ph="SELECT idUsu... empleados" />
-                <marker date="1543561220340" expanded="true" signature="13791:13798" ph="SELECT ISNUL... factura" />
-                <marker date="1543561220340" expanded="true" signature="13791:13845" ph="SELECT IFNUL... factura" />
-                <marker date="1543561220340" expanded="true" signature="14276:14319" ph="INSERT INTO empleados... " />
-                <marker date="1543561220340" expanded="true" signature="14276:14320" ph="INSERT INTO autor... " />
-                <marker date="1543561220340" expanded="true" signature="15591:15634" ph="DELETE FROM usuario... " />
-                <marker date="1543561220340" expanded="true" signature="16262:16312" ph="UPDATE autoactivo... " />
-                <marker date="1543561220340" expanded="true" signature="16693:16782" ph="SELECT NickN... usuario" />
-                <marker date="1543561220340" expanded="true" signature="18510:18560" ph="SELECT estat... precio" />
-                <marker date="1543561220340" expanded="true" signature="19152:19249" ph="SELECT NumTa... autoactivo" />
-                <marker date="1543561220340" expanded="true" signature="19777:19879" ph="SELECT NumTa... autoactivo" />
-                <marker date="1543561220340" expanded="true" signature="20394:20474" ph="SELECT COUNT... autoactivo" />
-                <marker date="1543561220340" expanded="true" signature="20904:21019" ph="SELECT COUNT... pensionados" />
-                <marker date="1543561220340" expanded="true" signature="21473:21526" ph="SELECT TIMES... " />
-                <marker date="1543561220340" expanded="true" signature="21963:22045" ph="SELECT DATED... pensionados" />
-                <marker date="1543561220340" expanded="true" signature="22503:22604" ph="SELECT SUM(M... otrosgastos" />
-                <marker date="1543561220340" expanded="true" signature="23047:23117" ph="SELECT SUM(M... otrosgastos" />
-                <marker date="1543561220340" expanded="true" signature="23561:23622" ph="SELECT SUM(c... pensionados" />
-                <marker date="1543561220340" expanded="true" signature="24082:24150" ph="UPDATE precio... " />
-                <marker date="1543561220340" expanded="true" signature="24833:24878" ph="UPDATE precio... " />
-                <marker date="1543561220340" expanded="true" signature="25508:25557" ph="UPDATE autoactivo... " />
-                <marker date="1543561220340" expanded="true" signature="26190:26240" ph="UPDATE autocobrado... " />
-                <marker date="1543561220340" expanded="true" signature="26860:26909" ph="UPDATE usuario... " />
-                <marker date="1543561220340" expanded="true" signature="27228:27254" ph="UPDATE usuario... " />
-                <marker date="1543561220340" expanded="true" signature="27594:27628" ph="UPDATE pensionados... " />
-                <marker date="1543561220340" expanded="true" signature="27885:27908" ph="DELETE FROM otrosgastos... " />
-                <marker date="1543561220340" expanded="true" signature="28165:28188" ph="DELETE FROM autocobrado... " />
-                <marker date="1543561220340" expanded="true" signature="28455:28573" ph="UPDATE pensionados... " />
               </folding>
             </state>
           </provider>
@@ -207,28 +115,162 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="157" column="79" lean-forward="true" selection-start-line="157" selection-start-column="79" selection-end-line="157" selection-end-column="79" />
+            <state relative-caret-position="465">
+              <caret line="227" column="13" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="227" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datComp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datComp.java">
+      <file leaf-file-name="TransactionDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="413">
+              <caret line="439" column="23" lean-forward="true" selection-start-line="439" selection-start-column="23" selection-end-line="439" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#46343#46356#0" expanded="true" />
+                <marker date="1543955584995" expanded="true" signature="12734:12741" ph="SELECT* FROM... empleados" />
+                <marker date="1543955584995" expanded="true" signature="12734:12791" ph="SELECT * FRO... clientes" />
+                <marker date="1543955584995" expanded="true" signature="12734:12798" ph="SELECT * FRO... clientes" />
+                <marker date="1543955584995" expanded="true" signature="13500:13549" ph="SELECT nombr... empleados" />
+                <marker date="1543955584995" expanded="true" signature="14265:14301" ph="SELECT * FRO... empleados" />
+                <marker date="1543955584995" expanded="true" signature="14265:14302" ph="SELECT * FRO... empleados" />
+                <marker date="1543955584995" expanded="true" signature="14265:14309" ph="SELECT * FRO... empleados" />
+                <marker date="1543955584995" expanded="true" signature="14265:14310" ph="SELECT NumTa... autoactivo" />
+                <marker date="1543955584995" expanded="true" signature="15350:15596" ph="SELECT P.cod... productos" />
+                <marker date="1543955584995" expanded="true" signature="16626:17147" ph="SELECT F.NoF... factura" />
+                <marker date="1543955584995" expanded="true" signature="18154:18194" ph="select idCli... clientes" />
+                <marker date="1543955584995" expanded="true" signature="18971:19045" ph="select codig... productos" />
+                <marker date="1543955584995" expanded="true" signature="18971:19074" ph="select codig... productos" />
+                <marker date="1543955584995" expanded="true" signature="18971:19081" ph="select codig... productos" />
+                <marker date="1543955584995" expanded="true" signature="18971:19082" ph="SELECT P.cod... productos" />
+                <marker date="1543955584995" expanded="true" signature="19816:19851" ph="GRANT ALL PR... " />
+                <marker date="1543955584995" expanded="true" signature="19816:19878" ph="GRANT ALL PR... " />
+                <marker date="1543955584995" expanded="true" signature="19816:19886" ph="GRANT ALL PR... " />
+                <marker date="1543955584995" expanded="true" signature="19816:19904" ph="DELETE FROM pensionados... " />
+                <marker date="1543955584995" expanded="true" signature="20544:20570" ph="GRANT USAGE " />
+                <marker date="1543955584995" expanded="true" signature="20544:20605" ph="GRANT USAGE " />
+                <marker date="1543955584995" expanded="true" signature="20582:20605" ph="GRANT ALL PR... " />
+                <marker date="1543955584995" expanded="true" signature="21286:21370" ph="INSERT INTO sucursal... " />
+                <marker date="1543955584995" expanded="true" signature="21286:21371" ph="INSERT INTO movimientos... " />
+                <marker date="1543955584995" expanded="true" signature="21326:21368" ph="SELECT idUsu... empleados" />
+                <marker date="1543955584995" expanded="true" signature="22654:22661" ph="SELECT ISNUL... factura" />
+                <marker date="1543955584995" expanded="true" signature="22654:22708" ph="SELECT IFNUL... factura" />
+                <marker date="1543955584995" expanded="true" signature="23227:23285" ph="select descr... productos" />
+                <marker date="1543955584995" expanded="true" signature="23227:23292" ph="SELECT IFNUL... factura" />
+                <marker date="1543955584995" expanded="true" signature="23861:23892" ph="select descr... productos" />
+                <marker date="1543955584995" expanded="true" signature="24391:24501" ph="select SUM(c... detalle" />
+                <marker date="1543955584995" expanded="true" signature="25002:25080" ph="SELECT descu... detalle" />
+                <marker date="1543955584995" expanded="true" signature="25576:25619" ph="INSERT INTO empleados... " />
+                <marker date="1543955584995" expanded="true" signature="25576:25620" ph="INSERT INTO autor... " />
+                <marker date="1543955584995" expanded="true" signature="26959:27051" ph="INSERT INTO movimiento... " />
+                <marker date="1543955584995" expanded="true" signature="28116:28159" ph="DELETE FROM usuario... " />
+                <marker date="1543955584995" expanded="true" signature="28787:28837" ph="UPDATE autoactivo... " />
+                <marker date="1543955584995" expanded="true" signature="29218:29307" ph="SELECT NickN... usuario" />
+                <marker date="1543955584995" expanded="true" signature="31035:31085" ph="SELECT estat... precio" />
+                <marker date="1543955584995" expanded="true" signature="31677:31774" ph="SELECT NumTa... autoactivo" />
+                <marker date="1543955584995" expanded="true" signature="32302:32404" ph="SELECT NumTa... autoactivo" />
+                <marker date="1543955584995" expanded="true" signature="32919:32999" ph="SELECT COUNT... autoactivo" />
+                <marker date="1543955584995" expanded="true" signature="33429:33544" ph="SELECT COUNT... pensionados" />
+                <marker date="1543955584995" expanded="true" signature="33998:34051" ph="SELECT TIMES... " />
+                <marker date="1543955584995" expanded="true" signature="34488:34570" ph="SELECT DATED... pensionados" />
+                <marker date="1543955584995" expanded="true" signature="35018:35088" ph="SELECT SUM(M... otrosgastos" />
+                <marker date="1543955584995" expanded="true" signature="35532:35593" ph="SELECT SUM(c... pensionados" />
+                <marker date="1543955584995" expanded="true" signature="36053:36121" ph="UPDATE precio... " />
+                <marker date="1543955584995" expanded="true" signature="36804:36849" ph="UPDATE precio... " />
+                <marker date="1543955584995" expanded="true" signature="37479:37528" ph="UPDATE autoactivo... " />
+                <marker date="1543955584995" expanded="true" signature="38161:38211" ph="UPDATE autocobrado... " />
+                <marker date="1543955584995" expanded="true" signature="38831:38880" ph="UPDATE usuario... " />
+                <marker date="1543955584995" expanded="true" signature="39199:39225" ph="UPDATE usuario... " />
+                <marker date="1543955584995" expanded="true" signature="39565:39599" ph="UPDATE pensionados... " />
+                <marker date="1543955584995" expanded="true" signature="39856:39879" ph="DELETE FROM otrosgastos... " />
+                <marker date="1543955584995" expanded="true" signature="40136:40159" ph="DELETE FROM autocobrado... " />
+                <marker date="1543955584995" expanded="true" signature="40426:40544" ph="UPDATE pensionados... " />
+                <marker date="1543955584995" expanded="true" signature="43766:43821" ph="SELECT noFac... factura" />
+                <marker date="1543955584995" expanded="true" signature="44667:44761" ph="SELECT idCli... clientes" />
+                <marker date="1543955584995" expanded="true" signature="45689:45726" ph="delete from clientes... " />
+                <marker date="1543955584995" expanded="true" signature="46593:46629" ph="SELECT * FRO... clientes" />
+                <marker date="1543955584995" expanded="true" signature="47694:47942" ph="SELECT descr... detalle" />
+                <marker date="1543955584995" expanded="true" signature="48835:48915" ph="SELECT numPa... pagos" />
+                <marker date="1543955584995" expanded="true" signature="49814:49885" ph="SELECT IFNUL... pagos" />
+                <marker date="1543955584995" expanded="true" signature="50480:50564" ph="INSERT INTO pagos... " />
+                <marker date="1543955584995" expanded="true" signature="51722:51929" ph="SELECT SUM(F... factura" />
+                <marker date="1543955584995" expanded="true" signature="51853:51914" ph="Select idMet... metodoPago" />
+                <marker date="1543955584995" expanded="true" signature="52418:52479" ph="SELECT SUM(a... pagos" />
+                <marker date="1543955584995" expanded="true" signature="52920:53061" ph="SELECT SUM(t... factura" />
+                <marker date="1543955584995" expanded="true" signature="52999:53060" ph="Select idMet... metodoPago" />
+                <marker date="1543955584995" expanded="true" signature="53499:53646" ph="SELECT SUM(t... factura" />
+                <marker date="1543955584995" expanded="true" signature="53578:53645" ph="Select idMet... metodoPago" />
+                <marker date="1543955584995" expanded="true" signature="54087:54242" ph="SELECT SUM(t... factura" />
+                <marker date="1543955584995" expanded="true" signature="54166:54241" ph="Select idMet... metodoPago" />
+                <marker date="1543955584995" expanded="true" signature="54683:54846" ph="SELECT SUM(c... movimiento" />
+                <marker date="1543955584995" expanded="true" signature="54790:54845" ph="Select idTip... tipMov" />
+                <marker date="1543955584995" expanded="true" signature="55289:55451" ph="SELECT SUM(c... movimiento" />
+                <marker date="1543955584995" expanded="true" signature="55396:55450" ph="Select idTip... tipMov" />
+                <marker date="1543955584995" expanded="true" signature="55890:56141" ph="select sum((... detalle" />
+                <marker date="1543955584995" expanded="true" signature="56693:57018" ph="select dt.de... detalle" />
+                <marker date="1543955584995" expanded="true" signature="57739:57823" ph="select SUM(c... movimiento" />
+                <marker date="1543955584995" expanded="true" signature="58262:58342" ph="select canti... movimiento" />
+                <marker date="1543955584995" expanded="true" signature="58919:58945" ph="select * fro... unidadmedida" />
+                <marker date="1543955584995" expanded="true" signature="59648:59718" ph="UPDATE unidadmedida... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datDetFact.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDetFact.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cont_clienteL.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteL.java">
+      <file leaf-file-name="datFactura.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datFactura.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+            <state relative-caret-position="357">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#239#240#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datDetalles.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDetalles.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cont_corteL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_corteL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datSucursal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datSucursal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -246,34 +288,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>3</find>
-      <find>3z</find>
-      <find>tras</find>
-      <find>trans</find>
-      <find>obser</find>
-      <find>FF</find>
-      <find>jfxcOMBO</find>
-      <find>jfxbu</find>
-      <find>btn</find>
-      <find>txt</find>
-      <find>rd</find>
-      <find>jfxRadio</find>
-      <find>jfxc</find>
-      <find>jfxcO</find>
-      <find>VBPR</find>
-      <find>RIG</find>
-      <find>id</find>
-      <find>fx:id</find>
-      <find>crea</find>
-      <find>cre</find>
-      <find>insSucursal</find>
-      <find>null</find>
-      <find>cr</find>
-      <find>usuarionull</find>
-      <find>creUsuario</find>
-      <find>crePri</find>
-      <find>SQL</find>
-      <find>ACT_PRO</find>
+      <find>datEm</find>
+      <find>dEmpleadoA</find>
+      <find>ins</find>
+      <find>NE</find>
+      <find>PROpza</find>
+      <find>GRANT</find>
+      <find>PROgranel</find>
+      <find>mAY</find>
+      <find>insM</find>
+      <find>CALL ACT_</find>
+      <find>sal</find>
+      <find>llenarT</find>
+      <find>del</find>
+      <find>act</find>
+      <find>nuevo pro</find>
+      <find>ACTdatos</find>
+      <find>totFactura</find>
+      <find>da</find>
+      <find>tblC</find>
+      <find>act_</find>
+      <find>progran</find>
+      <find>datEmpleados</find>
+      <find>f12</find>
+      <find>llenartb</find>
+      <find>gui_</find>
+      <find>transa</find>
+      <find>ACTDATOS</find>
+      <find>LlenarClientes</find>
+      <find>LlenarCliente</find>
+      <find>llenartbl</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -292,7 +336,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/PTBDPV/cont/Controller.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/inicio_Layout.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/bd/SQLC.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/login_Register_Layout.fxml" />
@@ -303,7 +346,6 @@
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_configuracionL.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/corte_Layout.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_corteL/fxml.java" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_corteL.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteSelec_Layout.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/clienteSelec_Layout.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/datos/datPagos.java" />
@@ -315,22 +357,36 @@
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/cliente_Layout.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/inventario_Layout.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_inventarioL.java" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datFactura.java" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/fxml/inicio_Layout.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/configuracion_Layout.fxml" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datProductos.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/bd/SQL.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/datos/datTrans.java" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_inicioL.java" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datComp.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/Main.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_conf_Usuario.java" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/bd/MySQL.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/fxml/INSvarios_Layout.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_login.java" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteL.java" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/bd/MySQL.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/fxml/ARTcomun_Layout.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/ventas_Layout.fxml" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datProductos.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/fxml/inicio_Layout.fxml" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datMovimientos.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_inicioL.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_ARTcomunL.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/fxml/ENSA_Layout.fxml" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_ENSAL.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_INSvarios.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/fxml/F12cobrar_Layout.fxml" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datComp.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_F12cobrarL.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_ventasL.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/fxml/VDD.fxml" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datClientes.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_corteL.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteL.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datFactura.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/fxml/VDD_Layout.fxml" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_VDDL.java" />
       </list>
     </option>
   </component>
@@ -340,8 +396,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1386" />
@@ -366,9 +428,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -406,13 +468,20 @@
               <item name="P-TBD-PV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="PTBDPV" type="462c0819:PsiDirectoryNode" />
+              <item name="datos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="P-TBD-PV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="P-TBD-PV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PTBDPV" type="462c0819:PsiDirectoryNode" />
               <item name="fxml" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,7 +496,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/ITC 4/1 GIT HUB/ProyectoTopicosAP/PROYECTOFINAL2" />
+    <property name="last_opened_file_path" value="E:/1_ OTROS PROYECTOS 4TO/CONTROL-ASO" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -607,36 +676,39 @@
       <workItem from="1543478591305" duration="109000" />
       <workItem from="1543498847035" duration="2522000" />
       <workItem from="1543507436585" duration="22156000" />
+      <workItem from="1543679804449" duration="36410000" />
+      <workItem from="1543806585710" duration="2828000" />
+      <workItem from="1543823987364" duration="20142000" />
+      <workItem from="1543929890323" duration="14579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163089000" />
+    <option name="totallyTimeSpent" value="237048000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34747145" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24358974" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16490166" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295626" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -647,8 +719,9 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -657,31 +730,31 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295626" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295626" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34747145" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22850679" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16490166" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -704,175 +777,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <marker date="1543561220340" expanded="true" signature="7213:7220" ph="SELECT* FROM... empleados" />
-            <marker date="1543561220340" expanded="true" signature="7213:7270" ph="SELECT * FRO... clientes" />
-            <marker date="1543561220340" expanded="true" signature="7213:7277" ph="SELECT * FRO... clientes" />
-            <marker date="1543561220340" expanded="true" signature="7979:8028" ph="SELECT nombr... empleados" />
-            <marker date="1543561220340" expanded="true" signature="8744:8780" ph="SELECT * FRO... empleados" />
-            <marker date="1543561220340" expanded="true" signature="8744:8781" ph="SELECT * FRO... empleados" />
-            <marker date="1543561220340" expanded="true" signature="8744:8788" ph="SELECT * FRO... empleados" />
-            <marker date="1543561220340" expanded="true" signature="8744:8789" ph="SELECT NumTa... autoactivo" />
-            <marker date="1543561220340" expanded="true" signature="9829:10062" ph="SELECT P.cod... productos" />
-            <marker date="1543561220340" expanded="true" signature="10953:10988" ph="GRANT ALL PR... " />
-            <marker date="1543561220340" expanded="true" signature="10953:11015" ph="GRANT ALL PR... " />
-            <marker date="1543561220340" expanded="true" signature="10953:11023" ph="GRANT ALL PR... " />
-            <marker date="1543561220340" expanded="true" signature="10953:11041" ph="DELETE FROM pensionados... " />
-            <marker date="1543561220340" expanded="true" signature="11681:11707" ph="GRANT USAGE " />
-            <marker date="1543561220340" expanded="true" signature="11681:11742" ph="GRANT USAGE " />
-            <marker date="1543561220340" expanded="true" signature="11719:11742" ph="GRANT ALL PR... " />
-            <marker date="1543561220340" expanded="true" signature="12423:12507" ph="INSERT INTO sucursal... " />
-            <marker date="1543561220340" expanded="true" signature="12423:12508" ph="INSERT INTO movimientos... " />
-            <marker date="1543561220340" expanded="true" signature="12463:12505" ph="SELECT idUsu... empleados" />
-            <marker date="1543561220340" expanded="true" signature="13791:13798" ph="SELECT ISNUL... factura" />
-            <marker date="1543561220340" expanded="true" signature="13791:13845" ph="SELECT IFNUL... factura" />
-            <marker date="1543561220340" expanded="true" signature="14276:14319" ph="INSERT INTO empleados... " />
-            <marker date="1543561220340" expanded="true" signature="14276:14320" ph="INSERT INTO autor... " />
-            <marker date="1543561220340" expanded="true" signature="15591:15634" ph="DELETE FROM usuario... " />
-            <marker date="1543561220340" expanded="true" signature="16262:16312" ph="UPDATE autoactivo... " />
-            <marker date="1543561220340" expanded="true" signature="16693:16782" ph="SELECT NickN... usuario" />
-            <marker date="1543561220340" expanded="true" signature="18510:18560" ph="SELECT estat... precio" />
-            <marker date="1543561220340" expanded="true" signature="19152:19249" ph="SELECT NumTa... autoactivo" />
-            <marker date="1543561220340" expanded="true" signature="19777:19879" ph="SELECT NumTa... autoactivo" />
-            <marker date="1543561220340" expanded="true" signature="20394:20474" ph="SELECT COUNT... autoactivo" />
-            <marker date="1543561220340" expanded="true" signature="20904:21019" ph="SELECT COUNT... pensionados" />
-            <marker date="1543561220340" expanded="true" signature="21473:21526" ph="SELECT TIMES... " />
-            <marker date="1543561220340" expanded="true" signature="21963:22045" ph="SELECT DATED... pensionados" />
-            <marker date="1543561220340" expanded="true" signature="22503:22604" ph="SELECT SUM(M... otrosgastos" />
-            <marker date="1543561220340" expanded="true" signature="23047:23117" ph="SELECT SUM(M... otrosgastos" />
-            <marker date="1543561220340" expanded="true" signature="23561:23622" ph="SELECT SUM(c... pensionados" />
-            <marker date="1543561220340" expanded="true" signature="24082:24150" ph="UPDATE precio... " />
-            <marker date="1543561220340" expanded="true" signature="24833:24878" ph="UPDATE precio... " />
-            <marker date="1543561220340" expanded="true" signature="25508:25557" ph="UPDATE autoactivo... " />
-            <marker date="1543561220340" expanded="true" signature="26190:26240" ph="UPDATE autocobrado... " />
-            <marker date="1543561220340" expanded="true" signature="26860:26909" ph="UPDATE usuario... " />
-            <marker date="1543561220340" expanded="true" signature="27228:27254" ph="UPDATE usuario... " />
-            <marker date="1543561220340" expanded="true" signature="27594:27628" ph="UPDATE pensionados... " />
-            <marker date="1543561220340" expanded="true" signature="27885:27908" ph="DELETE FROM otrosgastos... " />
-            <marker date="1543561220340" expanded="true" signature="28165:28188" ph="DELETE FROM autocobrado... " />
-            <marker date="1543561220340" expanded="true" signature="28455:28573" ph="UPDATE pensionados... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/SQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/inicio_Layout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/inicio_Layout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/inicio_Layout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/inicio_Layout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -880,28 +784,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datEmpleados.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datSucursal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="115" lean-forward="false" selection-start-line="7" selection-start-column="115" selection-end-line="7" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_corteL/fxml.java" />
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_corteL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/corte_Layout.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -915,13 +798,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteSelec_Layout.java" />
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/clienteSelec_Layout.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDetalles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/conf_Usuario.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -944,17 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/productos_Layout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
-          <caret line="246" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/inventario_Layout.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -966,13 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datProveedores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_inventarioL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -980,31 +838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDepartamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_productosL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
           <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datPagos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datFactura.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1030,170 +867,322 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/inicio_Layout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="132" column="10" lean-forward="false" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datTrans.java" />
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datProductos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_inicioL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-901">
-          <caret line="36" column="41" lean-forward="false" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2118#2119#0" expanded="true" />
-            <element signature="e#2164#2165#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/SQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/SQL.java" />
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="136">
           <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datComp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_configuracionL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="272">
           <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_conf_Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
+        <state relative-caret-position="1513">
           <caret line="109" column="62" lean-forward="false" selection-start-line="109" selection-start-column="62" selection-end-line="109" selection-end-column="62" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/MySQL.java">
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datMovimientos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#479#480#0" expanded="false" />
+            <element signature="e#514#515#0" expanded="false" />
+            <element signature="e#567#568#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#653#654#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#787#788#0" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#889#890#0" expanded="false" />
+            <element signature="e#923#924#0" expanded="false" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#979#980#0" expanded="false" />
+            <element signature="e#1017#1018#0" expanded="false" />
+            <element signature="e#1047#1048#0" expanded="false" />
+            <element signature="e#1080#1081#0" expanded="false" />
+            <element signature="e#1109#1110#0" expanded="false" />
+            <element signature="e#1153#1154#0" expanded="false" />
+            <element signature="e#1189#1190#0" expanded="false" />
+            <element signature="e#1224#1225#0" expanded="false" />
+            <element signature="e#1255#1256#0" expanded="false" />
+            <element signature="e#1303#1304#0" expanded="false" />
+            <element signature="e#1343#1344#0" expanded="false" />
+            <element signature="e#1373#1374#0" expanded="false" />
+            <element signature="e#1401#1402#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+            <element signature="e#1475#1476#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_ENSAL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_ARTcomunL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_INSvarios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="45" column="46" lean-forward="true" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datProductos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="83" lean-forward="false" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/ARTcomun_Layout.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="44" column="11" lean-forward="true" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/ENSA_Layout.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/INSvarios_Layout.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="75" column="12" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="75" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/productos_Layout.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="128" column="168" lean-forward="false" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="168" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/inicio_Layout.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="145" column="34" lean-forward="false" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_inicioL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="e#2446#2447#0" expanded="false" />
+            <element signature="e#2492#2493#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        <state relative-caret-position="1088">
+          <caret line="87" column="44" lean-forward="false" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/MySQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datPagos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/F12cobrar_Layout.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="62" column="87" lean-forward="false" selection-start-line="62" selection-start-column="87" selection-end-line="62" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datComp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#219#220#0" expanded="false" />
+            <element signature="e#255#256#0" expanded="false" />
+            <element signature="e#390#391#0" expanded="false" />
+            <element signature="e#422#423#0" expanded="false" />
+            <element signature="e#451#452#0" expanded="false" />
+            <element signature="e#482#483#0" expanded="false" />
+            <element signature="e#505#506#0" expanded="false" />
+            <element signature="e#529#530#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_F12cobrarL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="116" column="46" lean-forward="false" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3331#3332#0" expanded="false" />
+            <element signature="e#3357#3358#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_ventasL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="656" column="11" lean-forward="false" selection-start-line="656" selection-start-column="11" selection-end-line="656" selection-end-column="11" />
+          <folding>
+            <element signature="e#9776#9777#0" expanded="true" />
+            <element signature="e#9818#9819#0" expanded="true" />
+            <element signature="e#11818#11819#0" expanded="true" />
+            <element signature="e#11860#11861#0" expanded="true" />
+            <element signature="e#18768#18769#0" expanded="true" />
+            <element signature="e#18810#18811#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/com/sun/javafx/event/CompositeEventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDepartamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datProveedores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datSucursal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datClientes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datEmpleados.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_corteL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="258" column="56" lean-forward="true" selection-start-line="253" selection-start-column="38" selection-end-line="258" selection-end-column="56" />
+        <state relative-caret-position="289">
+          <caret line="185" column="20" lean-forward="false" selection-start-line="185" selection-start-column="20" selection-end-line="185" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <marker date="1543561220340" expanded="true" signature="7213:7220" ph="SELECT* FROM... empleados" />
-            <marker date="1543561220340" expanded="true" signature="7213:7270" ph="SELECT * FRO... clientes" />
-            <marker date="1543561220340" expanded="true" signature="7213:7277" ph="SELECT * FRO... clientes" />
-            <marker date="1543561220340" expanded="true" signature="7979:8028" ph="SELECT nombr... empleados" />
-            <marker date="1543561220340" expanded="true" signature="8744:8780" ph="SELECT * FRO... empleados" />
-            <marker date="1543561220340" expanded="true" signature="8744:8781" ph="SELECT * FRO... empleados" />
-            <marker date="1543561220340" expanded="true" signature="8744:8788" ph="SELECT * FRO... empleados" />
-            <marker date="1543561220340" expanded="true" signature="8744:8789" ph="SELECT NumTa... autoactivo" />
-            <marker date="1543561220340" expanded="true" signature="9829:10062" ph="SELECT P.cod... productos" />
-            <marker date="1543561220340" expanded="true" signature="10953:10988" ph="GRANT ALL PR... " />
-            <marker date="1543561220340" expanded="true" signature="10953:11015" ph="GRANT ALL PR... " />
-            <marker date="1543561220340" expanded="true" signature="10953:11023" ph="GRANT ALL PR... " />
-            <marker date="1543561220340" expanded="true" signature="10953:11041" ph="DELETE FROM pensionados... " />
-            <marker date="1543561220340" expanded="true" signature="11681:11707" ph="GRANT USAGE " />
-            <marker date="1543561220340" expanded="true" signature="11681:11742" ph="GRANT USAGE " />
-            <marker date="1543561220340" expanded="true" signature="11719:11742" ph="GRANT ALL PR... " />
-            <marker date="1543561220340" expanded="true" signature="12423:12507" ph="INSERT INTO sucursal... " />
-            <marker date="1543561220340" expanded="true" signature="12423:12508" ph="INSERT INTO movimientos... " />
-            <marker date="1543561220340" expanded="true" signature="12463:12505" ph="SELECT idUsu... empleados" />
-            <marker date="1543561220340" expanded="true" signature="13791:13798" ph="SELECT ISNUL... factura" />
-            <marker date="1543561220340" expanded="true" signature="13791:13845" ph="SELECT IFNUL... factura" />
-            <marker date="1543561220340" expanded="true" signature="14276:14319" ph="INSERT INTO empleados... " />
-            <marker date="1543561220340" expanded="true" signature="14276:14320" ph="INSERT INTO autor... " />
-            <marker date="1543561220340" expanded="true" signature="15591:15634" ph="DELETE FROM usuario... " />
-            <marker date="1543561220340" expanded="true" signature="16262:16312" ph="UPDATE autoactivo... " />
-            <marker date="1543561220340" expanded="true" signature="16693:16782" ph="SELECT NickN... usuario" />
-            <marker date="1543561220340" expanded="true" signature="18510:18560" ph="SELECT estat... precio" />
-            <marker date="1543561220340" expanded="true" signature="19152:19249" ph="SELECT NumTa... autoactivo" />
-            <marker date="1543561220340" expanded="true" signature="19777:19879" ph="SELECT NumTa... autoactivo" />
-            <marker date="1543561220340" expanded="true" signature="20394:20474" ph="SELECT COUNT... autoactivo" />
-            <marker date="1543561220340" expanded="true" signature="20904:21019" ph="SELECT COUNT... pensionados" />
-            <marker date="1543561220340" expanded="true" signature="21473:21526" ph="SELECT TIMES... " />
-            <marker date="1543561220340" expanded="true" signature="21963:22045" ph="SELECT DATED... pensionados" />
-            <marker date="1543561220340" expanded="true" signature="22503:22604" ph="SELECT SUM(M... otrosgastos" />
-            <marker date="1543561220340" expanded="true" signature="23047:23117" ph="SELECT SUM(M... otrosgastos" />
-            <marker date="1543561220340" expanded="true" signature="23561:23622" ph="SELECT SUM(c... pensionados" />
-            <marker date="1543561220340" expanded="true" signature="24082:24150" ph="UPDATE precio... " />
-            <marker date="1543561220340" expanded="true" signature="24833:24878" ph="UPDATE precio... " />
-            <marker date="1543561220340" expanded="true" signature="25508:25557" ph="UPDATE autoactivo... " />
-            <marker date="1543561220340" expanded="true" signature="26190:26240" ph="UPDATE autocobrado... " />
-            <marker date="1543561220340" expanded="true" signature="26860:26909" ph="UPDATE usuario... " />
-            <marker date="1543561220340" expanded="true" signature="27228:27254" ph="UPDATE usuario... " />
-            <marker date="1543561220340" expanded="true" signature="27594:27628" ph="UPDATE pensionados... " />
-            <marker date="1543561220340" expanded="true" signature="27885:27908" ph="DELETE FROM otrosgastos... " />
-            <marker date="1543561220340" expanded="true" signature="28165:28188" ph="DELETE FROM autocobrado... " />
-            <marker date="1543561220340" expanded="true" signature="28455:28573" ph="UPDATE pensionados... " />
           </folding>
         </state>
       </provider>
@@ -1203,20 +1192,156 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="157" column="79" lean-forward="true" selection-start-line="157" selection-start-column="79" selection-end-line="157" selection-end-column="79" />
+        <state relative-caret-position="465">
+          <caret line="227" column="13" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="227" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_ventasL.java">
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDetalles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="115" column="10" lean-forward="false" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+        <state relative-caret-position="493">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDetFact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="439" column="23" lean-forward="true" selection-start-line="439" selection-start-column="23" selection-end-line="439" selection-end-column="23" />
           <folding>
-            <element signature="e#4713#4714#0" expanded="true" />
-            <element signature="e#4735#4736#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#46343#46356#0" expanded="true" />
+            <marker date="1543955584995" expanded="true" signature="12734:12741" ph="SELECT* FROM... empleados" />
+            <marker date="1543955584995" expanded="true" signature="12734:12791" ph="SELECT * FRO... clientes" />
+            <marker date="1543955584995" expanded="true" signature="12734:12798" ph="SELECT * FRO... clientes" />
+            <marker date="1543955584995" expanded="true" signature="13500:13549" ph="SELECT nombr... empleados" />
+            <marker date="1543955584995" expanded="true" signature="14265:14301" ph="SELECT * FRO... empleados" />
+            <marker date="1543955584995" expanded="true" signature="14265:14302" ph="SELECT * FRO... empleados" />
+            <marker date="1543955584995" expanded="true" signature="14265:14309" ph="SELECT * FRO... empleados" />
+            <marker date="1543955584995" expanded="true" signature="14265:14310" ph="SELECT NumTa... autoactivo" />
+            <marker date="1543955584995" expanded="true" signature="15350:15596" ph="SELECT P.cod... productos" />
+            <marker date="1543955584995" expanded="true" signature="16626:17147" ph="SELECT F.NoF... factura" />
+            <marker date="1543955584995" expanded="true" signature="18154:18194" ph="select idCli... clientes" />
+            <marker date="1543955584995" expanded="true" signature="18971:19045" ph="select codig... productos" />
+            <marker date="1543955584995" expanded="true" signature="18971:19074" ph="select codig... productos" />
+            <marker date="1543955584995" expanded="true" signature="18971:19081" ph="select codig... productos" />
+            <marker date="1543955584995" expanded="true" signature="18971:19082" ph="SELECT P.cod... productos" />
+            <marker date="1543955584995" expanded="true" signature="19816:19851" ph="GRANT ALL PR... " />
+            <marker date="1543955584995" expanded="true" signature="19816:19878" ph="GRANT ALL PR... " />
+            <marker date="1543955584995" expanded="true" signature="19816:19886" ph="GRANT ALL PR... " />
+            <marker date="1543955584995" expanded="true" signature="19816:19904" ph="DELETE FROM pensionados... " />
+            <marker date="1543955584995" expanded="true" signature="20544:20570" ph="GRANT USAGE " />
+            <marker date="1543955584995" expanded="true" signature="20544:20605" ph="GRANT USAGE " />
+            <marker date="1543955584995" expanded="true" signature="20582:20605" ph="GRANT ALL PR... " />
+            <marker date="1543955584995" expanded="true" signature="21286:21370" ph="INSERT INTO sucursal... " />
+            <marker date="1543955584995" expanded="true" signature="21286:21371" ph="INSERT INTO movimientos... " />
+            <marker date="1543955584995" expanded="true" signature="21326:21368" ph="SELECT idUsu... empleados" />
+            <marker date="1543955584995" expanded="true" signature="22654:22661" ph="SELECT ISNUL... factura" />
+            <marker date="1543955584995" expanded="true" signature="22654:22708" ph="SELECT IFNUL... factura" />
+            <marker date="1543955584995" expanded="true" signature="23227:23285" ph="select descr... productos" />
+            <marker date="1543955584995" expanded="true" signature="23227:23292" ph="SELECT IFNUL... factura" />
+            <marker date="1543955584995" expanded="true" signature="23861:23892" ph="select descr... productos" />
+            <marker date="1543955584995" expanded="true" signature="24391:24501" ph="select SUM(c... detalle" />
+            <marker date="1543955584995" expanded="true" signature="25002:25080" ph="SELECT descu... detalle" />
+            <marker date="1543955584995" expanded="true" signature="25576:25619" ph="INSERT INTO empleados... " />
+            <marker date="1543955584995" expanded="true" signature="25576:25620" ph="INSERT INTO autor... " />
+            <marker date="1543955584995" expanded="true" signature="26959:27051" ph="INSERT INTO movimiento... " />
+            <marker date="1543955584995" expanded="true" signature="28116:28159" ph="DELETE FROM usuario... " />
+            <marker date="1543955584995" expanded="true" signature="28787:28837" ph="UPDATE autoactivo... " />
+            <marker date="1543955584995" expanded="true" signature="29218:29307" ph="SELECT NickN... usuario" />
+            <marker date="1543955584995" expanded="true" signature="31035:31085" ph="SELECT estat... precio" />
+            <marker date="1543955584995" expanded="true" signature="31677:31774" ph="SELECT NumTa... autoactivo" />
+            <marker date="1543955584995" expanded="true" signature="32302:32404" ph="SELECT NumTa... autoactivo" />
+            <marker date="1543955584995" expanded="true" signature="32919:32999" ph="SELECT COUNT... autoactivo" />
+            <marker date="1543955584995" expanded="true" signature="33429:33544" ph="SELECT COUNT... pensionados" />
+            <marker date="1543955584995" expanded="true" signature="33998:34051" ph="SELECT TIMES... " />
+            <marker date="1543955584995" expanded="true" signature="34488:34570" ph="SELECT DATED... pensionados" />
+            <marker date="1543955584995" expanded="true" signature="35018:35088" ph="SELECT SUM(M... otrosgastos" />
+            <marker date="1543955584995" expanded="true" signature="35532:35593" ph="SELECT SUM(c... pensionados" />
+            <marker date="1543955584995" expanded="true" signature="36053:36121" ph="UPDATE precio... " />
+            <marker date="1543955584995" expanded="true" signature="36804:36849" ph="UPDATE precio... " />
+            <marker date="1543955584995" expanded="true" signature="37479:37528" ph="UPDATE autoactivo... " />
+            <marker date="1543955584995" expanded="true" signature="38161:38211" ph="UPDATE autocobrado... " />
+            <marker date="1543955584995" expanded="true" signature="38831:38880" ph="UPDATE usuario... " />
+            <marker date="1543955584995" expanded="true" signature="39199:39225" ph="UPDATE usuario... " />
+            <marker date="1543955584995" expanded="true" signature="39565:39599" ph="UPDATE pensionados... " />
+            <marker date="1543955584995" expanded="true" signature="39856:39879" ph="DELETE FROM otrosgastos... " />
+            <marker date="1543955584995" expanded="true" signature="40136:40159" ph="DELETE FROM autocobrado... " />
+            <marker date="1543955584995" expanded="true" signature="40426:40544" ph="UPDATE pensionados... " />
+            <marker date="1543955584995" expanded="true" signature="43766:43821" ph="SELECT noFac... factura" />
+            <marker date="1543955584995" expanded="true" signature="44667:44761" ph="SELECT idCli... clientes" />
+            <marker date="1543955584995" expanded="true" signature="45689:45726" ph="delete from clientes... " />
+            <marker date="1543955584995" expanded="true" signature="46593:46629" ph="SELECT * FRO... clientes" />
+            <marker date="1543955584995" expanded="true" signature="47694:47942" ph="SELECT descr... detalle" />
+            <marker date="1543955584995" expanded="true" signature="48835:48915" ph="SELECT numPa... pagos" />
+            <marker date="1543955584995" expanded="true" signature="49814:49885" ph="SELECT IFNUL... pagos" />
+            <marker date="1543955584995" expanded="true" signature="50480:50564" ph="INSERT INTO pagos... " />
+            <marker date="1543955584995" expanded="true" signature="51722:51929" ph="SELECT SUM(F... factura" />
+            <marker date="1543955584995" expanded="true" signature="51853:51914" ph="Select idMet... metodoPago" />
+            <marker date="1543955584995" expanded="true" signature="52418:52479" ph="SELECT SUM(a... pagos" />
+            <marker date="1543955584995" expanded="true" signature="52920:53061" ph="SELECT SUM(t... factura" />
+            <marker date="1543955584995" expanded="true" signature="52999:53060" ph="Select idMet... metodoPago" />
+            <marker date="1543955584995" expanded="true" signature="53499:53646" ph="SELECT SUM(t... factura" />
+            <marker date="1543955584995" expanded="true" signature="53578:53645" ph="Select idMet... metodoPago" />
+            <marker date="1543955584995" expanded="true" signature="54087:54242" ph="SELECT SUM(t... factura" />
+            <marker date="1543955584995" expanded="true" signature="54166:54241" ph="Select idMet... metodoPago" />
+            <marker date="1543955584995" expanded="true" signature="54683:54846" ph="SELECT SUM(c... movimiento" />
+            <marker date="1543955584995" expanded="true" signature="54790:54845" ph="Select idTip... tipMov" />
+            <marker date="1543955584995" expanded="true" signature="55289:55451" ph="SELECT SUM(c... movimiento" />
+            <marker date="1543955584995" expanded="true" signature="55396:55450" ph="Select idTip... tipMov" />
+            <marker date="1543955584995" expanded="true" signature="55890:56141" ph="select sum((... detalle" />
+            <marker date="1543955584995" expanded="true" signature="56693:57018" ph="select dt.de... detalle" />
+            <marker date="1543955584995" expanded="true" signature="57739:57823" ph="select SUM(c... movimiento" />
+            <marker date="1543955584995" expanded="true" signature="58262:58342" ph="select canti... movimiento" />
+            <marker date="1543955584995" expanded="true" signature="58919:58945" ph="select * fro... unidadmedida" />
+            <marker date="1543955584995" expanded="true" signature="59648:59718" ph="UPDATE unidadmedida... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datFactura.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_VDDL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/VDD_Layout.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="74" column="43" lean-forward="false" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
