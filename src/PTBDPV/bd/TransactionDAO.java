@@ -2070,5 +2070,308 @@ public class TransactionDAO {
     }
 
 
+    /***********************************************NUEVO AGREGADO*******************************************************************/
+
+    public ObservableList<datProductos> InventarioPBI() {
+        ObservableList<datProductos> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select p.codigo AS codigo,p.descripcion AS descripcion,p.preVenta AS venta,p.noExistencia AS existencia," +
+                    "p.exiMinima AS EMinima, d.descripcion AS departamento " +
+                    "from productos p inner join departamento d on d.idDepartamento=p.idDepartamento\n" +
+                    " Where p.noExistencia<=p.exiMinima ;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datProductos p = null;
+            while(rs.next()) {
+                p = new datProductos(
+                        rs.getString("codigo"),
+                        rs.getString("descripcion"),
+                        rs.getDouble("venta"),
+                        rs.getDouble("existencia"),
+                        rs.getDouble("EMinima"),
+                        rs.getString("departamento"));
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n de clientes...");
+        }
+        return transactions;
+    }
+
+
+    /**/
+    public Boolean inventario (String cod, float cantA) throws SQLException {
+        Alert alert;
+        try {
+            conn.setAutoCommit(false);
+            CallableStatement cstmt = conn.prepareCall("{call inventario(?,?,?)}");
+            cstmt.setString(1, cod);
+            cstmt.setFloat(2,cantA);
+            cstmt.registerOutParameter(3, Types.VARCHAR);
+            cstmt.execute();
+            conn.commit();
+            if(!cstmt.getNString(3).equalsIgnoreCase("e"))
+            {
+                alert=new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText(cstmt.getNString(3));
+                alert.show();
+                return false;
+            }
+            else
+                return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Deshacer");
+//            conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            conn.setAutoCommit(true);
+        }
+        return false;
+    }
+
+    public Boolean inventarioUP (String cod, double cantA) throws SQLException {
+        Alert alert;
+        try {
+            conn.setAutoCommit(false);
+            CallableStatement cstmt = conn.prepareCall("{call inventarioUP(?,?,?)}");
+            cstmt.setString(1, cod);
+            cstmt.setDouble(2,cantA);
+            cstmt.registerOutParameter(3, Types.VARCHAR);
+            cstmt.execute();
+            conn.commit();
+            if(!cstmt.getNString(3).equalsIgnoreCase("e"))
+            {
+                alert=new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText(cstmt.getNString(3));
+                alert.show();
+                return false;
+            }
+            else
+                return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Deshacer");
+//            conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            conn.setAutoCommit(true);
+        }
+        return false;
+    }
+
+    public ObservableList<datDepartamento> llenaCBDep (){
+
+        ObservableList<datDepartamento> transactions = FXCollections.observableArrayList();
+        datDepartamento p=null;
+        try {
+            String query = "select * from departamento;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                //Mientras haya resultados obtengo el valor.
+                p=new datDepartamento(rs.getInt("idDepartamento"),
+                        rs.getString("descripcion"));
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n...");
+        }
+        return transactions;
+    }
+
+    public ObservableList<datProductos> InventarioRI() {
+        ObservableList<datProductos> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select p.codigo AS codigo,p.descripcion AS descripcion ,p.preCosto AS costo,p.preVenta AS venta," +
+                    "p.noExistencia AS Existencia,p.exiMinima AS EMinima from productos p \n" +
+                    "inner join departamento d on d.idDepartamento=p.idDepartamento;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datProductos p = null;
+            while(rs.next()) {
+                p = new datProductos(
+                        rs.getString("codigo"),
+                        rs.getString("descripcion"),
+                        rs.getDouble("costo"),
+                        rs.getDouble("venta"),
+                        rs.getDouble("existencia"),
+                        rs.getDouble("EMinima"));
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n de clientes...");
+        }
+        return transactions;
+    }
+
+    public ObservableList<datProductos> InventarioRIXDpto(int idDep) {
+        ObservableList<datProductos> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select p.codigo AS codigo,p.descripcion AS descripcion ,p.preCosto AS costo,p.preVenta AS venta," +
+                    "p.noExistencia AS Existencia,p.exiMinima AS EMinima from productos p \n" +
+                    "inner join departamento d on d.idDepartamento=p.idDepartamento \n" +
+                    "where d.idDepartamento="+idDep+";";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datProductos p = null;
+            while(rs.next()) {
+                p = new datProductos(
+                        rs.getString("codigo"),
+                        rs.getString("descripcion"),
+                        rs.getDouble("costo"),
+                        rs.getDouble("venta"),
+                        rs.getDouble("existencia"),
+                        rs.getDouble("EMinima"));
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar informaciÃ³n de clientes...");
+        }
+        return transactions;
+    }
+
+    public double CostoTotal() {
+        double p=0;
+        try {
+
+            String query = "select SUM(preCosto*noExistencia) AS costo from productos;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("costo");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double TotalInvent() {
+        double p=0;
+        try {
+
+            String query = "select SUM(noExistencia) AS total from productos;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("total");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double CostoTotalXDep(int idDep) {
+        double p=0;
+        try {
+
+            String query = "select SUM(p.preCosto*p.noExistencia) AS costo from productos p " +
+                    "inner join departamento d on d.idDepartamento=p.idDepartamento \n" +
+                    "where d.idDepartamento="+idDep+";";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("costo");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+
+    public double TotalInventXDEP(int idDep) {
+        double p=0;
+        try {
+
+            String query = "select SUM(p.noExistencia) AS total from productos p" +
+                    " inner join departamento d on d.idDepartamento=p.idDepartamento \n" +
+                    "where d.idDepartamento="+idDep+";";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getDouble("total");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+    public int ProdBajos() {
+        int p=0;
+        try {
+
+            String query = "select Count(descripcion) AS total from productos where  noExistencia<=exiMinima;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getInt("total");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+    public datProductos obtenerProduct(String cod)
+    {
+        List<datProductos> movimiento = new ArrayList<datProductos>();
+        datProductos objeto = null;
+        try {
+
+            String codigo,descripcion;
+            double noExistencia;
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery("SELECT codigo,descripcion,noExistencia FROM productos where codigo='"+cod +"';");
+            while (rs.next())
+            {
+                objeto=new datProductos();
+                codigo=rs.getString("codigo");
+                descripcion=rs.getString("descripcion");
+                noExistencia= rs.getDouble("noExistencia");
+
+
+                objeto.setCodigo(codigo);
+                objeto.setDescripcion(descripcion);
+                objeto.setNoExistencia(noExistencia);
+
+                movimiento.add(objeto);
+
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(TransactionDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return objeto;
+    }
 
 }

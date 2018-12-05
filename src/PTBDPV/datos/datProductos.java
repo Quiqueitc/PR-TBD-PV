@@ -6,6 +6,38 @@ public class datProductos {
     int idDepartamento,idProv;
     int numDetalle;
     String nomDepartamento,nomProv;
+
+
+    public String getDepartamento() {
+        return departamento;
+    }
+    public datProductos(String codigo, String descripcion, double preVenta, double noExistencia, double exiMinima, String departamento) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.preVenta = preVenta;
+        this.noExistencia = noExistencia;
+        this.exiMinima = exiMinima;
+        this.departamento = departamento;
+    }
+
+    public datProductos(String codigo, String descripcion,double preCosto, double preVenta, double noExistencia, double exiMinima) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.preCosto=preCosto;
+        this.preVenta = preVenta;
+        this.noExistencia = noExistencia;
+        this.exiMinima = exiMinima;
+
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    String departamento;
+    public datProductos() {
+    }
+
     public String getNomDepartamento() {
         return nomDepartamento;
     }
@@ -70,6 +102,7 @@ public class datProductos {
         this.noExistencia = noExistencia;
         this.idProv = idProv;
     }
+
     public datProductos(String codigo, String descripcion, double noExistencia ) {
         this.codigo = codigo;
         this.descripcion = descripcion;

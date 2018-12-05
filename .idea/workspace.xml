@@ -89,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cont_clienteL.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cont_clienteL.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteL.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="287">
@@ -101,28 +101,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configuracion_Layout.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/configuracion_Layout.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="datDepartamento.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDepartamento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="234" column="49" lean-forward="false" selection-start-line="234" selection-start-column="49" selection-end-line="234" selection-end-column="49" />
+            <state relative-caret-position="51">
+              <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ventas_Layout.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PTBDPV/fxml/ventas_Layout.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="datProductos.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datProductos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="145" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding>
+                <element signature="e#289#290#0" expanded="true" />
+                <element signature="e#324#325#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#1151#1152#0" expanded="true" />
+                <element signature="e#1253#1254#0" expanded="true" />
+                <element signature="e#1291#1292#0" expanded="true" />
+                <element signature="e#1353#1354#0" expanded="true" />
+                <element signature="e#1407#1408#0" expanded="true" />
+                <element signature="e#1441#1442#0" expanded="true" />
+                <element signature="e#1471#1472#0" expanded="true" />
+                <element signature="e#1517#1518#0" expanded="true" />
+                <element signature="e#1555#1556#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,129 +166,150 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransactionDAO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TransactionDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="1645" column="27" lean-forward="false" selection-start-line="1645" selection-start-column="19" selection-end-line="1645" selection-end-column="27" />
+            <state relative-caret-position="553">
+              <caret line="2375" column="0" lean-forward="true" selection-start-line="2375" selection-start-column="0" selection-end-line="2375" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#618#619#0" expanded="true" />
                 <element signature="e#650#651#0" expanded="true" />
                 <element signature="e#63521#63534#0" expanded="true" />
-                <marker date="1544016350013" expanded="true" signature="15527:15534" ph="SELECT* FROM... empleados" />
-                <marker date="1544016350013" expanded="true" signature="15527:15584" ph="SELECT * FRO... clientes" />
-                <marker date="1544016350013" expanded="true" signature="15527:15591" ph="SELECT * FRO... clientes" />
-                <marker date="1544016350013" expanded="true" signature="16293:16300" ph="select codig... productos" />
-                <marker date="1544016350013" expanded="true" signature="16293:16383" ph="select codig... productos" />
-                <marker date="1544016350013" expanded="true" signature="17078:17114" ph="select descr... departamento" />
-                <marker date="1544016350013" expanded="true" signature="17815:17845" ph="select nombr... proveedores" />
-                <marker date="1544016350013" expanded="true" signature="18546:18595" ph="SELECT nombr... empleados" />
-                <marker date="1544016350013" expanded="true" signature="19297:19324" ph="SELECT idUsu... empleados" />
-                <marker date="1544016350013" expanded="true" signature="20015:20051" ph="SELECT * FRO... empleados" />
-                <marker date="1544016350013" expanded="true" signature="20015:20052" ph="SELECT * FRO... empleados" />
-                <marker date="1544016350013" expanded="true" signature="20015:20059" ph="SELECT * FRO... empleados" />
-                <marker date="1544016350013" expanded="true" signature="20015:20060" ph="SELECT NumTa... autoactivo" />
-                <marker date="1544016350013" expanded="true" signature="21105:21142" ph="SELECT * FRO... empleados" />
-                <marker date="1544016350013" expanded="true" signature="21105:21153" ph="SELECT * FRO... empleados" />
-                <marker date="1544016350013" expanded="true" signature="21105:21173" ph="SELECT * FRO... empleados" />
-                <marker date="1544016350013" expanded="true" signature="22207:22489" ph="select * fro... productos" />
-                <marker date="1544016350013" expanded="true" signature="22207:22496" ph="select * fro... productos" />
-                <marker date="1544016350013" expanded="true" signature="23773:24019" ph="SELECT P.cod... productos" />
-                <marker date="1544016350013" expanded="true" signature="25053:25175" ph="SELECT P.cod... productos" />
-                <marker date="1544016350013" expanded="true" signature="26047:26073" ph="SELECT * FRo... departamento" />
-                <marker date="1544016350013" expanded="true" signature="26867:26904" ph="SELECT * FRo... departamento" />
-                <marker date="1544016350013" expanded="true" signature="27681:27688" ph="SELECT idPro... proveedores" />
-                <marker date="1544016350013" expanded="true" signature="27681:27706" ph="SELECT *\nFR... promociones" />
-                <marker date="1544016350013" expanded="true" signature="28648:29293" ph="SELECT F.NoF... factura" />
-                <marker date="1544016350013" expanded="true" signature="28648:29319" ph="SELECT F.NoF... factura" />
-                <marker date="1544016350013" expanded="true" signature="30333:30585" ph="SELECT D.num... detalle" />
-                <marker date="1544016350013" expanded="true" signature="30333:30610" ph="SELECT D.num... detalle" />
-                <marker date="1544016350013" expanded="true" signature="30333:30634" ph="SELECT D.noF... detalle" />
-                <marker date="1544016350013" expanded="true" signature="30333:30635" ph="SELECT D.num... detalle" />
-                <marker date="1544016350013" expanded="true" signature="31600:31640" ph="select idCli... clientes" />
-                <marker date="1544016350013" expanded="true" signature="32417:32491" ph="select codig... productos" />
-                <marker date="1544016350013" expanded="true" signature="32417:32520" ph="select codig... productos" />
-                <marker date="1544016350013" expanded="true" signature="32417:32527" ph="select codig... productos" />
-                <marker date="1544016350013" expanded="true" signature="32417:32528" ph="SELECT P.cod... productos" />
-                <marker date="1544016350013" expanded="true" signature="33262:33297" ph="GRANT ALL PR... " />
-                <marker date="1544016350013" expanded="true" signature="33262:33324" ph="GRANT ALL PR... " />
-                <marker date="1544016350013" expanded="true" signature="33262:33332" ph="GRANT ALL PR... " />
-                <marker date="1544016350013" expanded="true" signature="33262:33350" ph="DELETE FROM pensionados... " />
-                <marker date="1544016350013" expanded="true" signature="33990:34016" ph="GRANT USAGE " />
-                <marker date="1544016350013" expanded="true" signature="33990:34051" ph="GRANT USAGE " />
-                <marker date="1544016350013" expanded="true" signature="34028:34051" ph="GRANT ALL PR... " />
-                <marker date="1544016350013" expanded="true" signature="34725:34786" ph="GRANT USAGE " />
-                <marker date="1544016350013" expanded="true" signature="35484:35568" ph="INSERT INTO sucursal... " />
-                <marker date="1544016350013" expanded="true" signature="35484:35569" ph="INSERT INTO movimientos... " />
-                <marker date="1544016350013" expanded="true" signature="35524:35566" ph="SELECT idUsu... empleados" />
-                <marker date="1544016350013" expanded="true" signature="36852:36859" ph="SELECT ISNUL... factura" />
-                <marker date="1544016350013" expanded="true" signature="36852:36906" ph="SELECT IFNUL... factura" />
-                <marker date="1544016350013" expanded="true" signature="37403:37464" ph="select descr... departamento" />
-                <marker date="1544016350013" expanded="true" signature="37403:37471" ph="SELECT IFNUL... factura" />
-                <marker date="1544016350013" expanded="true" signature="37985:38042" ph="select descr... departamento" />
-                <marker date="1544016350013" expanded="true" signature="38568:38626" ph="select descr... productos" />
-                <marker date="1544016350013" expanded="true" signature="38568:38633" ph="SELECT IFNUL... factura" />
-                <marker date="1544016350013" expanded="true" signature="39202:39233" ph="select descr... productos" />
-                <marker date="1544016350013" expanded="true" signature="39732:39842" ph="select SUM(c... detalle" />
-                <marker date="1544016350013" expanded="true" signature="40343:40421" ph="SELECT descu... detalle" />
-                <marker date="1544016350013" expanded="true" signature="40917:40960" ph="INSERT INTO empleados... " />
-                <marker date="1544016350013" expanded="true" signature="40917:40961" ph="INSERT INTO autor... " />
-                <marker date="1544016350013" expanded="true" signature="42389:42436" ph="INSERT INTO departamento... " />
-                <marker date="1544016350013" expanded="true" signature="43207:43275" ph="INSERT INTO proveedores... " />
-                <marker date="1544016350013" expanded="true" signature="44163:44255" ph="INSERT INTO movimiento... " />
-                <marker date="1544016350013" expanded="true" signature="45311:45347" ph="DELETE FROM productos... " />
-                <marker date="1544016350013" expanded="true" signature="45311:45354" ph="DELETE FROM productos... " />
-                <marker date="1544016350013" expanded="true" signature="45311:45355" ph="DELETE FROM usuario... " />
-                <marker date="1544016350013" expanded="true" signature="45965:46015" ph="UPDATE autoactivo... " />
-                <marker date="1544016350013" expanded="true" signature="46396:46485" ph="SELECT NickN... usuario" />
-                <marker date="1544016350013" expanded="true" signature="48213:48263" ph="SELECT estat... precio" />
-                <marker date="1544016350013" expanded="true" signature="48855:48952" ph="SELECT NumTa... autoactivo" />
-                <marker date="1544016350013" expanded="true" signature="49480:49582" ph="SELECT NumTa... autoactivo" />
-                <marker date="1544016350013" expanded="true" signature="50097:50177" ph="SELECT COUNT... autoactivo" />
-                <marker date="1544016350013" expanded="true" signature="50607:50722" ph="SELECT COUNT... pensionados" />
-                <marker date="1544016350013" expanded="true" signature="51176:51229" ph="SELECT TIMES... " />
-                <marker date="1544016350013" expanded="true" signature="51666:51748" ph="SELECT DATED... pensionados" />
-                <marker date="1544016350013" expanded="true" signature="52196:52266" ph="SELECT SUM(M... otrosgastos" />
-                <marker date="1544016350013" expanded="true" signature="52710:52771" ph="SELECT SUM(c... pensionados" />
-                <marker date="1544016350013" expanded="true" signature="53231:53299" ph="UPDATE precio... " />
-                <marker date="1544016350013" expanded="true" signature="53982:54027" ph="UPDATE precio... " />
-                <marker date="1544016350013" expanded="true" signature="54657:54706" ph="UPDATE autoactivo... " />
-                <marker date="1544016350013" expanded="true" signature="55339:55389" ph="UPDATE autocobrado... " />
-                <marker date="1544016350013" expanded="true" signature="56009:56058" ph="UPDATE usuario... " />
-                <marker date="1544016350013" expanded="true" signature="56377:56403" ph="UPDATE usuario... " />
-                <marker date="1544016350013" expanded="true" signature="56743:56777" ph="UPDATE pensionados... " />
-                <marker date="1544016350013" expanded="true" signature="57034:57057" ph="DELETE FROM otrosgastos... " />
-                <marker date="1544016350013" expanded="true" signature="57314:57337" ph="DELETE FROM autocobrado... " />
-                <marker date="1544016350013" expanded="true" signature="57604:57722" ph="UPDATE pensionados... " />
-                <marker date="1544016350013" expanded="true" signature="60944:60999" ph="SELECT noFac... factura" />
-                <marker date="1544016350013" expanded="true" signature="61845:61939" ph="SELECT idCli... clientes" />
-                <marker date="1544016350013" expanded="true" signature="62867:62904" ph="delete from clientes... " />
-                <marker date="1544016350013" expanded="true" signature="63771:63807" ph="SELECT * FRO... clientes" />
-                <marker date="1544016350013" expanded="true" signature="64872:65120" ph="SELECT descr... detalle" />
-                <marker date="1544016350013" expanded="true" signature="66013:66093" ph="SELECT numPa... pagos" />
-                <marker date="1544016350013" expanded="true" signature="66992:67063" ph="SELECT IFNUL... pagos" />
-                <marker date="1544016350013" expanded="true" signature="67658:67742" ph="INSERT INTO pagos... " />
-                <marker date="1544016350013" expanded="true" signature="68900:69107" ph="SELECT SUM(F... factura" />
-                <marker date="1544016350013" expanded="true" signature="69031:69092" ph="Select idMet... metodoPago" />
-                <marker date="1544016350013" expanded="true" signature="69596:69657" ph="SELECT SUM(a... pagos" />
-                <marker date="1544016350013" expanded="true" signature="70098:70239" ph="SELECT SUM(t... factura" />
-                <marker date="1544016350013" expanded="true" signature="70177:70238" ph="Select idMet... metodoPago" />
-                <marker date="1544016350013" expanded="true" signature="70677:70824" ph="SELECT SUM(t... factura" />
-                <marker date="1544016350013" expanded="true" signature="70756:70823" ph="Select idMet... metodoPago" />
-                <marker date="1544016350013" expanded="true" signature="71265:71420" ph="SELECT SUM(t... factura" />
-                <marker date="1544016350013" expanded="true" signature="71344:71419" ph="Select idMet... metodoPago" />
-                <marker date="1544016350013" expanded="true" signature="71861:72024" ph="SELECT SUM(c... movimiento" />
-                <marker date="1544016350013" expanded="true" signature="71968:72023" ph="Select idTip... tipMov" />
-                <marker date="1544016350013" expanded="true" signature="72467:72629" ph="SELECT SUM(c... movimiento" />
-                <marker date="1544016350013" expanded="true" signature="72574:72628" ph="Select idTip... tipMov" />
-                <marker date="1544016350013" expanded="true" signature="73068:73319" ph="select sum((... detalle" />
-                <marker date="1544016350013" expanded="true" signature="73871:74196" ph="select dt.de... detalle" />
-                <marker date="1544016350013" expanded="true" signature="74917:75001" ph="select SUM(c... movimiento" />
-                <marker date="1544016350013" expanded="true" signature="75440:75520" ph="select canti... movimiento" />
-                <marker date="1544016350013" expanded="true" signature="76097:76123" ph="select * fro... unidadmedida" />
-                <marker date="1544016350013" expanded="true" signature="76826:76896" ph="UPDATE unidadmedida... " />
+                <element signature="e#87289#87303#0" expanded="true" />
+                <marker date="1544018517377" expanded="true" signature="15527:15534" ph="SELECT* FROM... empleados" />
+                <marker date="1544018517377" expanded="true" signature="15527:15584" ph="SELECT * FRO... clientes" />
+                <marker date="1544018517377" expanded="true" signature="15527:15591" ph="SELECT * FRO... clientes" />
+                <marker date="1544018517377" expanded="true" signature="16293:16300" ph="select codig... productos" />
+                <marker date="1544018517377" expanded="true" signature="16293:16383" ph="select codig... productos" />
+                <marker date="1544018517377" expanded="true" signature="17078:17114" ph="select descr... departamento" />
+                <marker date="1544018517377" expanded="true" signature="17815:17845" ph="select nombr... proveedores" />
+                <marker date="1544018517377" expanded="true" signature="18546:18595" ph="SELECT nombr... empleados" />
+                <marker date="1544018517377" expanded="true" signature="19297:19324" ph="SELECT idUsu... empleados" />
+                <marker date="1544018517377" expanded="true" signature="20015:20051" ph="SELECT * FRO... empleados" />
+                <marker date="1544018517377" expanded="true" signature="20015:20052" ph="SELECT * FRO... empleados" />
+                <marker date="1544018517377" expanded="true" signature="20015:20059" ph="SELECT * FRO... empleados" />
+                <marker date="1544018517377" expanded="true" signature="20015:20060" ph="SELECT NumTa... autoactivo" />
+                <marker date="1544018517377" expanded="true" signature="21105:21142" ph="SELECT * FRO... empleados" />
+                <marker date="1544018517377" expanded="true" signature="21105:21153" ph="SELECT * FRO... empleados" />
+                <marker date="1544018517377" expanded="true" signature="21105:21173" ph="SELECT * FRO... empleados" />
+                <marker date="1544018517377" expanded="true" signature="22207:22489" ph="select * fro... productos" />
+                <marker date="1544018517377" expanded="true" signature="22207:22496" ph="select * fro... productos" />
+                <marker date="1544018517377" expanded="true" signature="23773:24019" ph="SELECT P.cod... productos" />
+                <marker date="1544018517377" expanded="true" signature="25053:25175" ph="SELECT P.cod... productos" />
+                <marker date="1544018517377" expanded="true" signature="26047:26073" ph="SELECT * FRo... departamento" />
+                <marker date="1544018517377" expanded="true" signature="26867:26904" ph="SELECT * FRo... departamento" />
+                <marker date="1544018517377" expanded="true" signature="27681:27688" ph="SELECT idPro... proveedores" />
+                <marker date="1544018517377" expanded="true" signature="27681:27706" ph="SELECT *\nFR... promociones" />
+                <marker date="1544018517377" expanded="true" signature="28648:29293" ph="SELECT F.NoF... factura" />
+                <marker date="1544018517377" expanded="true" signature="28648:29319" ph="SELECT F.NoF... factura" />
+                <marker date="1544018517377" expanded="true" signature="30333:30585" ph="SELECT D.num... detalle" />
+                <marker date="1544018517377" expanded="true" signature="30333:30610" ph="SELECT D.num... detalle" />
+                <marker date="1544018517377" expanded="true" signature="30333:30634" ph="SELECT D.noF... detalle" />
+                <marker date="1544018517377" expanded="true" signature="30333:30635" ph="SELECT D.num... detalle" />
+                <marker date="1544018517377" expanded="true" signature="31600:31640" ph="select idCli... clientes" />
+                <marker date="1544018517377" expanded="true" signature="32417:32491" ph="select codig... productos" />
+                <marker date="1544018517377" expanded="true" signature="32417:32520" ph="select codig... productos" />
+                <marker date="1544018517377" expanded="true" signature="32417:32527" ph="select codig... productos" />
+                <marker date="1544018517377" expanded="true" signature="32417:32528" ph="SELECT P.cod... productos" />
+                <marker date="1544018517377" expanded="true" signature="33262:33297" ph="GRANT ALL PR... " />
+                <marker date="1544018517377" expanded="true" signature="33262:33324" ph="GRANT ALL PR... " />
+                <marker date="1544018517377" expanded="true" signature="33262:33332" ph="GRANT ALL PR... " />
+                <marker date="1544018517377" expanded="true" signature="33262:33350" ph="DELETE FROM pensionados... " />
+                <marker date="1544018517377" expanded="true" signature="33990:34016" ph="GRANT USAGE " />
+                <marker date="1544018517377" expanded="true" signature="33990:34051" ph="GRANT USAGE " />
+                <marker date="1544018517377" expanded="true" signature="34028:34051" ph="GRANT ALL PR... " />
+                <marker date="1544018517377" expanded="true" signature="34725:34786" ph="GRANT USAGE " />
+                <marker date="1544018517377" expanded="true" signature="35484:35568" ph="INSERT INTO sucursal... " />
+                <marker date="1544018517377" expanded="true" signature="35484:35569" ph="INSERT INTO movimientos... " />
+                <marker date="1544018517377" expanded="true" signature="35524:35566" ph="SELECT idUsu... empleados" />
+                <marker date="1544018517377" expanded="true" signature="36852:36859" ph="SELECT ISNUL... factura" />
+                <marker date="1544018517377" expanded="true" signature="36852:36906" ph="SELECT IFNUL... factura" />
+                <marker date="1544018517377" expanded="true" signature="37403:37464" ph="select descr... departamento" />
+                <marker date="1544018517377" expanded="true" signature="37403:37471" ph="SELECT IFNUL... factura" />
+                <marker date="1544018517377" expanded="true" signature="37985:38042" ph="select descr... departamento" />
+                <marker date="1544018517377" expanded="true" signature="38568:38626" ph="select descr... productos" />
+                <marker date="1544018517377" expanded="true" signature="38568:38633" ph="SELECT IFNUL... factura" />
+                <marker date="1544018517377" expanded="true" signature="39202:39233" ph="select descr... productos" />
+                <marker date="1544018517377" expanded="true" signature="39732:39842" ph="select SUM(c... detalle" />
+                <marker date="1544018517377" expanded="true" signature="40343:40421" ph="SELECT descu... detalle" />
+                <marker date="1544018517377" expanded="true" signature="40917:40960" ph="INSERT INTO empleados... " />
+                <marker date="1544018517377" expanded="true" signature="40917:40961" ph="INSERT INTO autor... " />
+                <marker date="1544018517377" expanded="true" signature="42389:42436" ph="INSERT INTO departamento... " />
+                <marker date="1544018517377" expanded="true" signature="43207:43275" ph="INSERT INTO proveedores... " />
+                <marker date="1544018517377" expanded="true" signature="44163:44255" ph="INSERT INTO movimiento... " />
+                <marker date="1544018517377" expanded="true" signature="45311:45347" ph="DELETE FROM productos... " />
+                <marker date="1544018517377" expanded="true" signature="45311:45354" ph="DELETE FROM productos... " />
+                <marker date="1544018517377" expanded="true" signature="45311:45355" ph="DELETE FROM usuario... " />
+                <marker date="1544018517377" expanded="true" signature="45965:46015" ph="UPDATE autoactivo... " />
+                <marker date="1544018517377" expanded="true" signature="46396:46485" ph="SELECT NickN... usuario" />
+                <marker date="1544018517377" expanded="true" signature="48213:48263" ph="SELECT estat... precio" />
+                <marker date="1544018517377" expanded="true" signature="48855:48952" ph="SELECT NumTa... autoactivo" />
+                <marker date="1544018517377" expanded="true" signature="49480:49582" ph="SELECT NumTa... autoactivo" />
+                <marker date="1544018517377" expanded="true" signature="50097:50177" ph="SELECT COUNT... autoactivo" />
+                <marker date="1544018517377" expanded="true" signature="50607:50722" ph="SELECT COUNT... pensionados" />
+                <marker date="1544018517377" expanded="true" signature="51176:51229" ph="SELECT TIMES... " />
+                <marker date="1544018517377" expanded="true" signature="51666:51748" ph="SELECT DATED... pensionados" />
+                <marker date="1544018517377" expanded="true" signature="52196:52266" ph="SELECT SUM(M... otrosgastos" />
+                <marker date="1544018517377" expanded="true" signature="52710:52771" ph="SELECT SUM(c... pensionados" />
+                <marker date="1544018517377" expanded="true" signature="53231:53299" ph="UPDATE precio... " />
+                <marker date="1544018517377" expanded="true" signature="53982:54027" ph="UPDATE precio... " />
+                <marker date="1544018517377" expanded="true" signature="54657:54706" ph="UPDATE autoactivo... " />
+                <marker date="1544018517377" expanded="true" signature="55339:55389" ph="UPDATE autocobrado... " />
+                <marker date="1544018517377" expanded="true" signature="56009:56058" ph="UPDATE usuario... " />
+                <marker date="1544018517377" expanded="true" signature="56377:56403" ph="UPDATE usuario... " />
+                <marker date="1544018517377" expanded="true" signature="56743:56777" ph="UPDATE pensionados... " />
+                <marker date="1544018517377" expanded="true" signature="57034:57057" ph="DELETE FROM otrosgastos... " />
+                <marker date="1544018517377" expanded="true" signature="57314:57337" ph="DELETE FROM autocobrado... " />
+                <marker date="1544018517377" expanded="true" signature="57604:57722" ph="UPDATE pensionados... " />
+                <marker date="1544018517377" expanded="true" signature="60944:60999" ph="SELECT noFac... factura" />
+                <marker date="1544018517377" expanded="true" signature="61845:61939" ph="SELECT idCli... clientes" />
+                <marker date="1544018517377" expanded="true" signature="62867:62904" ph="delete from clientes... " />
+                <marker date="1544018517377" expanded="true" signature="63771:63807" ph="SELECT * FRO... clientes" />
+                <marker date="1544018517377" expanded="true" signature="64872:65120" ph="SELECT descr... detalle" />
+                <marker date="1544018517377" expanded="true" signature="66013:66093" ph="SELECT numPa... pagos" />
+                <marker date="1544018517377" expanded="true" signature="66992:67063" ph="SELECT IFNUL... pagos" />
+                <marker date="1544018517377" expanded="true" signature="67658:67742" ph="INSERT INTO pagos... " />
+                <marker date="1544018517377" expanded="true" signature="68900:69107" ph="SELECT SUM(F... factura" />
+                <marker date="1544018517377" expanded="true" signature="69031:69092" ph="Select idMet... metodoPago" />
+                <marker date="1544018517377" expanded="true" signature="69596:69657" ph="SELECT SUM(a... pagos" />
+                <marker date="1544018517377" expanded="true" signature="70098:70239" ph="SELECT SUM(t... factura" />
+                <marker date="1544018517377" expanded="true" signature="70177:70238" ph="Select idMet... metodoPago" />
+                <marker date="1544018517377" expanded="true" signature="70677:70824" ph="SELECT SUM(t... factura" />
+                <marker date="1544018517377" expanded="true" signature="70756:70823" ph="Select idMet... metodoPago" />
+                <marker date="1544018517377" expanded="true" signature="71265:71420" ph="SELECT SUM(t... factura" />
+                <marker date="1544018517377" expanded="true" signature="71344:71419" ph="Select idMet... metodoPago" />
+                <marker date="1544018517377" expanded="true" signature="71861:72024" ph="SELECT SUM(c... movimiento" />
+                <marker date="1544018517377" expanded="true" signature="71968:72023" ph="Select idTip... tipMov" />
+                <marker date="1544018517377" expanded="true" signature="72467:72629" ph="SELECT SUM(c... movimiento" />
+                <marker date="1544018517377" expanded="true" signature="72574:72628" ph="Select idTip... tipMov" />
+                <marker date="1544018517377" expanded="true" signature="73068:73319" ph="select sum((... detalle" />
+                <marker date="1544018517377" expanded="true" signature="73871:74196" ph="select dt.de... detalle" />
+                <marker date="1544018517377" expanded="true" signature="74917:75001" ph="select SUM(c... movimiento" />
+                <marker date="1544018517377" expanded="true" signature="75440:75520" ph="select canti... movimiento" />
+                <marker date="1544018517377" expanded="true" signature="76097:76123" ph="select * fro... unidadmedida" />
+                <marker date="1544018517377" expanded="true" signature="76826:76896" ph="UPDATE unidadmedida... " />
+                <marker date="1544018517377" expanded="true" signature="77586:77934" ph="select p.cod... productos" />
+                <marker date="1544018517377" expanded="true" signature="81117:81143" ph="select * fro... departamento" />
+                <marker date="1544018517377" expanded="true" signature="81938:82217" ph="select p.cod... productos" />
+                <marker date="1544018517377" expanded="true" signature="83224:83554" ph="select p.cod... productos" />
+                <marker date="1544018517377" expanded="true" signature="84463:84520" ph="select SUM(p... productos" />
+                <marker date="1544018517377" expanded="true" signature="84961:85009" ph="select SUM(n... productos" />
+                <marker date="1544018517377" expanded="true" signature="85462:85664" ph="select SUM(p... productos" />
+                <marker date="1544018517377" expanded="true" signature="86127:86318" ph="select SUM(p... productos" />
+                <marker date="1544018517377" expanded="true" signature="86759:86839" ph="select Count... productos" />
+                <marker date="1544018517377" expanded="true" signature="87525:87602" ph="SELECT codig... productos" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cont_inventarioL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_inventarioL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-165">
+              <caret line="155" column="65" lean-forward="false" selection-start-line="155" selection-start-column="51" selection-end-line="155" selection-end-column="65" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -308,7 +336,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>btnID</find>
       <find>btnAD</find>
       <find>insPro</find>
       <find>exiD</find>
@@ -338,6 +365,7 @@
       <find>datSucu</find>
       <find>btnCP</find>
       <find>deleteCL</find>
+      <find>obtener</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -395,18 +423,18 @@
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/corte_Layout.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/datos/datPromociones.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/productos_Layout.fxml" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datProductos.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_productosL.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/conf_Usuario.fxml" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_inicioL.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_conf_Usuario.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_login.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/fxml/configuracion_Layout.fxml" />
-        <option value="$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/datos/datEmpleados.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_configuracionL.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_ENSAL.java" />
         <option value="$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteL.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/datos/datProductos.java" />
+        <option value="$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java" />
       </list>
     </option>
   </component>
@@ -699,12 +727,12 @@
       <workItem from="1543679804449" duration="36410000" />
       <workItem from="1543806585710" duration="2828000" />
       <workItem from="1543823987364" duration="20142000" />
-      <workItem from="1543929890323" duration="48401000" />
+      <workItem from="1543929890323" duration="49078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270870000" />
+    <option name="totallyTimeSpent" value="271547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -819,13 +847,6 @@
         <state relative-caret-position="850">
           <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_inventarioL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1142,31 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDepartamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datProductos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="50" column="30" lean-forward="false" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
-          <folding>
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_VDDL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1289,137 +1285,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="1645" column="27" lean-forward="false" selection-start-line="1645" selection-start-column="19" selection-end-line="1645" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#63521#63534#0" expanded="true" />
-            <marker date="1544016350013" expanded="true" signature="15527:15534" ph="SELECT* FROM... empleados" />
-            <marker date="1544016350013" expanded="true" signature="15527:15584" ph="SELECT * FRO... clientes" />
-            <marker date="1544016350013" expanded="true" signature="15527:15591" ph="SELECT * FRO... clientes" />
-            <marker date="1544016350013" expanded="true" signature="16293:16300" ph="select codig... productos" />
-            <marker date="1544016350013" expanded="true" signature="16293:16383" ph="select codig... productos" />
-            <marker date="1544016350013" expanded="true" signature="17078:17114" ph="select descr... departamento" />
-            <marker date="1544016350013" expanded="true" signature="17815:17845" ph="select nombr... proveedores" />
-            <marker date="1544016350013" expanded="true" signature="18546:18595" ph="SELECT nombr... empleados" />
-            <marker date="1544016350013" expanded="true" signature="19297:19324" ph="SELECT idUsu... empleados" />
-            <marker date="1544016350013" expanded="true" signature="20015:20051" ph="SELECT * FRO... empleados" />
-            <marker date="1544016350013" expanded="true" signature="20015:20052" ph="SELECT * FRO... empleados" />
-            <marker date="1544016350013" expanded="true" signature="20015:20059" ph="SELECT * FRO... empleados" />
-            <marker date="1544016350013" expanded="true" signature="20015:20060" ph="SELECT NumTa... autoactivo" />
-            <marker date="1544016350013" expanded="true" signature="21105:21142" ph="SELECT * FRO... empleados" />
-            <marker date="1544016350013" expanded="true" signature="21105:21153" ph="SELECT * FRO... empleados" />
-            <marker date="1544016350013" expanded="true" signature="21105:21173" ph="SELECT * FRO... empleados" />
-            <marker date="1544016350013" expanded="true" signature="22207:22489" ph="select * fro... productos" />
-            <marker date="1544016350013" expanded="true" signature="22207:22496" ph="select * fro... productos" />
-            <marker date="1544016350013" expanded="true" signature="23773:24019" ph="SELECT P.cod... productos" />
-            <marker date="1544016350013" expanded="true" signature="25053:25175" ph="SELECT P.cod... productos" />
-            <marker date="1544016350013" expanded="true" signature="26047:26073" ph="SELECT * FRo... departamento" />
-            <marker date="1544016350013" expanded="true" signature="26867:26904" ph="SELECT * FRo... departamento" />
-            <marker date="1544016350013" expanded="true" signature="27681:27688" ph="SELECT idPro... proveedores" />
-            <marker date="1544016350013" expanded="true" signature="27681:27706" ph="SELECT *\nFR... promociones" />
-            <marker date="1544016350013" expanded="true" signature="28648:29293" ph="SELECT F.NoF... factura" />
-            <marker date="1544016350013" expanded="true" signature="28648:29319" ph="SELECT F.NoF... factura" />
-            <marker date="1544016350013" expanded="true" signature="30333:30585" ph="SELECT D.num... detalle" />
-            <marker date="1544016350013" expanded="true" signature="30333:30610" ph="SELECT D.num... detalle" />
-            <marker date="1544016350013" expanded="true" signature="30333:30634" ph="SELECT D.noF... detalle" />
-            <marker date="1544016350013" expanded="true" signature="30333:30635" ph="SELECT D.num... detalle" />
-            <marker date="1544016350013" expanded="true" signature="31600:31640" ph="select idCli... clientes" />
-            <marker date="1544016350013" expanded="true" signature="32417:32491" ph="select codig... productos" />
-            <marker date="1544016350013" expanded="true" signature="32417:32520" ph="select codig... productos" />
-            <marker date="1544016350013" expanded="true" signature="32417:32527" ph="select codig... productos" />
-            <marker date="1544016350013" expanded="true" signature="32417:32528" ph="SELECT P.cod... productos" />
-            <marker date="1544016350013" expanded="true" signature="33262:33297" ph="GRANT ALL PR... " />
-            <marker date="1544016350013" expanded="true" signature="33262:33324" ph="GRANT ALL PR... " />
-            <marker date="1544016350013" expanded="true" signature="33262:33332" ph="GRANT ALL PR... " />
-            <marker date="1544016350013" expanded="true" signature="33262:33350" ph="DELETE FROM pensionados... " />
-            <marker date="1544016350013" expanded="true" signature="33990:34016" ph="GRANT USAGE " />
-            <marker date="1544016350013" expanded="true" signature="33990:34051" ph="GRANT USAGE " />
-            <marker date="1544016350013" expanded="true" signature="34028:34051" ph="GRANT ALL PR... " />
-            <marker date="1544016350013" expanded="true" signature="34725:34786" ph="GRANT USAGE " />
-            <marker date="1544016350013" expanded="true" signature="35484:35568" ph="INSERT INTO sucursal... " />
-            <marker date="1544016350013" expanded="true" signature="35484:35569" ph="INSERT INTO movimientos... " />
-            <marker date="1544016350013" expanded="true" signature="35524:35566" ph="SELECT idUsu... empleados" />
-            <marker date="1544016350013" expanded="true" signature="36852:36859" ph="SELECT ISNUL... factura" />
-            <marker date="1544016350013" expanded="true" signature="36852:36906" ph="SELECT IFNUL... factura" />
-            <marker date="1544016350013" expanded="true" signature="37403:37464" ph="select descr... departamento" />
-            <marker date="1544016350013" expanded="true" signature="37403:37471" ph="SELECT IFNUL... factura" />
-            <marker date="1544016350013" expanded="true" signature="37985:38042" ph="select descr... departamento" />
-            <marker date="1544016350013" expanded="true" signature="38568:38626" ph="select descr... productos" />
-            <marker date="1544016350013" expanded="true" signature="38568:38633" ph="SELECT IFNUL... factura" />
-            <marker date="1544016350013" expanded="true" signature="39202:39233" ph="select descr... productos" />
-            <marker date="1544016350013" expanded="true" signature="39732:39842" ph="select SUM(c... detalle" />
-            <marker date="1544016350013" expanded="true" signature="40343:40421" ph="SELECT descu... detalle" />
-            <marker date="1544016350013" expanded="true" signature="40917:40960" ph="INSERT INTO empleados... " />
-            <marker date="1544016350013" expanded="true" signature="40917:40961" ph="INSERT INTO autor... " />
-            <marker date="1544016350013" expanded="true" signature="42389:42436" ph="INSERT INTO departamento... " />
-            <marker date="1544016350013" expanded="true" signature="43207:43275" ph="INSERT INTO proveedores... " />
-            <marker date="1544016350013" expanded="true" signature="44163:44255" ph="INSERT INTO movimiento... " />
-            <marker date="1544016350013" expanded="true" signature="45311:45347" ph="DELETE FROM productos... " />
-            <marker date="1544016350013" expanded="true" signature="45311:45354" ph="DELETE FROM productos... " />
-            <marker date="1544016350013" expanded="true" signature="45311:45355" ph="DELETE FROM usuario... " />
-            <marker date="1544016350013" expanded="true" signature="45965:46015" ph="UPDATE autoactivo... " />
-            <marker date="1544016350013" expanded="true" signature="46396:46485" ph="SELECT NickN... usuario" />
-            <marker date="1544016350013" expanded="true" signature="48213:48263" ph="SELECT estat... precio" />
-            <marker date="1544016350013" expanded="true" signature="48855:48952" ph="SELECT NumTa... autoactivo" />
-            <marker date="1544016350013" expanded="true" signature="49480:49582" ph="SELECT NumTa... autoactivo" />
-            <marker date="1544016350013" expanded="true" signature="50097:50177" ph="SELECT COUNT... autoactivo" />
-            <marker date="1544016350013" expanded="true" signature="50607:50722" ph="SELECT COUNT... pensionados" />
-            <marker date="1544016350013" expanded="true" signature="51176:51229" ph="SELECT TIMES... " />
-            <marker date="1544016350013" expanded="true" signature="51666:51748" ph="SELECT DATED... pensionados" />
-            <marker date="1544016350013" expanded="true" signature="52196:52266" ph="SELECT SUM(M... otrosgastos" />
-            <marker date="1544016350013" expanded="true" signature="52710:52771" ph="SELECT SUM(c... pensionados" />
-            <marker date="1544016350013" expanded="true" signature="53231:53299" ph="UPDATE precio... " />
-            <marker date="1544016350013" expanded="true" signature="53982:54027" ph="UPDATE precio... " />
-            <marker date="1544016350013" expanded="true" signature="54657:54706" ph="UPDATE autoactivo... " />
-            <marker date="1544016350013" expanded="true" signature="55339:55389" ph="UPDATE autocobrado... " />
-            <marker date="1544016350013" expanded="true" signature="56009:56058" ph="UPDATE usuario... " />
-            <marker date="1544016350013" expanded="true" signature="56377:56403" ph="UPDATE usuario... " />
-            <marker date="1544016350013" expanded="true" signature="56743:56777" ph="UPDATE pensionados... " />
-            <marker date="1544016350013" expanded="true" signature="57034:57057" ph="DELETE FROM otrosgastos... " />
-            <marker date="1544016350013" expanded="true" signature="57314:57337" ph="DELETE FROM autocobrado... " />
-            <marker date="1544016350013" expanded="true" signature="57604:57722" ph="UPDATE pensionados... " />
-            <marker date="1544016350013" expanded="true" signature="60944:60999" ph="SELECT noFac... factura" />
-            <marker date="1544016350013" expanded="true" signature="61845:61939" ph="SELECT idCli... clientes" />
-            <marker date="1544016350013" expanded="true" signature="62867:62904" ph="delete from clientes... " />
-            <marker date="1544016350013" expanded="true" signature="63771:63807" ph="SELECT * FRO... clientes" />
-            <marker date="1544016350013" expanded="true" signature="64872:65120" ph="SELECT descr... detalle" />
-            <marker date="1544016350013" expanded="true" signature="66013:66093" ph="SELECT numPa... pagos" />
-            <marker date="1544016350013" expanded="true" signature="66992:67063" ph="SELECT IFNUL... pagos" />
-            <marker date="1544016350013" expanded="true" signature="67658:67742" ph="INSERT INTO pagos... " />
-            <marker date="1544016350013" expanded="true" signature="68900:69107" ph="SELECT SUM(F... factura" />
-            <marker date="1544016350013" expanded="true" signature="69031:69092" ph="Select idMet... metodoPago" />
-            <marker date="1544016350013" expanded="true" signature="69596:69657" ph="SELECT SUM(a... pagos" />
-            <marker date="1544016350013" expanded="true" signature="70098:70239" ph="SELECT SUM(t... factura" />
-            <marker date="1544016350013" expanded="true" signature="70177:70238" ph="Select idMet... metodoPago" />
-            <marker date="1544016350013" expanded="true" signature="70677:70824" ph="SELECT SUM(t... factura" />
-            <marker date="1544016350013" expanded="true" signature="70756:70823" ph="Select idMet... metodoPago" />
-            <marker date="1544016350013" expanded="true" signature="71265:71420" ph="SELECT SUM(t... factura" />
-            <marker date="1544016350013" expanded="true" signature="71344:71419" ph="Select idMet... metodoPago" />
-            <marker date="1544016350013" expanded="true" signature="71861:72024" ph="SELECT SUM(c... movimiento" />
-            <marker date="1544016350013" expanded="true" signature="71968:72023" ph="Select idTip... tipMov" />
-            <marker date="1544016350013" expanded="true" signature="72467:72629" ph="SELECT SUM(c... movimiento" />
-            <marker date="1544016350013" expanded="true" signature="72574:72628" ph="Select idTip... tipMov" />
-            <marker date="1544016350013" expanded="true" signature="73068:73319" ph="select sum((... detalle" />
-            <marker date="1544016350013" expanded="true" signature="73871:74196" ph="select dt.de... detalle" />
-            <marker date="1544016350013" expanded="true" signature="74917:75001" ph="select SUM(c... movimiento" />
-            <marker date="1544016350013" expanded="true" signature="75440:75520" ph="select canti... movimiento" />
-            <marker date="1544016350013" expanded="true" signature="76097:76123" ph="select * fro... unidadmedida" />
-            <marker date="1544016350013" expanded="true" signature="76826:76896" ph="UPDATE unidadmedida... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_clienteL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="168" column="37" lean-forward="true" selection-start-line="168" selection-start-column="37" selection-end-line="168" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datDepartamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/datos/datProductos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <element signature="e#1441#1442#0" expanded="true" />
+            <element signature="e#1471#1472#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/cont/cont_inventarioL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="155" column="65" lean-forward="false" selection-start-line="155" selection-start-column="51" selection-end-line="155" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PTBDPV/bd/TransactionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="2375" column="0" lean-forward="true" selection-start-line="2375" selection-start-column="0" selection-end-line="2375" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#63521#63534#0" expanded="true" />
+            <element signature="e#87289#87303#0" expanded="true" />
+            <marker date="1544018517377" expanded="true" signature="15527:15534" ph="SELECT* FROM... empleados" />
+            <marker date="1544018517377" expanded="true" signature="15527:15584" ph="SELECT * FRO... clientes" />
+            <marker date="1544018517377" expanded="true" signature="15527:15591" ph="SELECT * FRO... clientes" />
+            <marker date="1544018517377" expanded="true" signature="16293:16300" ph="select codig... productos" />
+            <marker date="1544018517377" expanded="true" signature="16293:16383" ph="select codig... productos" />
+            <marker date="1544018517377" expanded="true" signature="17078:17114" ph="select descr... departamento" />
+            <marker date="1544018517377" expanded="true" signature="17815:17845" ph="select nombr... proveedores" />
+            <marker date="1544018517377" expanded="true" signature="18546:18595" ph="SELECT nombr... empleados" />
+            <marker date="1544018517377" expanded="true" signature="19297:19324" ph="SELECT idUsu... empleados" />
+            <marker date="1544018517377" expanded="true" signature="20015:20051" ph="SELECT * FRO... empleados" />
+            <marker date="1544018517377" expanded="true" signature="20015:20052" ph="SELECT * FRO... empleados" />
+            <marker date="1544018517377" expanded="true" signature="20015:20059" ph="SELECT * FRO... empleados" />
+            <marker date="1544018517377" expanded="true" signature="20015:20060" ph="SELECT NumTa... autoactivo" />
+            <marker date="1544018517377" expanded="true" signature="21105:21142" ph="SELECT * FRO... empleados" />
+            <marker date="1544018517377" expanded="true" signature="21105:21153" ph="SELECT * FRO... empleados" />
+            <marker date="1544018517377" expanded="true" signature="21105:21173" ph="SELECT * FRO... empleados" />
+            <marker date="1544018517377" expanded="true" signature="22207:22489" ph="select * fro... productos" />
+            <marker date="1544018517377" expanded="true" signature="22207:22496" ph="select * fro... productos" />
+            <marker date="1544018517377" expanded="true" signature="23773:24019" ph="SELECT P.cod... productos" />
+            <marker date="1544018517377" expanded="true" signature="25053:25175" ph="SELECT P.cod... productos" />
+            <marker date="1544018517377" expanded="true" signature="26047:26073" ph="SELECT * FRo... departamento" />
+            <marker date="1544018517377" expanded="true" signature="26867:26904" ph="SELECT * FRo... departamento" />
+            <marker date="1544018517377" expanded="true" signature="27681:27688" ph="SELECT idPro... proveedores" />
+            <marker date="1544018517377" expanded="true" signature="27681:27706" ph="SELECT *\nFR... promociones" />
+            <marker date="1544018517377" expanded="true" signature="28648:29293" ph="SELECT F.NoF... factura" />
+            <marker date="1544018517377" expanded="true" signature="28648:29319" ph="SELECT F.NoF... factura" />
+            <marker date="1544018517377" expanded="true" signature="30333:30585" ph="SELECT D.num... detalle" />
+            <marker date="1544018517377" expanded="true" signature="30333:30610" ph="SELECT D.num... detalle" />
+            <marker date="1544018517377" expanded="true" signature="30333:30634" ph="SELECT D.noF... detalle" />
+            <marker date="1544018517377" expanded="true" signature="30333:30635" ph="SELECT D.num... detalle" />
+            <marker date="1544018517377" expanded="true" signature="31600:31640" ph="select idCli... clientes" />
+            <marker date="1544018517377" expanded="true" signature="32417:32491" ph="select codig... productos" />
+            <marker date="1544018517377" expanded="true" signature="32417:32520" ph="select codig... productos" />
+            <marker date="1544018517377" expanded="true" signature="32417:32527" ph="select codig... productos" />
+            <marker date="1544018517377" expanded="true" signature="32417:32528" ph="SELECT P.cod... productos" />
+            <marker date="1544018517377" expanded="true" signature="33262:33297" ph="GRANT ALL PR... " />
+            <marker date="1544018517377" expanded="true" signature="33262:33324" ph="GRANT ALL PR... " />
+            <marker date="1544018517377" expanded="true" signature="33262:33332" ph="GRANT ALL PR... " />
+            <marker date="1544018517377" expanded="true" signature="33262:33350" ph="DELETE FROM pensionados... " />
+            <marker date="1544018517377" expanded="true" signature="33990:34016" ph="GRANT USAGE " />
+            <marker date="1544018517377" expanded="true" signature="33990:34051" ph="GRANT USAGE " />
+            <marker date="1544018517377" expanded="true" signature="34028:34051" ph="GRANT ALL PR... " />
+            <marker date="1544018517377" expanded="true" signature="34725:34786" ph="GRANT USAGE " />
+            <marker date="1544018517377" expanded="true" signature="35484:35568" ph="INSERT INTO sucursal... " />
+            <marker date="1544018517377" expanded="true" signature="35484:35569" ph="INSERT INTO movimientos... " />
+            <marker date="1544018517377" expanded="true" signature="35524:35566" ph="SELECT idUsu... empleados" />
+            <marker date="1544018517377" expanded="true" signature="36852:36859" ph="SELECT ISNUL... factura" />
+            <marker date="1544018517377" expanded="true" signature="36852:36906" ph="SELECT IFNUL... factura" />
+            <marker date="1544018517377" expanded="true" signature="37403:37464" ph="select descr... departamento" />
+            <marker date="1544018517377" expanded="true" signature="37403:37471" ph="SELECT IFNUL... factura" />
+            <marker date="1544018517377" expanded="true" signature="37985:38042" ph="select descr... departamento" />
+            <marker date="1544018517377" expanded="true" signature="38568:38626" ph="select descr... productos" />
+            <marker date="1544018517377" expanded="true" signature="38568:38633" ph="SELECT IFNUL... factura" />
+            <marker date="1544018517377" expanded="true" signature="39202:39233" ph="select descr... productos" />
+            <marker date="1544018517377" expanded="true" signature="39732:39842" ph="select SUM(c... detalle" />
+            <marker date="1544018517377" expanded="true" signature="40343:40421" ph="SELECT descu... detalle" />
+            <marker date="1544018517377" expanded="true" signature="40917:40960" ph="INSERT INTO empleados... " />
+            <marker date="1544018517377" expanded="true" signature="40917:40961" ph="INSERT INTO autor... " />
+            <marker date="1544018517377" expanded="true" signature="42389:42436" ph="INSERT INTO departamento... " />
+            <marker date="1544018517377" expanded="true" signature="43207:43275" ph="INSERT INTO proveedores... " />
+            <marker date="1544018517377" expanded="true" signature="44163:44255" ph="INSERT INTO movimiento... " />
+            <marker date="1544018517377" expanded="true" signature="45311:45347" ph="DELETE FROM productos... " />
+            <marker date="1544018517377" expanded="true" signature="45311:45354" ph="DELETE FROM productos... " />
+            <marker date="1544018517377" expanded="true" signature="45311:45355" ph="DELETE FROM usuario... " />
+            <marker date="1544018517377" expanded="true" signature="45965:46015" ph="UPDATE autoactivo... " />
+            <marker date="1544018517377" expanded="true" signature="46396:46485" ph="SELECT NickN... usuario" />
+            <marker date="1544018517377" expanded="true" signature="48213:48263" ph="SELECT estat... precio" />
+            <marker date="1544018517377" expanded="true" signature="48855:48952" ph="SELECT NumTa... autoactivo" />
+            <marker date="1544018517377" expanded="true" signature="49480:49582" ph="SELECT NumTa... autoactivo" />
+            <marker date="1544018517377" expanded="true" signature="50097:50177" ph="SELECT COUNT... autoactivo" />
+            <marker date="1544018517377" expanded="true" signature="50607:50722" ph="SELECT COUNT... pensionados" />
+            <marker date="1544018517377" expanded="true" signature="51176:51229" ph="SELECT TIMES... " />
+            <marker date="1544018517377" expanded="true" signature="51666:51748" ph="SELECT DATED... pensionados" />
+            <marker date="1544018517377" expanded="true" signature="52196:52266" ph="SELECT SUM(M... otrosgastos" />
+            <marker date="1544018517377" expanded="true" signature="52710:52771" ph="SELECT SUM(c... pensionados" />
+            <marker date="1544018517377" expanded="true" signature="53231:53299" ph="UPDATE precio... " />
+            <marker date="1544018517377" expanded="true" signature="53982:54027" ph="UPDATE precio... " />
+            <marker date="1544018517377" expanded="true" signature="54657:54706" ph="UPDATE autoactivo... " />
+            <marker date="1544018517377" expanded="true" signature="55339:55389" ph="UPDATE autocobrado... " />
+            <marker date="1544018517377" expanded="true" signature="56009:56058" ph="UPDATE usuario... " />
+            <marker date="1544018517377" expanded="true" signature="56377:56403" ph="UPDATE usuario... " />
+            <marker date="1544018517377" expanded="true" signature="56743:56777" ph="UPDATE pensionados... " />
+            <marker date="1544018517377" expanded="true" signature="57034:57057" ph="DELETE FROM otrosgastos... " />
+            <marker date="1544018517377" expanded="true" signature="57314:57337" ph="DELETE FROM autocobrado... " />
+            <marker date="1544018517377" expanded="true" signature="57604:57722" ph="UPDATE pensionados... " />
+            <marker date="1544018517377" expanded="true" signature="60944:60999" ph="SELECT noFac... factura" />
+            <marker date="1544018517377" expanded="true" signature="61845:61939" ph="SELECT idCli... clientes" />
+            <marker date="1544018517377" expanded="true" signature="62867:62904" ph="delete from clientes... " />
+            <marker date="1544018517377" expanded="true" signature="63771:63807" ph="SELECT * FRO... clientes" />
+            <marker date="1544018517377" expanded="true" signature="64872:65120" ph="SELECT descr... detalle" />
+            <marker date="1544018517377" expanded="true" signature="66013:66093" ph="SELECT numPa... pagos" />
+            <marker date="1544018517377" expanded="true" signature="66992:67063" ph="SELECT IFNUL... pagos" />
+            <marker date="1544018517377" expanded="true" signature="67658:67742" ph="INSERT INTO pagos... " />
+            <marker date="1544018517377" expanded="true" signature="68900:69107" ph="SELECT SUM(F... factura" />
+            <marker date="1544018517377" expanded="true" signature="69031:69092" ph="Select idMet... metodoPago" />
+            <marker date="1544018517377" expanded="true" signature="69596:69657" ph="SELECT SUM(a... pagos" />
+            <marker date="1544018517377" expanded="true" signature="70098:70239" ph="SELECT SUM(t... factura" />
+            <marker date="1544018517377" expanded="true" signature="70177:70238" ph="Select idMet... metodoPago" />
+            <marker date="1544018517377" expanded="true" signature="70677:70824" ph="SELECT SUM(t... factura" />
+            <marker date="1544018517377" expanded="true" signature="70756:70823" ph="Select idMet... metodoPago" />
+            <marker date="1544018517377" expanded="true" signature="71265:71420" ph="SELECT SUM(t... factura" />
+            <marker date="1544018517377" expanded="true" signature="71344:71419" ph="Select idMet... metodoPago" />
+            <marker date="1544018517377" expanded="true" signature="71861:72024" ph="SELECT SUM(c... movimiento" />
+            <marker date="1544018517377" expanded="true" signature="71968:72023" ph="Select idTip... tipMov" />
+            <marker date="1544018517377" expanded="true" signature="72467:72629" ph="SELECT SUM(c... movimiento" />
+            <marker date="1544018517377" expanded="true" signature="72574:72628" ph="Select idTip... tipMov" />
+            <marker date="1544018517377" expanded="true" signature="73068:73319" ph="select sum((... detalle" />
+            <marker date="1544018517377" expanded="true" signature="73871:74196" ph="select dt.de... detalle" />
+            <marker date="1544018517377" expanded="true" signature="74917:75001" ph="select SUM(c... movimiento" />
+            <marker date="1544018517377" expanded="true" signature="75440:75520" ph="select canti... movimiento" />
+            <marker date="1544018517377" expanded="true" signature="76097:76123" ph="select * fro... unidadmedida" />
+            <marker date="1544018517377" expanded="true" signature="76826:76896" ph="UPDATE unidadmedida... " />
+            <marker date="1544018517377" expanded="true" signature="77586:77934" ph="select p.cod... productos" />
+            <marker date="1544018517377" expanded="true" signature="81117:81143" ph="select * fro... departamento" />
+            <marker date="1544018517377" expanded="true" signature="81938:82217" ph="select p.cod... productos" />
+            <marker date="1544018517377" expanded="true" signature="83224:83554" ph="select p.cod... productos" />
+            <marker date="1544018517377" expanded="true" signature="84463:84520" ph="select SUM(p... productos" />
+            <marker date="1544018517377" expanded="true" signature="84961:85009" ph="select SUM(n... productos" />
+            <marker date="1544018517377" expanded="true" signature="85462:85664" ph="select SUM(p... productos" />
+            <marker date="1544018517377" expanded="true" signature="86127:86318" ph="select SUM(p... productos" />
+            <marker date="1544018517377" expanded="true" signature="86759:86839" ph="select Count... productos" />
+            <marker date="1544018517377" expanded="true" signature="87525:87602" ph="SELECT codig... productos" />
           </folding>
         </state>
       </provider>
