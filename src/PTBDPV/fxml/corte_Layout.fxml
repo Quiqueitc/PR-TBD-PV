@@ -84,7 +84,7 @@
                             </HBox>
 
                             <HBox>
-                                <Label maxWidth="1500" style="-fx-background-color: #FFFFFF; -fx-font-size: 12pt; -fx-text-fill:#00008b; -fx-font-weight:bold;" text="       Targeta Credito/Debito:   " />
+                                <Label maxWidth="1500" style="-fx-background-color: #FFFFFF; -fx-font-size: 12pt; -fx-text-fill:#00008b; -fx-font-weight:bold;" text="       Tarjeta Crédito/Débito:   " />
                                 <Label fx:id="lblTG" alignment="CENTER" style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#00008b; -fx-font-weight:bold;" text="0.00 " />
                             </HBox>
 

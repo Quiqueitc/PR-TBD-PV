@@ -4,12 +4,22 @@ public class datDetalles {
     int  noFactura,numDetalle;
     double cantidad,precio,descuento;
     String codigo;
-    public datDetalles(int noFactura, int numDetalle, double cantidad, double precio, double descuento, String codigo) {
+    String desc;
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+
+    public datDetalles(int noFactura, int numDetalle, double cantidad, double precio, String desc, String codigo) {
         this.noFactura = noFactura;
         this.numDetalle = numDetalle;
         this.cantidad = cantidad;
         this.precio = precio;
-        this.descuento = descuento;
+        this.desc = desc;
         this.codigo = codigo;
     }
 

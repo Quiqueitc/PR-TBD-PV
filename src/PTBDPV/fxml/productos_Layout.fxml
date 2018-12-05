@@ -126,7 +126,7 @@
 						idProv smallint not null, /*PUEDE SER NULA*/-->
                         <VBox fx:id="VBAP" visible="true" alignment="TOP_CENTER" spacing="12">
                             <children>
-                                <Label text="Nuevo producto"  style="-fx-background-color: #FFFFFF; -fx-font-size: 15pt; -fx-text-fill:#CAB4F9; -fx-font-weight:bold;"/>
+                                <Label fx:id="lblNP" text="Nuevo producto"  style="-fx-background-color: #FFFFFF; -fx-font-size: 15pt; -fx-text-fill:#CAB4F9; -fx-font-weight:bold;"/>
                                 <HBox alignment="CENTER" spacing="10">
                                     <JFXTextField fx:id="txtCP" promptText="Código" labelFloat="true" alignment="CENTER" layoutX="75.0" layoutY="147.0" maxWidth="500.0" minWidth="150.0" prefHeight="31.0" prefWidth="150.0" style=" -fx-border-color: #CAB4F9">
                                         <font>
@@ -220,7 +220,7 @@
                                 </HBox>
                                 <Separator orientation="HORIZONTAL" maxWidth="500"></Separator>
                                 <HBox alignment="CENTER" spacing="50">
-                                    <JFXButton fx:id="btnGP" text="Guadar" alignment="CENTER" prefHeight="5" maxWidth="150" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#FFFFFF;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
+                                    <JFXButton fx:id="btnGP" text="Guardar" alignment="CENTER" prefHeight="5" maxWidth="150" contentDisplay="LEFT" prefWidth="200" style="-fx-background-color:#FFFFFF;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" textFill="black" >
                                         <graphic>
                                             <FontAwesomeIconView fill="green" glyphName="CHECK" glyphSize="15" />
                                         </graphic>
@@ -273,7 +273,7 @@
                                 <columns>
                                     <TableColumn fx:id="tblNN" text="Código" prefWidth="60">
                                         <cellValueFactory>
-                                            <PropertyValueFactory property="codigo"></PropertyValueFactory>
+                                            <PropertyValueFactory property="idDepartamento"></PropertyValueFactory>
                                         </cellValueFactory>
                                     </TableColumn>
                                     <TableColumn fx:id="tblNC" text="Descripción producto" prefWidth="230">

@@ -13,15 +13,20 @@
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:id="BPVDD">
+            fx:id="BPVDD"
+            fx:controller="PTBDPV.cont.cont_VDDL"
+            prefWidth="900" prefHeight="600"
+            >
     <top>
         <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
             <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
                 <HBox spacing="10">
                     <HBox spacing="10" alignment="CENTER_LEFT">
-                        <Label text=" Venta de productos" maxWidth="1500" prefWidth="1500" style="-fx-background-color: #ADCAF2; -fx-font-size: 15pt; -fx-text-fill:#FFFFFF; -fx-font-weight:bold;"/>
+                        <Label text=" VENTAS DEL DÍA" maxWidth="1500" prefWidth="1500" style="-fx-background-color: #ADCAF2; -fx-font-size: 15pt; -fx-text-fill:#FFFFFF; -fx-font-weight:bold;"/>
                     </HBox>
                 </HBox>
             </VBox>
@@ -30,49 +35,44 @@
     <center>
         <AnchorPane>
             <VBox alignment="CENTER" spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
-                <TableView fx:id="tblFac" VBox.vgrow="ALWAYS">
+                <TableView fx:id="tblFac" VBox.vgrow="ALWAYS" maxWidth="550">
                     <columns>
-                        <TableColumn fx:id="tblNN" text="No. Factura" prefWidth="100">
+                        <TableColumn fx:id="tblNN" text="No. Ven" prefWidth="50">
                             <cellValueFactory>
                                 <PropertyValueFactory property="noFactura"></PropertyValueFactory>
                             </cellValueFactory>
                         </TableColumn>
-                        <TableColumn fx:id="tblNC" text="Fecha" prefWidth="100">
+                        <TableColumn fx:id="tblNC" text="Fecha" prefWidth="80">
                             <cellValueFactory>
                                 <PropertyValueFactory property="fecha"></PropertyValueFactory>
                             </cellValueFactory>
                         </TableColumn>
-                        <TableColumn fx:id="tblTU" text="Total" prefWidth="100" style="-fx-background-color: #D1FBA1">
+                        <TableColumn fx:id="tblTU" text="Total" prefWidth="60">
                             <cellValueFactory>
                                 <PropertyValueFactory property="total"></PropertyValueFactory>
                             </cellValueFactory>
                         </TableColumn>
-                        <TableColumn fx:id="tblTV" text="Empleado" prefWidth="150">
+                        <TableColumn fx:id="tblTV" text="Empleado" prefWidth="90">
                             <cellValueFactory>
                                 <PropertyValueFactory property="idUsu"></PropertyValueFactory>
                             </cellValueFactory>
                         </TableColumn>
-                        <TableColumn fx:id="tblTI" text="Cliente" prefWidth="150" >
+                        <TableColumn fx:id="tblTI" text="Cliente" prefWidth="130" >
                             <cellValueFactory>
                                 <PropertyValueFactory property="nomCompleto"></PropertyValueFactory>
                             </cellValueFactory>
                         </TableColumn>
-                        <TableColumn fx:id="tblTE" text="Mét pago" prefWidth="100">
+                        <TableColumn fx:id="tblTE" text="Mét pago" prefWidth="80">
                             <cellValueFactory>
                                 <PropertyValueFactory property="idMetPago"></PropertyValueFactory>
-                            </cellValueFactory>
-                        </TableColumn>
-                        <TableColumn fx:id="tblE" text="Estatus" prefWidth="100">
-                            <cellValueFactory>
-                                <PropertyValueFactory property="estatus"></PropertyValueFactory>
                             </cellValueFactory>
                         </TableColumn>
                     </columns>
                 </TableView>
                 <HBox alignment="CENTER" spacing="10">
                     <JFXComboBox fx:id="cbUsu" promptText="Empleado" labelFloat="true"></JFXComboBox>
-                    <DatePicker fx:id="dpFec" promptText="04-12-2018"></DatePicker>
-                    <CheckBox fx:id="chbVen" text="Ventas a crédito"></CheckBox>
+                   <JFXDatePicker fx:id="dpF" promptText="04-12-2018"></JFXDatePicker>
+                    <JFXCheckBox fx:id="chbVen" text="Ventas a crédito"></JFXCheckBox>
                 </HBox>
 
             </VBox>
@@ -80,44 +80,42 @@
         </AnchorPane>
     </center>
     <right>
+        <!-- public datDetalles(int noFactura, int numDetalle, double cantidad, double precio, String desc, String codigo) {
+        this.noFactura = noFactura;
+        this.numDetalle = numDetalle;
+        this.cantidad = cantidad;
+        this.precio = precio;
+        this.desc = desc;
+        this.codigo = codigo;
+    }-->
         <Separator orientation="VERTICAL" maxWidth="200" prefWidth="200"></Separator>
         <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
-            <TableView fx:id="tblDetalle" VBox.vgrow="ALWAYS">
-                <columns>
-                    <TableColumn fx:id="tblg" text="Código producto" prefWidth="120">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="codigo"></PropertyValueFactory>
-                        </cellValueFactory>
-                    </TableColumn>
-                    <TableColumn fx:id="tblgC" text="Descripción producto" prefWidth="250">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="descripcion"></PropertyValueFactory>
-                        </cellValueFactory>
-                    </TableColumn>
-                    <TableColumn fx:id="tbdTU" text="Precio venta" prefWidth="100">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="preVenta"></PropertyValueFactory>
-                        </cellValueFactory>
-                    </TableColumn>
-                    <TableColumn fx:id="tblThV" text="Cantidad" prefWidth="100">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="preMayoreo"></PropertyValueFactory>
-                        </cellValueFactory>
-                    </TableColumn>
-                    <TableColumn fx:id="tbldTI" text="Importe" prefWidth="100"  style="-fx-background-color: #D1FBA1">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="exiMinima"></PropertyValueFactory>
-                        </cellValueFactory>
-                    </TableColumn>
-                    <TableColumn fx:id="tblTcE" text="Existencia" prefWidth="100">
-                        <cellValueFactory>
-                            <PropertyValueFactory property="noExistencia"></PropertyValueFactory>
-                        </cellValueFactory>
-                    </TableColumn>
-                </columns>
-            </TableView>
-
+            <VBox AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10">
+                <TableView fx:id="tblDetalle"  visible="false" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="tblg" text="No. Art" prefWidth="50">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="numDetalle"></PropertyValueFactory>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tblgC" text="Cant" prefWidth="50">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="cantidad"></PropertyValueFactory>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tbdTU" text="Precio" prefWidth="80">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="precio"></PropertyValueFactory>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tbldTI" text="Producto" prefWidth="100">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="codigo"></PropertyValueFactory>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </VBox>
         </AnchorPane>
-
     </right>
 </BorderPane>

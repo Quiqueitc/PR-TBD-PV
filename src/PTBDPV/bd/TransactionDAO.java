@@ -175,6 +175,69 @@ public class TransactionDAO {
         }
         return false;
     }
+    public Boolean insPROMOCION (datPromociones datPromociones) throws SQLException {
+      Alert alert;
+        try {
+                conn.setAutoCommit(false);
+                CallableStatement cstmt = conn.prepareCall("{call ADD_PROMOCION(?,?,?,?,?,?)}");
+                cstmt.setString(1, datPromociones.getCodigo());
+                cstmt.setString(2,datPromociones.getNomPromocion());
+                cstmt.setDouble(3,datPromociones.getCantMinima());
+                cstmt.setDouble(4,datPromociones.getCantMaxima());
+                cstmt.setDouble(5,datPromociones.getPreUnitario());
+                cstmt.registerOutParameter(6, Types.VARCHAR);
+                cstmt.execute();
+                conn.commit();
+
+                    alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText(cstmt.getNString(6));
+                    alert.show();
+
+                    return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Deshacer");
+//            conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            conn.setAutoCommit(true);
+        }
+        return false;
+    }
+    public Boolean insPRO (datProductos datProductos) throws SQLException {
+      Alert alert;
+        try {
+                conn.setAutoCommit(false);
+                CallableStatement cstmt = conn.prepareCall("{call INS_PRO(?,?,?,?,?,?,?,?,?,?,?)}");
+                cstmt.setString(1, datProductos.getCodigo());
+                cstmt.setString(2,datProductos.getDescripcion());
+                cstmt.setDouble(3,datProductos.getPreCosto());
+                cstmt.setDouble(4,datProductos.getPreVenta());
+                cstmt.setDouble(5,datProductos.getPreMayoreo());
+                cstmt.setDouble(6,datProductos.getNoExistencia());
+                cstmt.setDouble(7,datProductos.getExiMinima());
+                cstmt.setString(8,datProductos.getIdUniMed());
+                cstmt.setString(9,datProductos.getNomDepartamento());
+                cstmt.setString(10,datProductos.getNomProv());
+                cstmt.registerOutParameter(11, Types.VARCHAR);
+                cstmt.execute();
+                conn.commit();
+                    alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText(cstmt.getNString(11));
+                    alert.show();
+                    return true;
+        } catch (Exception e) {
+            // deshacer la ejecucion en caso de error
+            System.out.println("Deshacer");
+//            conn.rollback();
+            // informar por consola
+            e.printStackTrace();
+        } finally {
+            conn.setAutoCommit(true);
+        }
+        return false;
+    }
     public Boolean updFAC (int NC,int NF) throws SQLException {
       Alert alert;
         try {
@@ -339,6 +402,66 @@ public class TransactionDAO {
         }
         return transactions;
     }
+    public ObservableList<String> LlenarProductos(String B) {
+        ObservableList<String> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select codigo from productos WHERE codigo LIKE '"+B+"%' and descripcion !='Producto común';";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            String p = null;
+            while(rs.next()) {
+                p=       rs.getString("codigo");
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de productos...");
+        }
+        return transactions;
+    }
+    public ObservableList<String> LlenarDepartamentos() {
+        ObservableList<String> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select descripcion from departamento;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            String p = null;
+            while(rs.next()) {
+                p=       rs.getString("descripcion");
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de departamento...");
+        }
+        return transactions;
+    }
+    public ObservableList<String> LlenarProveedores() {
+        ObservableList<String> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select nombre from proveedores;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            String p = null;
+            while(rs.next()) {
+                p=       rs.getString("nombre");
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de proveedores...");
+        }
+        return transactions;
+    }
     public ObservableList<String> LlenarEncargados(char ti) {
         ObservableList<String> transactions = FXCollections.observableArrayList();
         try {
@@ -349,6 +472,26 @@ public class TransactionDAO {
             String p = null;
             while(rs.next()) {
                 p=                        rs.getString("nombre");
+                transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de empleados...");
+        }
+        return transactions;
+    }
+    public ObservableList<String> LlenarEMP() {
+        ObservableList<String> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT idUsu FROM empleados;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            String p = null;
+            while(rs.next()) {
+                p=rs.getString("idUsu");
                 transactions.add(p);
             }
             rs.close();
@@ -387,6 +530,38 @@ public class TransactionDAO {
         }
         return null;
     }
+
+    public datProductos dtProductos(String CO) {
+        // ObservableList<DatosAutoActivo> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "select P.codigo,P.descripcion,P.preCosto,P.preVenta,P.preMayoreo,P.noExistencia,P.exiMinima,P.ganancia, P.idUniMed, D.descripcion,Pr.nombre from productos P INNER JOIN departamento D ON P.idDepartamento=D.idDepartamento INNER JOIN proveedores Pr ON P.idProv=Pr.idProv WHERE codigo='"+CO+"';";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datProductos p = null;
+            while(rs.next()) {
+                p = new datProductos(rs.getString("P.codigo"),
+                        rs.getString("P.descripcion"),
+                        rs.getDouble("P.preCosto"),
+                        rs.getDouble("P.preVenta"),
+                        rs.getDouble("P.preMayoreo"),
+                        rs.getDouble("P.noExistencia"),
+                        rs.getDouble("P.exiMinima"),
+                        rs.getDouble("P.ganancia"),
+                        rs.getString("P.idUniMed"),
+                        rs.getString("D.descripcion"),
+                        rs.getString("Pr.nombre"));
+                //  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+            return p;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de empleados...");
+        }
+        return null;
+    }
     public ObservableList<datProductos> LlenarTblVen(int NF) {
         ObservableList<datProductos> transactions = FXCollections.observableArrayList();
         try {
@@ -413,7 +588,72 @@ public class TransactionDAO {
         }
         return transactions;
     }
-    public ObservableList<datFactura> LlenarTblFAC() {
+    public ObservableList<datDepartamento> LlenarTblDepto() {
+        ObservableList<datDepartamento> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT * FRom departamento";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datDepartamento p = null;
+            while(rs.next()) {
+                p = new datDepartamento(rs.getInt("idDepartamento"),
+                        rs.getString("descripcion"));
+                  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de departamento...");
+        }
+        return transactions;
+    }
+    public ObservableList<datProveedores> LlenarTblProvee() {
+        ObservableList<datProveedores> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT idProv,nombre FRom proveedores;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datProveedores p = null;
+            while(rs.next()) {
+                p = new datProveedores(rs.getInt("idProv"),
+                        rs.getString("nombre"));
+                  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de proveedores...");
+        }
+        return transactions;
+    }
+    public ObservableList<datPromociones> LlenarTblPromo() {
+        ObservableList<datPromociones> transactions = FXCollections.observableArrayList();
+        try {
+            String query = "SELECT * FRom promociones;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datPromociones p = null;
+            while(rs.next()) {
+                p = new datPromociones(rs.getString("codigo"),
+                        rs.getString("nomPromocion"),
+                        rs.getDouble("cantMinima"),
+                        rs.getDouble("cantMaxima"),
+                        rs.getDouble("preUnitario"));
+                  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de proveedores...");
+        }
+        return transactions;
+    }
+    public ObservableList<datFactura> LlenarTblFAC(String B) {
         ObservableList<datFactura> transactions = FXCollections.observableArrayList();
         try {
 
@@ -423,7 +663,8 @@ public class TransactionDAO {
                     "\t\t\t\t\t\t\t\tWHEN 'F' THEN 'Fiado'\n" +
                     "                                END AS estatus\n" +
                     "FROM factura F INNER JOIN clientes C ON F.idClie=C.idClie\n" +
-                    "\t\t\t\tINNER JOIN MetodoPago M ON M.idMetPago=F.idMetPago;";
+                    "\t\t\t\tINNER JOIN MetodoPago M ON M.idMetPago=F.idMetPago\n" +
+                    "                WHERE F.fecha LIKE '"+B+"%' or F.idUsu LIKE '"+B+"%' or F.idMetPAgo LIKE '"+B+"%' ORDER BY  F.NoFactura ASC;";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             datFactura p = null;
@@ -435,6 +676,31 @@ public class TransactionDAO {
                         rs.getString("nomCompleto"),
                         rs.getString("descripcion"),
                         rs.getString("estatus"));
+                  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de facturas...");
+        }
+        return transactions;
+    }
+    public ObservableList<datDetalles> LlenarTblDET(int NF) {
+        ObservableList<datDetalles> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT  D.noFactura,D.numDetalle, D.cantidad, D.precio, CASE D.descuento WHEN 'V' THEN 'Precio Venta' WHEN 'C' THEN 'Precio Costo' WHEN 'M' THEN 'Precio Mayoreo' END AS descuento, P.descripcion FROM detalle D INNER JOIN productos P ON D.codigo=P.codigo WHERE noFactura='"+NF+"' ORDER BY numDetalle ASC;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datDetalles p = null;
+            while(rs.next()) {
+                p = new datDetalles(rs.getInt("noFactura"),
+                        rs.getInt("numDetalle"),
+                        rs.getDouble("cantidad"),
+                        rs.getDouble("precio"),
+                        rs.getString("descuento"),
+                        rs.getString("descripcion"));
                   transactions.add(p);
             }
             rs.close();
@@ -577,6 +843,44 @@ public class TransactionDAO {
         }
         return p;
     }
+    public String exiDepto(String ND) //REgresa Existencia de depto
+    {
+        String p=null;
+        ResultSet rs = null;
+        try {
+
+            String query = "select descripcion from departamento where descripcion LIKE '"+ND+"';";
+            Statement st = conn.createStatement();
+             rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getString("descripcion");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
+    public String exiProvee(String NP) //REgresa Existencia de proveedor
+    {
+        String p=null;
+        ResultSet rs = null;
+        try {
+
+            String query = "SELECT nombre FROM proveedores WHERE nombre LIKE '"+NP+"';";
+            Statement st = conn.createStatement();
+             rs = st.executeQuery(query);
+            while (rs.next()) {
+                p=rs.getString("nombre");
+            }
+            rs.close();
+            st.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return p;
+    }
     public String[]  DPproducto(String NP) //REgresa la descripcion de producto
     {
         String p[]=new String[2];
@@ -671,12 +975,60 @@ public class TransactionDAO {
             alert=new Alert(Alert.AlertType.ERROR);
             if(e.getErrorCode()==1062)
             {
-                alert.setContentText("La clave de autor ya existe");
+                alert.setContentText("El id ya existe");
                 alert.show();
             }
             if(e.getErrorCode()==1406)
             {
-                alert.setContentText("La clave no debe ser mayor de 2 caracteres");
+                alert.setContentText("Algunos valores exceden la capacidad permitida");
+                alert.show();
+            }
+            System.out.println("Error "+e);
+        }
+        return false;
+    }
+    public Boolean insDepartamento(String ND) {
+        try {
+            String query = "INSERT INTO departamento (descripcion)values(?);";
+            PreparedStatement st =  conn.prepareStatement(query);
+            st.setString(1, ND);
+            st.execute();
+            return true;
+        } catch (SQLException e) {
+            alert=new Alert(Alert.AlertType.ERROR);
+            if(e.getErrorCode()==1062)
+            {
+                alert.setContentText("El id ya existe");
+                alert.show();
+            }
+            if(e.getErrorCode()==1406)
+            {
+                alert.setContentText("Algunos valores exceden la capacidad permitida");
+                alert.show();
+            }
+            System.out.println("Error "+e);
+        }
+        return false;
+    }
+    public Boolean insProveedores(String NP,String TP,String DP) {
+        try {
+            String query = "INSERT INTO proveedores (nombre,telefono,descripcion) VALUES (?,?,?);";
+            PreparedStatement st =  conn.prepareStatement(query);
+            st.setString(1, NP);
+            st.setString(2, TP);
+            st.setString(3, DP);
+            st.execute();
+            return true;
+        } catch (SQLException e) {
+            alert=new Alert(Alert.AlertType.ERROR);
+            if(e.getErrorCode()==1062)
+            {
+                alert.setContentText("El id ya existe");
+                alert.show();
+            }
+            if(e.getErrorCode()==1406)
+            {
+                alert.setContentText("Algunos valores exceden la capacidad permitida");
                 alert.show();
             }
             System.out.println("Error "+e);
@@ -715,10 +1067,10 @@ public class TransactionDAO {
         return false;
     }
 
-    public Boolean ELIMINARUSUARIO(String NN) {
+    public Boolean eliPRO(String CO) {
 
         try {
-            String query = "DELETE FROM usuario WHERE NickName='"+NN+"'";
+            String query = "DELETE FROM productos WHERE codigo='"+CO+"';";
             PreparedStatement st = conn.prepareStatement(query);
             st.execute();
             return true;
@@ -727,7 +1079,7 @@ public class TransactionDAO {
             if(e.getErrorCode()==1451)
             {
                 alert.setTitle("Error de eliminación");
-                alert.setContentText("El usuario no se puede eliminar en este momento porque tiene registros en otras tablas");
+                alert.setContentText("No se puede eliminar porque el producto tiene detalles existentes...");
                 alert.show();
             }
         }

@@ -5,6 +5,53 @@ public class datProductos {
     double preCosto,preVenta,preMayoreo,noExistencia,exiMinima,ganancia;
     int idDepartamento,idProv;
     int numDetalle;
+    String nomDepartamento,nomProv;
+    public String getNomDepartamento() {
+        return nomDepartamento;
+    }
+
+    public void setNomDepartamento(String nomDepartamento) {
+        this.nomDepartamento = nomDepartamento;
+    }
+
+    public String getNomProv() {
+        return nomProv;
+    }
+
+    public void setNomProv(String nomProv) {
+        this.nomProv = nomProv;
+    }
+
+
+    public datProductos(String codigo, String descripcion, double preCosto, double preVenta, double preMayoreo, double noExistencia, double exiMinima,String idUniMed, int idDepartamento, int idProv) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.idUniMed = idUniMed;
+        this.preCosto = preCosto;
+        this.preVenta = preVenta;
+        this.preMayoreo = preMayoreo;
+        this.noExistencia = noExistencia;
+        this.exiMinima = exiMinima;
+        this.idDepartamento = idDepartamento;
+        this.idProv = idProv;
+    }
+
+
+    public datProductos(String codigo, String descripcion, double preCosto, double preVenta, double preMayoreo, double noExistencia, double exiMinima,double ganancia,String idUniMed, String nomDepartamento, String nomProv) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.idUniMed = idUniMed;
+        this.preCosto = preCosto;
+        this.preVenta = preVenta;
+        this.preMayoreo = preMayoreo;
+        this.noExistencia = noExistencia;
+        this.ganancia=ganancia;
+        this.exiMinima = exiMinima;
+        this.nomDepartamento = nomDepartamento;
+        this.nomProv = nomProv;
+    }
+
+
 
 
 

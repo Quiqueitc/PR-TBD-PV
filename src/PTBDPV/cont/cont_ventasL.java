@@ -211,6 +211,7 @@ public class cont_ventasL implements Initializable {
             }
             if (event.getSource()==btnVDD){
                 tblBP.setVisible(false);
+                VDD();
             }
         }
     };
@@ -572,47 +573,49 @@ public class cont_ventasL implements Initializable {
         }
     }
     private void F12cobrar(){
-        Stage stage =new Stage();
-        FXMLLoader loader;
-        //System.out.println(datSucu[0]+ "rfc");
-        Parent parent;
-        stage.setResizable(false);
-        cont_F12cobrarL cont_f12cobrarL=new cont_F12cobrarL(NF);
-        //stage.setTitle("Tarjetas Extraviadas");
-        stage.setMaximized(false);
-        stage.setTitle("Cobrar");
-        stage.initStyle(StageStyle.DECORATED);
-        loader=new FXMLLoader(getClass().getResource("../fxml/F12cobrar_Layout.fxml"));
-        loader.setController(cont_f12cobrarL);
-        try {
-            parent= loader.load();
-            Scene scene=new Scene(parent);
-            stage.setScene(scene);
-            stage.show();
-        }
-        catch (IOException et)
-        {
+        double to;
+        to=Double.parseDouble(txtTotal.getText().toString());
+        if(to!=0.0){
+            Stage stage =new Stage();
+            FXMLLoader loader;
+            //System.out.println(datSucu[0]+ "rfc");
+            Parent parent;
+            stage.setResizable(false);
+            cont_F12cobrarL cont_f12cobrarL=new cont_F12cobrarL(NF);
+            //stage.setTitle("Tarjetas Extraviadas");
+            stage.setMaximized(false);
+            stage.setTitle("Cobrar");
+            stage.initStyle(StageStyle.DECORATED);
+            loader=new FXMLLoader(getClass().getResource("../fxml/F12cobrar_Layout.fxml"));
+            loader.setController(cont_f12cobrarL);
+            try {
+                parent= loader.load();
+                Scene scene=new Scene(parent);
+                stage.setScene(scene);
+                stage.show();
+            }
+            catch (IOException et)
+            {
 
-            System.out.println(et);
-        }
-        stage.addEventHandler(WindowEvent.WINDOW_HIDDEN, new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
-                vD=datCom.dS();
-                System.out.println("valor    "+ vD);
-                if(vD)
-                {
-                    GUI_REFRESH();
-                    tblVen.getSelectionModel().clearSelection();
-                    txtCodigo.clear();
-                    txtTotal.setText("0.0");
-                    lblNPV.setText("0.0");
-                    reloadData();
+                System.out.println(et);
+            }
+            stage.addEventHandler(WindowEvent.WINDOW_HIDDEN, new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent event) {
+                    vD=datCom.dS();
+                    System.out.println("valor    "+ vD);
+                    if(vD)
+                    {
+                        GUI_REFRESH();
+                        tblVen.getSelectionModel().clearSelection();
+                        txtCodigo.clear();
+                        txtTotal.setText("0.0");
+                        lblNPV.setText("0.0");
+                        reloadData();
+                    }
                 }
-              }
-        });
-
-
+            });
+        }
     }
     public void VDD() //VENTAS DEL DÍA Y DEVOLUCIONES
     {
@@ -621,13 +624,13 @@ public class cont_ventasL implements Initializable {
         //System.out.println(datSucu[0]+ "rfc");
         Parent parent;
         stage.setResizable(false);
-        cont_F12cobrarL cont_f12cobrarL=new cont_F12cobrarL(NF);
+        cont_VDDL cont_vddl=new cont_VDDL(/*NF*/);
         //stage.setTitle("Tarjetas Extraviadas");
         stage.setMaximized(false);
-        stage.setTitle("Cobrar");
+        stage.setTitle("Ventas del día");
         stage.initStyle(StageStyle.DECORATED);
-        loader=new FXMLLoader(getClass().getResource("../fxml/F12cobrar_Layout.fxml"));
-        loader.setController(cont_f12cobrarL);
+        loader=new FXMLLoader(getClass().getResource("../fxml/VDD_Layout.fxml"));
+     //   loader.setController(cont_f12cobrarL);
         try {
             parent= loader.load();
             Scene scene=new Scene(parent);
