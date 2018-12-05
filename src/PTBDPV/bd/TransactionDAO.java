@@ -530,6 +530,33 @@ public class TransactionDAO {
         }
         return null;
     }
+    public datEmpleados datEmpleadoTT(String IU, String PA) {
+        // ObservableList<DatosAutoActivo> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT * FROM empleados WHERE idUsu='"+IU+"' and contrasena='"+PA+"';";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datEmpleados p = null;
+            while(rs.next()) {
+                p = new datEmpleados(rs.getString("idUsu"),
+                        rs.getString("nombre"),
+                        rs.getString("domicilio"),
+                        rs.getString("telefono"),
+                        rs.getString("contrasena"),
+                        rs.getString("idTip"),
+                        rs.getDate("fecContrato"));
+                //  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+            return p;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de empleados...");
+        }
+        return null;
+    }
 
     public datProductos dtProductos(String CO) {
         // ObservableList<DatosAutoActivo> transactions = FXCollections.observableArrayList();
@@ -578,6 +605,29 @@ public class TransactionDAO {
                         rs.getDouble("Importe"),
                         rs.getDouble("P.noExistencia"),
                         rs.getInt("D.numDetalle"));
+                  transactions.add(p);
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información de detalles...");
+        }
+        return transactions;
+    }
+    public ObservableList<datEmpleados> LlenarTblEmp() {
+        ObservableList<datEmpleados> transactions = FXCollections.observableArrayList();
+        try {
+
+            String query = "SELECT idUsu,nombre,domicilio, CASE idTip  WHEN 'A' THEN 'Administrador' WHEN 'C' THEN 'Cajero' END AS tipo FROM empleados;";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            datEmpleados p = null;
+            while(rs.next()) {
+                p = new datEmpleados(rs.getString("idUsu"),
+                        rs.getString("nombre"),
+                        rs.getString("domicilio"),
+                        rs.getString("tipo"));
                   transactions.add(p);
             }
             rs.close();
@@ -793,6 +843,25 @@ public class TransactionDAO {
        }
        return false;
    }
+    public Boolean creUSAGE(String id,String pas) {
+
+       try {
+           String query = "GRANT USAGE ON bdpv.* TO '"+id+"'@'%' IDENTIFIED BY '"+pas+"';";
+           PreparedStatement st = conn.prepareStatement(query);
+           //creUsuario(id,pas); Otros permisos
+           st.execute();
+           return true;
+       } catch (SQLException e) {
+           System.out.println("Error al dar privi usuario   "+e.getMessage()+ "  "+e.getErrorCode());
+           alert=new Alert(Alert.AlertType.ERROR);
+           if(e.getErrorCode()==1451)
+           {
+               alert.setContentText("Este pensionado no se puede eliminar porque está siendo usado en otras tablas");
+               alert.show();
+           }
+       }
+       return false;
+   }
     public Boolean insSucursal(datSucursal datSucursal) {
         try {
             String query = "INSERT INTO sucursal VALUES (?,?,?,?,?,(SELECT idUsu FROM empleados WHERE nombre=?));";
@@ -967,8 +1036,11 @@ public class TransactionDAO {
             st.setString(5,datEmpleados.getContrasena());
             st.setDate(6,datEmpleados.getFecContrato());
             st.setString(7,datEmpleados.getIdTip());
-            crePri(datEmpleados.getIdUsu(),datEmpleados.getContrasena());
-//            creUsuario(datEmpleados.getIdUsu(),datEmpleados.getContrasena());
+           /* if(datEmpleados.getIdTip().equalsIgnoreCase("A"))
+                crePri(datEmpleados.getIdUsu(),datEmpleados.getContrasena());
+            else
+                creUSAGE(datEmpleados.getIdUsu(),datEmpleados.getContrasena());
+//            creUsuario(datEmpleados.getIdUsu(),datEmpleados.getContrasena());*/
             st.execute();
             return true;
         } catch (SQLException e) {

@@ -122,6 +122,12 @@ public class cont_ENSAL implements Initializable {
                         alert.show();
                         closeStage();
                     }
+                    else
+                    {
+                        alert=new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("No tiene los permisos para entrada o salida de efectivo");
+                        alert.show();
+                    }
                 }
                 else {
                     alert=new Alert(Alert.AlertType.ERROR);

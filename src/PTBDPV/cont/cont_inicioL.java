@@ -96,10 +96,27 @@ public class cont_inicioL implements Initializable {
                MInventario();
             }
             if(event.getSource()==btnConfiguracion){
-               MConfiguracion();
+                if(!datEmpleados.getIdTip().equalsIgnoreCase("C"))
+                {
+                    MConfiguracion();
+                }
+                else {
+                    Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText("No tienes los permisos para está área");
+                    alert.show();
+                }
             }
             if (event.getSource()==btnCorte){
-                MCorte();
+                if(!datEmpleados.getIdTip().equalsIgnoreCase("C"))
+                {
+                    MCorte();
+                }
+                else {
+                    Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText("No tienes los permisos para está área");
+                    alert.show();
+                }
+
             }
             if(event.getSource()==btnCliente){
                 MCliente();

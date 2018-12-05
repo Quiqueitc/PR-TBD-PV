@@ -154,9 +154,20 @@ public class cont_clienteL implements Initializable {
                 lblTi.setText("Eliminar cliente");
                 //Verifica que un elemento esté seleccionado
                 if (tblClientes.getSelectionModel().getSelectedIndex() >= 0) {
+                    Alert alert;
                     datClientes datClientes = tblClientes.getSelectionModel().getSelectedItem();
                     int aux = datClientes.getIdClie();
-                    transactionDAO.deleteCL(aux);
+                    if(transactionDAO.deleteCL(aux))
+                    {
+                        alert=new Alert(Alert.AlertType.INFORMATION);
+                        alert.setContentText("Se eliminó con éxito");
+                        alert.show();
+                    }
+                    else {
+                        alert=new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("No tiene los permisos para hacer esta operación");
+                        alert.show();
+                    }
                     reloadData();//Recarga los registros de la tabla
 
                 }

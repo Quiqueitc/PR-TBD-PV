@@ -14,6 +14,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Tooltip?>
 <BorderPane fx:id="BPC" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PTBDPV.cont.cont_configuracionL">
 
     <top>
@@ -90,99 +100,73 @@
                         </VBox>
                            </VBox>
 
-                        <VBox fx:id="VBU" alignment="TOP_LEFT" prefHeight="423.0" prefWidth="341.0" visible="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
-
-                            <HBox>
-                                <Separator maxWidth="50" orientation="VERTICAL" prefWidth="12" visible="false" />
-
-                                <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Usuario: " />
-                                <JFXTextField fx:id="txtU" alignment="CENTER" labelFloat="true" layoutX="75.0" layoutY="147.0" maxWidth="500.0" minWidth="233.0" prefHeight="31.0" prefWidth="300.0" promptText="Usuario" style=" -fx-border-color: #A4F796">
-                                    <font>
-                                        <Font name="Roboto Medium" size="14.0" />
-                                    </font>
-                                </JFXTextField>
-                            </HBox>
-                            <Separator maxWidth="50" orientation="VERTICAL" prefWidth="12" visible="false" />
-                            <HBox>
-                                <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="    Clave:" />
-                                <Separator maxWidth="20" orientation="HORIZONTAL" prefWidth="12" visible="false" />
-                                <JFXTextField fx:id="txtClave" alignment="CENTER" labelFloat="true" layoutX="75.0" layoutY="147.0" maxWidth="500.0" minWidth="233.0" prefHeight="32.0" prefWidth="302.0" promptText="Clave" style=" -fx-border-color: #A4F796">
-                                    <font>
-                                        <Font name="Roboto Medium" size="14.0" />
-                                    </font>
-                                </JFXTextField>
-                            </HBox>
-                            <Separator maxWidth="50" orientation="VERTICAL" prefWidth="12" visible="false" />
-
-                            <HBox>
-                                <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="  Nombre: " />
-                                <JFXTextField fx:id="txtNC" alignment="CENTER" labelFloat="true" layoutX="75.0" layoutY="147.0" maxWidth="500.0" minWidth="233.0" prefHeight="18.0" prefWidth="300.0" promptText="Nombre Completo" style=" -fx-border-color: #A4F796">
-                                    <font>
-                                        <Font name="Roboto Medium" size="14.0" />
-                                    </font>
-                                </JFXTextField>
-                            </HBox>
-                            <Separator maxWidth="100" orientation="VERTICAL" prefWidth="12" visible="false" />
-
-                            <VBox>
-                                <HBox>
-                                    <VBox>
-                                        <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Ventas" />
-                                        <JFXCheckBox fx:id="ChRE" text="Registrar entradas" />
-                                        <JFXCheckBox fx:id="ChRS" text="Registrar salidas" />
-                                        <JFXCheckBox fx:id="ChAMD" text="Aplicar precio de mayoreo y descuentos" />
-                                        <JFXCheckBox fx:id="ChRHV" text="Revisar historial de ventas" />
-                                        <JFXCheckBox fx:id="ChCC" text="Cobrar a credito" />
-                                        <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Inventario" />
-                                        <JFXCheckBox fx:id="ChAM" text="Agrgar mercancia" />
-                                        <JFXCheckBox fx:id="ChVEM" text="Ver existencias y minimos" />
-                                        <JFXCheckBox fx:id="ChAI" text="Ajustar Inventario" />
-                                        <JFXCheckBox fx:id="ChVMI" text="Ver movimiento de inventarios" />
-
-                                    </VBox>
-                                    <Separator maxWidth="12" orientation="HORIZONTAL" prefWidth="12" visible="false" />
-                                    <VBox>
-                                        <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Productos" />
-                                        <JFXCheckBox fx:id="ChCP" text="Crear productos" />
-                                        <JFXCheckBox fx:id="ChMod" text="Modificar Productos" />
-                                        <JFXCheckBox fx:id="ChEl" text="Eliminar productos" />
-                                        <JFXCheckBox fx:id="ChVRV" text="Ver reporte de ventas" />
-                                        <JFXCheckBox fx:id="ChCProm" text="Crear promociones" />
-                                        <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Clientes" />
-                                        <JFXCheckBox fx:id="ChACC" text="Administrar credito de clientes" />
-                                        <JFXCheckBox fx:id="ChCME" text="Crear, modificar, eliminar" />
-                                        <JFXCheckBox style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Otros" />
-                                        <JFXCheckBox fx:id="ChCConf" text="Cambiar la configuración" />
-                                        <JFXCheckBox fx:id="ChRCD" text="Realizar corte del día" />
-
-                                    </VBox>
-
-                                </HBox>
-                                <Separator maxWidth="60" orientation="VERTICAL" prefWidth="12" visible="false" />
-
-                                <HBox alignment="CENTER_LEFT">
-                                    <JFXButton fx:id="btnGuardarCajero" alignment="CENTER" contentDisplay="LEFT" maxWidth="194.0" prefHeight="29.0" prefWidth="194.0" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" text="Guardar Cajero" textFill="black">
-                                        <graphic>
-                                            <MaterialDesignIconView fill="green" glyphName="CHECK_ALL" glyphSize="15" />
-                                        </graphic>
+                        <HBox fx:id="VBU" alignment="CENTER"  visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+                            <VBox alignment="CENTER" spacing="18">
+                                    <ImageView fx:id="imgU" fitHeight="30.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../res/adduser.png" />
+                                        </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="txtNickName" labelFloat="true" alignment="CENTER"  promptText="Usuario">
                                         <font>
-                                            <Font name="Roboto Bold" size="13.0" />
+                                            <Font name="Roboto Medium" size="15" />
+                                        </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtNombre" labelFloat="true"  alignment="CENTER"  promptText="Nombre">
+                                        <font>
+                                            <Font name="Roboto Medium" size="15" />
+                                        </font>
+                                    </JFXTextField>
+                                <HBox alignment="CENTER" spacing="10">
+                                    <JFXTextField fx:id="txtDomicilio" labelFloat="true" alignment="CENTER" promptText="Domicilio">
+                                        <font>
+                                            <Font name="Roboto Medium" size="15" />
+                                        </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtTelefono" labelFloat="true"  alignment="CENTER" promptText="Telefono">
+                                        <font>
+                                            <Font name="Roboto Medium" size="15" />
+                                        </font>
+                                    </JFXTextField>
+                                </HBox>
+                                <HBox alignment="CENTER" spacing="12">
+                                    <JFXRadioButton fx:id="rdA" text="Administrador" selected="false" >
+                                        <toggleGroup>
+                                            <ToggleGroup fx:id="tog"></ToggleGroup>
+                                        </toggleGroup>
+                                        <font>
+                                            <Font name="Roboto Medium" size="15" />
+                                        </font>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="rdC" selected="true" text="Cajero" toggleGroup="$tog">
+                                        <font>
+                                            <Font name="Roboto Medium" size="15" />
+                                        </font>
+                                    </JFXRadioButton>
+                                </HBox>
+                                    <JFXPasswordField fx:id="txtPassword" labelFloat="true"  alignment="CENTER" promptText="Contraseña">
+                                        <font>
+                                            <Font name="Roboto Medium" size="15" />
+                                        </font>
+                                    </JFXPasswordField>
+                                <HBox alignment="CENTER" spacing="12">
+                                    <JFXButton fx:id="btnInicio" layoutX="90.0" style="-fx-background-color: TRANSPARENT; -fx-border-radius: 90; -fx-text-fill: #00bcd4; -fx-border-color: #00bcd4" text="¡Agregar usuario!">
+                                        <font>
+                                            <Font name="Roboto Bold" size="14.0" />
                                         </font>
                                     </JFXButton>
-                                    <Separator maxWidth="800" orientation="HORIZONTAL" prefWidth="12" visible="false" />
-
-                                    <JFXButton fx:id="btnCancel" alignment="CENTER" contentDisplay="LEFT" maxWidth="205.0" prefHeight="29.0" prefWidth="205.0" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" text="Cancelar" textFill="black">
-                                        <graphic>
-                                            <MaterialDesignIconView fill="red" glyphName="CLOSE" glyphSize="15" />
-                                        </graphic>
+                                    <JFXButton fx:id="btnCerrar" layoutX="210.0" layoutY="300.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: #FF0101; -fx-border-radius: 90" text="Cancelar" textFill="red">
                                         <font>
-                                            <Font name="Roboto Bold" size="13.0" />
+                                            <Font name="Roboto Bold" size="14.0" />
                                         </font>
                                     </JFXButton>
                                 </HBox>
                             </VBox>
 
-                        </VBox>
+
+
+
+                        </HBox>
 
                         <VBox fx:id="VBUM" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0" visible="false" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
                             <HBox>
@@ -221,8 +205,6 @@
                                 </JFXButton>
                             </HBox>
 
-
-
                             <VBox />
 
                         </VBox>
@@ -235,7 +217,95 @@
 
 
 </center>
+<right>
+    <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+        <VBox spacing="10" fx:id="VBtbl" alignment="CENTER" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10">
+            <TableView fx:id="tblBP" visible="false" VBox.vgrow="ALWAYS" prefHeight="80">
+                <columns>
+                    <TableColumn text="Empleado" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="idUsu"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn  text="Nombre" prefWidth="180">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="nombre"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn  text="Domicilio" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="domicilio"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+                <tooltip>
+                    <Tooltip text="Presione dos veces para agregar a la venta"></Tooltip>
+                </tooltip>
+            </TableView>
 
+        </VBox>
+
+        <VBox fx:id="VBP"  visible="false" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+            <HBox>
+                <VBox>
+                    <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Ventas" />
+                    <JFXCheckBox fx:id="ChRE" text="Registrar entradas y salidas" />
+
+                    <JFXCheckBox fx:id="ChAMD" text="Aplicar precio de mayoreo y descuentos" />
+                    <JFXCheckBox fx:id="ChRHV" text="Revisar historial de ventas" />
+                    <JFXCheckBox fx:id="ChCC" text="Cobrar a credito" />
+                    <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Inventario" />
+                    <JFXCheckBox fx:id="ChAM" text="Agrgar mercancia" />
+                    <JFXCheckBox fx:id="ChVEM" text="Ver existencias y minimos" />
+                    <JFXCheckBox fx:id="ChAI" text="Ajustar Inventario" />
+                    <JFXCheckBox fx:id="ChVMI" text="Ver movimiento de inventarios" />
+
+                </VBox>
+                <Separator maxWidth="12" orientation="HORIZONTAL" prefWidth="12" visible="false" />
+                <VBox>
+                    <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Productos" />
+                    <JFXCheckBox fx:id="ChCP" text="Crear productos" />
+                    <JFXCheckBox fx:id="ChMod" text="Modificar Productos" />
+                    <JFXCheckBox fx:id="ChEl" text="Eliminar productos" />
+                    <JFXCheckBox fx:id="ChVRV" text="Ver reporte de ventas" />
+                    <JFXCheckBox fx:id="ChCProm" text="Crear promociones" />
+                    <Label style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Clientes" />
+                    <JFXCheckBox fx:id="ChACC" text="Administrar credito de clientes" />
+                    <JFXCheckBox fx:id="ChCME" text="Crear, modificar, eliminar" />
+                    <JFXCheckBox style="-fx-background-color: #FFFFFF; -fx-font-size: 10pt; -fx-text-fill:#000000; -fx-font-weight:bold;" text="Otros" />
+                    <JFXCheckBox fx:id="ChCConf" text="Cambiar la configuración" />
+                    <JFXCheckBox fx:id="ChRCD" text="Realizar corte del día" />
+
+                </VBox>
+
+            </HBox>
+            <Separator maxWidth="60" orientation="VERTICAL" prefWidth="12" visible="false" />
+
+            <HBox alignment="CENTER_LEFT">
+                <JFXButton fx:id="btnGuardarCajero" alignment="CENTER" contentDisplay="LEFT" maxWidth="194.0" prefHeight="29.0" prefWidth="194.0" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" text="Guardar Cajero" textFill="black">
+                    <graphic>
+                        <MaterialDesignIconView fill="green" glyphName="CHECK_ALL" glyphSize="15" />
+                    </graphic>
+                    <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                    </font>
+                </JFXButton>
+                <Separator maxWidth="800" orientation="HORIZONTAL" prefWidth="12" visible="false" />
+
+                <JFXButton fx:id="btnCancel" alignment="CENTER" contentDisplay="LEFT" maxWidth="205.0" prefHeight="29.0" prefWidth="205.0" style="-fx-background-color:#F7F9F9;   -fx-border-color: black; -fx-border-radius: 4; -fx-padding: 4;" text="Cancelar" textFill="black">
+                    <graphic>
+                        <MaterialDesignIconView fill="red" glyphName="CLOSE" glyphSize="15" />
+                    </graphic>
+                    <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                    </font>
+                </JFXButton>
+            </HBox>
+        </VBox>
+
+    </AnchorPane>
+
+</right>
 
 
 

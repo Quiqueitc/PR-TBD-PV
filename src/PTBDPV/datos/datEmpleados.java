@@ -18,6 +18,12 @@ public class datEmpleados {
         this.idUsu = idUsu;
         this.nombre = nombre;
     }
+    public datEmpleados(String idUsu, String nombre,String domicilio,String idTip) {
+        this.idUsu = idUsu;
+        this.nombre = nombre;
+        this.domicilio=domicilio;
+        this.idTip=idTip;
+    }
 
     java.sql.Date fecContrato;
     public String getIdUsu() {
